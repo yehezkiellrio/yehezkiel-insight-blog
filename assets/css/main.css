@@ -1557,26 +1557,37 @@ body.dark-mode .btn,
   position: relative;
 }
 
-.footer::before{filter: blur(0.2px);
-box-shadow: 0 0 14px rgba(168, 85, 247, 0.35);
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;              /* garis di ATAS footer */
-  height: 3px;         /* ketebalan garis */
-  background: linear-gradient(
-    90deg,
-    #ff3b30 0%,
-    #ff2d95 35%,
-    #a855f7 65%,
-    #3b82f6 100%
-  );
+/* --- Footer: Deep Modern Gradient --- */
+.footer {
+    /* Background gradient gelap: dari hitam ke biru tua */
+    background: linear-gradient(135deg, #020617 0%, #0f172a 100%);
+    color: #cbd5e1; /* Text color: soft grey/blue */
+    padding-top: 0; /* Reset padding atas karena ada border top */
+    margin-top: auto;
+    position: relative;
+    overflow: hidden;
 }
 
-/* kalau footer kamu punya overflow hidden, ini amanin */
-.footer{
-  overflow: hidden;
+/* Garis warna-warni di bagian atas footer (Pelangi tipis) */
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px; /* Ketebalan garis */
+    background: linear-gradient(
+        90deg,
+        #ef4444,
+        #f97316,
+        #eab308,
+        #22c55e,
+        #3b82f6,
+        #a855f7,
+        #ec4899
+    );
+    z-index: 10;
 }
+
 
 
