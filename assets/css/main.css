@@ -1557,7 +1557,8 @@ body.dark-mode .btn,
   position: relative;
 }
 
-.footer::before{
+.footer::before{filter: blur(0.2px);
+box-shadow: 0 0 14px rgba(168, 85, 247, 0.35);
   content: "";
   position: absolute;
   left: 0;
