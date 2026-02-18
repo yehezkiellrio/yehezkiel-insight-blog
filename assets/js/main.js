@@ -1,7 +1,14 @@
 // Load enhancements (dark mode + extras) on every page
 (function () {
+  // Cari URL main.js yang sedang dipakai halaman ini
+  const current = document.currentScript?.src;
+  if (!current) return;
+
+  // Base URL sampai sebelum "assets/js/main.js"
+  const base = current.replace(/assets\/js\/main\.js(\?.*)?$/, "");
+
   const s = document.createElement("script");
-  s.src = (window.location.pathname.includes("/posts/") ? "../" : "") + "assets/js/enhancements.js";
+  s.src = base + "assets/js/enhancements.js";
   s.defer = true;
   document.head.appendChild(s);
 })();
