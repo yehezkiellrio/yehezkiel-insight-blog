@@ -1590,6 +1590,20 @@ body.dark-mode .btn,
     );
     z-index: 10;
 }
+/* Give space between the gradient line and footer content */
+.footer::before{
+  height: 2px; /* keep your line */
+}
+
+.footer .footer-content{
+  padding-top: 24px; /* jarak dari garis ke tulisan */
+}
+
+@media (min-width: 768px){
+  .footer .footer-content{
+    padding-top: 32px;
+  }
+}
 
 
 
