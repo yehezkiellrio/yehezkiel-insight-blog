@@ -1409,3 +1409,147 @@ a:focus {
         border: 1px solid #ccc;
     }
 }
+/* ===== Personal & Modern UI Pack ===== */
+
+/* Typography + layout */
+:root{
+  --content-max: 980px;
+  --reading-max: 720px;
+  --radius-lg: 18px;
+  --radius-md: 14px;
+}
+
+body{
+  line-height: 1.7;
+  letter-spacing: 0.1px;
+}
+
+.container{
+  max-width: var(--content-max);
+}
+
+/* HERO (Home intro) */
+.hero{
+  padding: 22px 0 10px;
+}
+
+.hero h1{
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+  margin-bottom: 10px;
+}
+
+.hero p{
+  max-width: 62ch;
+  opacity: 0.9;
+  margin-bottom: 14px;
+}
+
+.hero-actions{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.btn{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  border: 1px solid rgba(0,0,0,0.12);
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(8px);
+}
+
+.btn:hover{
+  transform: translateY(-1px);
+}
+
+.btn-primary{
+  border-color: rgba(0,0,0,0.14);
+  background: rgba(0,0,0,0.06);
+}
+
+/* Cards for post list */
+.post-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+@media (min-width: 900px){
+  .post-grid{
+    grid-template-columns: 1.25fr 0.75fr; /* content + sidebar */
+    gap: 18px;
+  }
+}
+
+.card{
+  border: 1px solid rgba(0,0,0,0.10);
+  border-radius: var(--radius-lg);
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+  padding: 16px;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.card .meta{
+  font-size: 0.92rem;
+  opacity: 0.75;
+  margin-bottom: 6px;
+}
+
+.card h2, .card h3{
+  margin: 0 0 8px;
+  line-height: 1.25;
+}
+
+.card p{
+  margin: 0 0 12px;
+  opacity: 0.92;
+}
+
+.card .readmore{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Reading width on post pages */
+.post-content, article{
+  max-width: var(--reading-max);
+  margin-inline: auto;
+}
+
+/* Nav polish */
+nav a{
+  text-decoration: none;
+}
+
+nav a:hover{
+  opacity: 0.85;
+}
+
+/* Dark mode friendly cards (works even if your dark mode uses body.dark-mode) */
+body.dark-mode .card,
+.dark-mode .card{
+  border-color: rgba(255,255,255,0.14);
+  background: rgba(20,20,20,0.45);
+}
+
+body.dark-mode .btn,
+.dark-mode .btn{
+  border-color: rgba(255,255,255,0.16);
+  background: rgba(20,20,20,0.35);
+}
