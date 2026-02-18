@@ -500,7 +500,9 @@ a:hover {
 .footer {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 50%, #1a202c 100%);
     color: white;
+
     padding: calc(var(--spacing-2xl) + 12px) 0 var(--spacing-lg);
+
     margin-top: var(--spacing-2xl);
     position: relative;
     overflow: hidden;
@@ -509,7 +511,7 @@ a:hover {
 .footer::before {
     content: '';
     position: absolute;
-    top: 6px;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
