@@ -1552,4 +1552,30 @@ body.dark-mode .btn,
 .dark-mode .btn{
   border-color: rgba(255,255,255,0.16);
   background: rgba(20,20,20,0.35);
+}/* Gradient line on footer (top border accent) */
+.footer{
+  position: relative;
 }
+
+.footer::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;              /* garis di ATAS footer */
+  height: 3px;         /* ketebalan garis */
+  background: linear-gradient(
+    90deg,
+    #ff3b30 0%,
+    #ff2d95 35%,
+    #a855f7 65%,
+    #3b82f6 100%
+  );
+}
+
+/* kalau footer kamu punya overflow hidden, ini amanin */
+.footer{
+  overflow: hidden;
+}
+
+
