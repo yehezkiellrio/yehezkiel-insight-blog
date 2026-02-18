@@ -501,9 +501,9 @@ a:hover {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 50%, #1a202c 100%);
     color: white;
 
-    padding: calc(var(--spacing-2xl) + 12px) 0 var(--spacing-lg);
+    padding: calc(var(--spacing-4xl) + 16px) 0 var(--spacing-lg);
 
-    margin-top: var(--spacing-2xl);
+    margin-top: var(--spacing-4xl);
     position: relative;
     overflow: hidden;
 }
