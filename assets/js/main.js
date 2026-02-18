@@ -1,3 +1,10 @@
+// Load enhancements (dark mode + extras) on every page
+(function () {
+  const s = document.createElement("script");
+  s.src = (window.location.pathname.includes("/posts/") ? "../" : "") + "assets/js/enhancements.js";
+  s.defer = true;
+  document.head.appendChild(s);
+})();
 /**
  * Main JavaScript file for Yehezkiel's Insight Blog
  * Handles interactivity, search functionality, and user experience enhancements
