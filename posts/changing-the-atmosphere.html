@@ -1,269 +1,1000 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Changing the Atmosphere: From Living in Fear to Living in Faith - Yehezkiel's Insight</title>
-    <meta name="description" content="Everyone has fears, and it's okay. Learn how to change the atmosphere from fear to faith and let faith lead the way.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Changing the Atmosphere: From Living in Fear to Living in Faith — Yehezkiel's Insight</title>
+  <meta name="description" content="Semua orang pernah takut. Tapi ada perbedaan besar antara rasa takut yang membentuk dan rasa takut yang memenjara. Dan iman bukan tentang tidak takut — tapi tentang siapa yang kamu percayai di tengah rasa takut itu." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <link rel="stylesheet" href="../assets/css/enhancements.css" />
+
+  <style>
+    /* =========================================================
+       POST PAGE — Changing the Atmosphere
+       Theme accent: sky-blue (#0ea5e9) + amber (#f59e0b)
+       Fully dark/light mode aware, consistent with site DNA
+       ========================================================= */
+    .post-page { --post-max: 1120px; --content-max: 720px; }
+    .post-page .container { max-width: var(--post-max); }
+
+    /* ── Reading Progress ─────────────────────────────── */
+    .read-progress {
+      position: fixed;
+      top: 0; left: 0;
+      height: 3px; width: 0%;
+      background: linear-gradient(90deg, #0ea5e9, #f59e0b, #0ea5e9);
+      background-size: 200% 100%;
+      animation: shimmer 2.5s linear infinite;
+      z-index: 9999;
+      transition: width 0.1s linear;
+    }
+    @keyframes shimmer {
+      0%   { background-position: 0% 0%; }
+      100% { background-position: 200% 0%; }
+    }
+
+    /* ── HERO ─────────────────────────────────────────── */
+    .post-hero { padding: 32px 0 8px; }
+
+    .post-hero-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 24px;
+      padding: 36px 32px 28px;
+      border: 1px solid rgba(255,255,255,0.13);
+      background:
+        radial-gradient(900px 360px at 10% 8%,  rgba(14,165,233,0.26) 0%, transparent 55%),
+        radial-gradient(700px 300px at 90% 12%, rgba(245,158,11,0.22) 0%, transparent 55%),
+        radial-gradient(500px 260px at 50% 92%, rgba(168,85,247,0.12) 0%, transparent 60%),
+        linear-gradient(160deg, rgba(255,255,255,0.07) 0%, rgba(255,255,255,0.02) 100%);
+      box-shadow: 0 24px 64px rgba(0,0,0,0.22), inset 0 1px 0 rgba(255,255,255,0.08);
+      backdrop-filter: blur(12px);
+    }
+    body:not(.dark-mode) .post-hero-card {
+      border-color: rgba(15,23,42,0.10);
+      background:
+        radial-gradient(900px 360px at 10% 8%,  rgba(14,165,233,0.11) 0%, transparent 55%),
+        radial-gradient(700px 300px at 90% 12%, rgba(245,158,11,0.10) 0%, transparent 55%),
+        radial-gradient(500px 260px at 50% 92%, rgba(168,85,247,0.07) 0%, transparent 60%),
+        linear-gradient(160deg, rgba(255,255,255,0.94) 0%, rgba(247,250,252,0.88) 100%);
+      box-shadow: 0 24px 64px rgba(15,23,42,0.09), inset 0 1px 0 rgba(255,255,255,0.97);
+    }
+    .post-hero-card::after {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 240px; height: 240px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(14,165,233,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .post-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(14,165,233,0.35);
+      background: rgba(14,165,233,0.10);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: #0284c7;
+      margin-bottom: 18px;
+    }
+    .dark-mode .post-kicker { color: #38bdf8; border-color: rgba(56,189,248,0.30); background: rgba(14,165,233,0.12); }
+    .post-kicker::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: #0ea5e9;
+      flex-shrink: 0;
+    }
+
+    .post-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: clamp(2.0rem, 3.4vw, 3.1rem);
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+      margin: 0 0 8px;
+      color: #f1f5f9;
+    }
+    body:not(.dark-mode) .post-title { color: #1e293b; }
+
+    .post-title-sub {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+      font-weight: 400;
+      color: #38bdf8;
+      margin: 0 0 18px;
+      display: block;
+    }
+    body:not(.dark-mode) .post-title-sub { color: #0284c7; }
+
+    .post-subtitle {
+      max-width: 66ch;
+      line-height: 1.78;
+      margin: 0 0 22px;
+      font-size: 1.03rem;
+      color: #cbd5e1;
+    }
+    body:not(.dark-mode) .post-subtitle { color: #475569; }
+
+    .post-meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.10);
+    }
+    body:not(.dark-mode) .post-meta-bar { border-top-color: rgba(15,23,42,0.10); }
+
+    .pill {
+      display: inline-flex;
+      gap: 6px;
+      align-items: center;
+      padding: 7px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.06);
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    body:not(.dark-mode) .pill { border-color: rgba(15,23,42,0.12); background: rgba(15,23,42,0.04); }
+    .pill:hover { transform: translateY(-2px); background: rgba(14,165,233,0.12); border-color: rgba(14,165,233,0.30); }
+
+    /* ── LAYOUT ───────────────────────────────────────── */
+    .post-shell { padding: 20px 0 70px; }
+
+    .post-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      margin-top: 18px;
+    }
+    @media (min-width: 980px) {
+      .post-grid { grid-template-columns: minmax(0, 1fr) 260px; align-items: start; gap: 26px; }
+    }
+
+    .post-card {
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.11);
+      background: rgba(255,255,255,0.035);
+      overflow: hidden;
+      backdrop-filter: blur(4px);
+    }
+    body:not(.dark-mode) .post-card {
+      border-color: rgba(15,23,42,0.09);
+      background: rgba(255,255,255,0.72);
+      box-shadow: 0 4px 28px rgba(15,23,42,0.06);
+    }
+
+    .post-card.main-card { position: relative; }
+    .post-card.main-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, #0ea5e9, #f59e0b, #a855f7, #0ea5e9);
+      background-size: 300% 100%;
+      animation: gslide 7s ease infinite;
+    }
+    @keyframes gslide {
+      0%, 100% { background-position: 0% 0%; }
+      50%       { background-position: 100% 0%; }
+    }
+
+    .post-content {
+      max-width: var(--content-max);
+      margin: 0 auto;
+      padding: 36px 24px 40px;
+    }
+    @media (min-width: 680px) { .post-content { padding: 40px 40px 48px; } }
+
+    /* ── TYPOGRAPHY ───────────────────────────────────── */
+    .post-content p {
+      line-height: 1.9;
+      font-size: 1.02rem;
+      margin: 0 0 1.25em;
+      color: var(--text-color);
+    }
+    .dark-mode .post-content p { color: #cbd5e1; }
+    .post-content strong { color: var(--text-color); }
+    .dark-mode .post-content strong { color: #f1f5f9; }
+
+    .lead-text {
+      font-size: 1.09rem;
+      line-height: 1.92;
+      padding-bottom: 26px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+    }
+    body:not(.dark-mode) .lead-text { border-bottom-color: rgba(15,23,42,0.10); }
+    .dark-mode .lead-text p { color: #e2e8f0; }
+
+    .post-h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.42rem;
+      line-height: 1.22;
+      margin: 40px 0 12px;
+      letter-spacing: -0.2px;
+      color: var(--text-color);
+    }
+    .dark-mode .post-h2 { color: #f1f5f9; }
+
+    /* Labels */
+    .post-label {
+      display: inline-block;
+      font-weight: 700;
+      font-size: 0.71rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #0284c7;
+      margin: 36px 0 8px;
+      padding: 5px 10px;
+      border-radius: 6px;
+      background: rgba(14,165,233,0.09);
+      border: 1px solid rgba(14,165,233,0.22);
+    }
+    .dark-mode .post-label { color: #38bdf8; }
+
+    .post-label.amber {
+      color: #b45309;
+      background: rgba(245,158,11,0.09);
+      border-color: rgba(245,158,11,0.22);
+    }
+    .dark-mode .post-label.amber { color: #fbbf24; }
+
+    .post-label.red {
+      color: #dc2626;
+      background: rgba(239,68,68,0.08);
+      border-color: rgba(239,68,68,0.20);
+    }
+    .dark-mode .post-label.red { color: #f87171; }
+
+    .post-label.purple {
+      color: #7c3aed;
+      background: rgba(168,85,247,0.08);
+      border-color: rgba(168,85,247,0.20);
+    }
+    .dark-mode .post-label.purple { color: #c084fc; }
+
+    /* ── SECTION DIVIDER ──────────────────────────────── */
+    .section-divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 34px 0;
+    }
+    .section-divider::before,
+    .section-divider::after {
+      content: ''; flex: 1; height: 1px;
+      background: rgba(255,255,255,0.10);
+    }
+    body:not(.dark-mode) .section-divider::before,
+    body:not(.dark-mode) .section-divider::after { background: rgba(15,23,42,0.10); }
+    .sdots { display: flex; gap: 5px; align-items: center; }
+    .sdots span { width: 5px; height: 5px; border-radius: 50%; background: linear-gradient(135deg, #0ea5e9, #f59e0b); }
+    .sdots span:nth-child(2) { opacity: 0.5; width: 4px; height: 4px; }
+    .sdots span:nth-child(3) { opacity: 0.25; width: 3px; height: 3px; }
+
+    /* ── VERSE BOX ────────────────────────────────────── */
+    .verse-box {
+      margin: 26px 0;
+      padding: 22px 26px;
+      border-radius: 16px;
+      border: 1px solid rgba(14,165,233,0.28);
+      background: rgba(14,165,233,0.06);
+      position: relative; overflow: hidden;
+    }
+    body:not(.dark-mode) .verse-box { background: rgba(14,165,233,0.05); }
+    .verse-box::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, #0ea5e9, #f59e0b);
+    }
+    .verse-box p {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.07rem !important;
+      line-height: 1.75 !important;
+      margin-bottom: 10px !important;
+    }
+    .verse-ref {
+      font-family: 'Inter', sans-serif !important;
+      font-size: 0.78rem !important;
+      font-style: normal !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #0284c7 !important;
+      margin-bottom: 0 !important;
+    }
+    .dark-mode .verse-ref { color: #38bdf8 !important; }
+
+    /* ── QUOTE ────────────────────────────────────────── */
+    .quote {
+      position: relative;
+      border-left: 3px solid #0ea5e9;
+      padding: 18px 18px 18px 24px;
+      margin: 26px 0;
+      background: rgba(14,165,233,0.06);
+      border-radius: 0 14px 14px 0;
+      overflow: hidden;
+    }
+    body:not(.dark-mode) .quote { background: rgba(14,165,233,0.05); }
+    .quote::before {
+      content: '\201C';
+      position: absolute;
+      top: -10px; left: 12px;
+      font-family: 'Playfair Display', serif;
+      font-size: 3.8rem;
+      color: rgba(14,165,233,0.18);
+      line-height: 1;
+      pointer-events: none;
+    }
+    .quote p { margin: 0 0 8px !important; font-style: italic; line-height: 1.82; font-size: 1.0rem !important; }
+    .quote p:last-child { margin-bottom: 0 !important; }
+    .quote cite { display: block; margin-top: 10px; font-size: 0.82rem; opacity: 0.68; font-style: normal; font-weight: 500; }
+
+    /* ── CONCEPT CARD (dark inverted) ─────────────────── */
+    .concept-card {
+      margin: 28px 0;
+      padding: 26px 28px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #040d1a 0%, #0c1a2e 100%);
+      border: 1px solid rgba(14,165,233,0.22);
+      color: #e2e8f0;
+      position: relative; overflow: hidden;
+    }
+    body:not(.dark-mode) .concept-card { background: linear-gradient(135deg, #0c1a2e 0%, #1e1b4b 100%); }
+    .concept-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, #0ea5e9, #f59e0b, #a855f7);
+    }
+    .concept-card-label {
+      font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: #38bdf8; margin-bottom: 12px;
+    }
+    .concept-card p {
+      color: rgba(226,232,240,0.88) !important;
+      font-size: 1.05rem !important;
+      line-height: 1.82 !important;
+      margin-bottom: 0 !important;
+      font-style: italic;
+    }
+
+    /* ── PERSONAL NOTE (blue) ─────────────────────────── */
+    .personal-note {
+      margin: 26px 0; padding: 20px 22px;
+      border-radius: 14px;
+      border: 1px solid rgba(14,165,233,0.22);
+      background: rgba(14,165,233,0.06);
+      border-left: 3px solid #0ea5e9;
+    }
+    .personal-note p { margin-bottom: 8px !important; font-size: 0.98rem !important; line-height: 1.88 !important; }
+    .personal-note p:last-child { margin-bottom: 0 !important; }
+
+    /* ── TESTIMONY (amber warm) ───────────────────────── */
+    .testimony {
+      margin: 26px 0; padding: 20px 22px;
+      border-radius: 14px;
+      border: 1px solid rgba(245,158,11,0.22);
+      background: rgba(245,158,11,0.05);
+      border-left: 3px solid #f59e0b;
+    }
+    .testimony p { margin-bottom: 8px !important; font-size: 0.98rem !important; line-height: 1.88 !important; }
+    .testimony p:last-child { margin-bottom: 0 !important; }
+    .testimony-label {
+      font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: #b45309; margin-bottom: 10px; display: block;
+    }
+    .dark-mode .testimony-label { color: #fbbf24; }
+
+    /* ── ILLUSTRATION ─────────────────────────────────── */
+    .illustration {
+      margin: 26px 0; padding: 22px 24px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.10);
+    }
+    body:not(.dark-mode) .illustration { background: rgba(15,23,42,0.03); border-color: rgba(15,23,42,0.09); }
+    .illus-label {
+      font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: #0ea5e9; margin-bottom: 10px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    body:not(.dark-mode) .illus-label { color: #0284c7; }
+    .illus-label::before { content: ''; display: inline-block; width: 14px; height: 1px; background: currentColor; }
+    .illustration p { margin-bottom: 8px !important; font-size: 0.99rem !important; line-height: 1.88 !important; }
+    .illustration p:last-child { margin-bottom: 0 !important; }
+
+    /* ── PHILOSOPHY CHALLENGE BOX ─────────────────────── */
+    .philo-box {
+      margin: 30px 0; border-radius: 18px;
+      overflow: hidden; border: 1px solid rgba(239,68,68,0.22);
+    }
+    .philo-header {
+      padding: 14px 22px;
+      background: rgba(239,68,68,0.10);
+      border-bottom: 1px solid rgba(239,68,68,0.18);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .dark-mode .philo-header { background: rgba(239,68,68,0.12); }
+    .philo-icon {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: rgba(239,68,68,0.18);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.9rem; flex-shrink: 0;
+    }
+    .philo-title {
+      font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: #ef4444;
+    }
+    .dark-mode .philo-title { color: #f87171; }
+    .philo-claim {
+      padding: 16px 22px 18px;
+      background: rgba(239,68,68,0.05);
+    }
+    .philo-claim p {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.06rem !important;
+      line-height: 1.72 !important;
+      margin-bottom: 0 !important;
+    }
+    .philo-response {
+      padding: 18px 22px 20px;
+      border-top: 1px solid rgba(14,165,233,0.18);
+      background: rgba(14,165,233,0.05);
+    }
+    .philo-response-label {
+      font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: #0284c7; margin-bottom: 10px;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .dark-mode .philo-response-label { color: #38bdf8; }
+    .philo-response-label::before { content: '✦'; }
+    .philo-response p { margin-bottom: 8px !important; font-size: 0.97rem !important; line-height: 1.85 !important; }
+    .philo-response p:last-child { margin-bottom: 0 !important; }
+
+    /* ── FEAR TYPES — side-by-side contrast ──────────── */
+    .contrast-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 24px 0;
+    }
+    @media (max-width: 600px) { .contrast-grid { grid-template-columns: 1fr; } }
+
+    .contrast-card {
+      padding: 18px 20px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.10);
+    }
+    body:not(.dark-mode) .contrast-card { border-color: rgba(15,23,42,0.09); }
+    .contrast-card.good {
+      background: rgba(14,165,233,0.06);
+      border-color: rgba(14,165,233,0.22);
+    }
+    .contrast-card.bad {
+      background: rgba(239,68,68,0.05);
+      border-color: rgba(239,68,68,0.18);
+    }
+    .contrast-label {
+      font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      margin-bottom: 10px; display: block;
+    }
+    .contrast-card.good .contrast-label { color: #0ea5e9; }
+    .contrast-card.bad  .contrast-label { color: #ef4444; }
+    .dark-mode .contrast-card.bad .contrast-label { color: #f87171; }
+    .contrast-card p { margin-bottom: 0 !important; font-size: 0.92rem !important; line-height: 1.78 !important; }
+
+    /* ── BULLETS ──────────────────────────────────────── */
+    .bullets { list-style: none; padding: 0; margin: 16px 0 22px; }
+    .bullets li {
+      position: relative;
+      padding: 11px 14px 11px 38px;
+      margin-bottom: 8px; border-radius: 10px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      line-height: 1.78; font-size: 0.98rem;
+    }
+    body:not(.dark-mode) .bullets li { background: rgba(15,23,42,0.03); border-color: rgba(15,23,42,0.08); }
+    .bullets li::before {
+      content: '';
+      position: absolute; left: 14px; top: 19px;
+      width: 7px; height: 7px; border-radius: 50%;
+      background: linear-gradient(135deg, #0ea5e9, #f59e0b);
+    }
+
+    /* ── CLOSING NOTE ─────────────────────────────────── */
+    .closing-note {
+      margin-top: 40px; padding: 30px 32px;
+      border-radius: 18px; text-align: center;
+      border: 1px solid rgba(14,165,233,0.22);
+      background: rgba(14,165,233,0.05);
+      position: relative; overflow: hidden;
+    }
+    .closing-note::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, #0ea5e9, #f59e0b, #a855f7);
+    }
+    .closing-note p {
+      font-family: 'Playfair Display', serif; font-style: italic;
+      font-size: 1.1rem !important; line-height: 1.85 !important;
+      margin-bottom: 12px !important;
+    }
+    .closing-note p:last-child { margin-bottom: 0 !important; }
+    .closing-signature {
+      font-family: 'Inter', sans-serif !important;
+      font-style: normal !important; font-size: 0.9rem !important;
+      font-weight: 600 !important; opacity: 0.72;
+    }
+
+    /* ── FOOTER NOTE ──────────────────────────────────── */
+    .footer-note {
+      margin-top: 30px; padding: 16px 18px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.05);
+    }
+    body:not(.dark-mode) .footer-note { border-color: rgba(15,23,42,0.10); background: rgba(15,23,42,0.03); }
+
+    /* ── POST NAV ─────────────────────────────────────── */
+    .post-nav { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 26px; }
+    .post-nav a {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 16px; border-radius: 999px; text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.05);
+      font-size: 0.88rem; font-weight: 500; transition: all 0.2s ease;
+    }
+    body:not(.dark-mode) .post-nav a { border-color: rgba(15,23,42,0.12); background: rgba(15,23,42,0.04); }
+    .post-nav a:hover { transform: translateY(-2px); background: rgba(14,165,233,0.10); border-color: rgba(14,165,233,0.30); }
+
+    /* ── TOC ──────────────────────────────────────────── */
+    .post-card.toc { border: none !important; background: none !important; box-shadow: none !important; backdrop-filter: none !important; }
+    .toc { padding: 24px 8px 20px; }
+    @media (min-width: 980px) { .toc { position: sticky; top: 92px; } }
+    .toc-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.95rem; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--text-color); margin: 0 0 18px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+    }
+    body:not(.dark-mode) .toc-title { border-bottom-color: rgba(15,23,42,0.10); }
+    .toc a {
+      display: block; padding: 9px 0 9px 16px;
+      text-decoration: none; font-size: 0.92rem; font-weight: 400;
+      color: var(--accent-color);
+      border-left: 2px solid transparent;
+      transition: all 0.18s ease; line-height: 1.4;
+    }
+    .toc a:hover { border-left-color: var(--accent-color); padding-left: 20px; opacity: 0.85; }
+    .toc a.active { border-left-color: #0ea5e9; color: #0ea5e9; font-weight: 500; }
+    body:not(.dark-mode) .toc a.active { color: #0284c7; border-left-color: #0284c7; }
+
+    .anchor { scroll-margin-top: 100px; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .post-hero { animation: fadeUp 0.55s ease both; }
+    .post-grid { animation: fadeUp 0.55s ease 0.12s both; }
+  </style>
 </head>
-<body>
-    <!-- Header -->
-    <header class="header" id="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <h1><a href="../index.html">Yehezkiel's Insight</a></h1>
-                    <p class="tagline">Walking with Faith, Living with Purpose</p>
-                </div>
-                <nav class="nav">
-                    <ul class="nav-list">
-                        <li><a href="../index.html" class="nav-link">Home</a></li>
-                        <li><a href="../about.html" class="nav-link">About</a></li>
-                        <li><button id="darkModeToggle" class="dark-mode-toggle">Dark Mode Off</button></li>
-                    </ul>
-                </nav>
-            </div>
+
+<body class="post-page">
+  <div class="read-progress" id="readProgress"></div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <h1><a href="../index.html">Yehezkiel's Insight</a></h1>
+          <p class="tagline">Walking with Faith, Living with Purpose</p>
         </div>
-    </header>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="../index.html" class="nav-link">Home</a></li>
+            <li><a href="../about.html" class="nav-link">About</a></li>
+            <li><button id="darkModeToggle" class="dark-mode-toggle" type="button">Dark Mode Off</button></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-    <!-- Main Content -->
-    <main class="main">
-        <div class="container">
-            <article class="post-content">
-                <header class="post-header">
-                    <div class="post-meta">
-                        <time datetime="2025-07-31">31 Juli 2025</time>
-                    </div>
-                    <h1 class="post-title">Changing the Atmosphere: From Living in Fear to Living in Faith</h1>
-                </header>
-
-                <div class="post-body">
-                    <section class="post-section">
-                        <h2>Everyone Has Fears (and It's Okay)</h2>
-                        
-                        <p>Setiap orang pasti pernah takut, yes, termasuk saya juga.</p>
-
-                        <p>Kadang rasa takut itu muncul tiba-tiba, diem-diem di malam hari, atau bahkan pas lagi sibuk di tengah keramaian.</p>
-
-                        <p>Dan anehnya, sometimes it hits so hard sampai saya ngerasa nggak yakin sama diri sendiri.</p>
-
-                        <p>Tapi, honestly, nggak semua takut itu jelek kok. Ada juga takut yang justru bikin kita lebih hati-hati, lebih rajin, jadi nggak gampang leha-leha.</p>
-
-                        <p>Takut yang sehat ini, surprisingly, bisa jadi alasan kita buat grow, jadi versi yang lebih baik.</p>
-                    </section>
-
-                    <section class="post-section">
-                        <h2>Fear That Moves Me</h2>
-                        
-                        <p>Saya jadi inget masa kecil, ada temen yang nakalnya luar biasa. Dinasihati ortu nggak ngaruh, sama kakaknya juga nggak mempan. Tapi anehnya, pas ketemu gurunya, dia bisa langsung berubah jadi anak yang sangat baik dan nurut.</p>
-
-                        <p>Dari situ saya sadar, ternyata rasa takut juga bisa jadi dorongan buat seseorang berubah ke arah yang positif.</p>
-
-                        <p>Atau waktu saya harus presentasi. Karena takut banget kalo salah dan malu, saya latihan terus terusan sampai akhirnya presentasi itu berjalan lancar.</p>
-
-                        <p>Kadang, rasa takut itu justru jadi motivasi buat push diri sendiri keluar dari zona nyaman.</p>
-                    </section>
-
-                    <section class="post-section">
-                        <h2>Fear That Paralyzes Me</h2>
-                        
-                        <p>Tapi, jujur aja, nggak semua rasa takut itu membantu.</p>
-
-                        <p>Ada juga ketakutan yang bikin saya stuck, freeze, nggak berani maju, sampai akhirnya kesempatan baik lewat gitu aja.</p>
-
-                        <p>Langsung keinget cerita Raja Saul sama tentaranya yang keren-keren. Tapi begitu Goliat muncul, semuanya langsung ciut, nggak ada satupun yang berani maju.</p>
-
-                        <p>Atau kisah hamba yang dapat satu talenta di Matius 25, karena takut, dia malah kubur talentanya.</p>
-
-                        <blockquote class="quote">
-                            <p>"Karena itu aku takut dan pergi menyembunyikan talenta tuan itu di dalam tanah."</p>
-                        </blockquote>
-
-                        <p>Padahal, kalau mau ambil risiko, mungkin hasilnya bisa beda.</p>
-
-                        <p>Kadang, saya pun begitu, ketakutan bikin saya nggak berani melangkah dan akhirnya kehilangan peluang.</p>
-                    </section>
-
-                    <section class="post-section">
-                        <h2>Fear That Controls Me</h2>
-                        
-                        <p>Kadang rasa takut itu kayak invisible chain, nahan langkah saya.</p>
-
-                        <p>Pikiran mulai overthinking: "Gimana kalau hal buruk beneran kejadian?"</p>
-
-                        <p>Padahal, menurut research, 85% ketakutan kita nggak pernah kejadian sama sekali. Sisanya, kalaupun kejadian, ternyata nggak separah yang udah dibayangin.</p>
-
-                        <p>Di Roma 8:15 ada ayat yang bilang, "Kamu nggak lagi terima roh perbudakan yang bikin kamu takut, tapi Roh yang bikin kamu jadi anak Allah."</p>
-
-                        <p>Honestly, saya sering lupa. Kadang lebih dengerin suara takut daripada kebenaran Tuhan sendiri.</p>
-                    </section>
-
-                    <section class="post-section">
-                        <h2>When Fear Meets the Light</h2>
-                        
-                        <p>Takut itu biasanya tumbuh subur di tempat gelap, area yang nggak kita ngerti, "the unknown."</p>
-
-                        <p>Takut periksa ke dokter bukan karena sakitnya, tapi takut denger hasil labnya.</p>
-
-                        <p>Takut public speaking, takut dibanding-bandingin, takut nggak cukup bagus, takut nggak ada yang dengerin.</p>
-
-                        <p>Padahal, seringnya, semua itu cuma di kepala doang.</p>
-
-                        <p>Saya belajar satu hal: begitu saya bawa ketakutan ke terang, ke hadapan Tuhan, pelan-pelan rasa takut itu mengecil sendiri.</p>
-
-                        <blockquote class="quote">
-                            <p>"Kamu akan tahu kebenaran, dan kebenaran itu yang memerdekakan kamu."</p>
-                            <cite>(Yohanes 8:32)</cite>
-                        </blockquote>
-
-                        <p>Sometimes, the truth is: ketakutan itu cuma bayangan doang, bukan kenyataan.</p>
-
-                        <p>Jadi, coba tanya deh, "Sebenernya, saya takut sama apa sih? Ini real atau cuma di pikiran sendiri?"</p>
-                    </section>
-
-                    <section class="post-section">
-                        <h2>When Faith Replaces Fear</h2>
-                        
-                        <p>Yang saya suka, lawan kata dari takut itu bukan sekedar berani, tapi iman.</p>
-
-                        <p>Berani biasanya muncul dari self-confidence, dari merasa "I can do this."</p>
-
-                        <p>Tapi iman? Iman itu tentang percaya bahwa Tuhan tetap pegang kendali, even waktu saya lagi nggak yakin sama diri sendiri.</p>
-
-                        <p>Bahkan Yesus juga pernah takut kok. Di Lukas 22:44 diceritain, waktu Yesus ketakutan banget, Dia malah makin sungguh-sungguh berdoa.</p>
-
-                        <p>Bukan lari, tapi bawa ketakutannya ke Tuhan.</p>
-
-                        <p>Itu reminder buat saya, kalau takut ya bilang aja sama Tuhan.</p>
-
-                        <blockquote class="quote">
-                            <p>"Karena Ia sendiri pernah dicobai dan menderita, maka Ia bisa menolong mereka yang dicobai."</p>
-                            <cite>(Ibrani 2:18)</cite>
-                        </blockquote>
-
-                        <p>Iman itu nggak selalu bikin semua jadi gampang, tapi setidaknya kita nggak harus jalan sendiri.</p>
-
-                        <p>Iman itu kayak anchor, tali jangkar, di tengah badai ketakutan.</p>
-                    </section>
-
-                    <section class="post-section">
-                        <h2>Bringing Fear Into the Light of Truth</h2>
-                        
-                        <p>Selama saya hidup dalam ketakutan, suara negatif bakal terus nyamperin.</p>
-
-                        <p>Tapi kuncinya: bawa semua ketakutan itu ke Firman Tuhan, dan inget siapa saya di mata-Nya.</p>
-
-                        <p>Jangan biarin suara takut lebih keras dari suara Tuhan.</p>
-
-                        <blockquote class="quote">
-                            <p>"Sebab Allah memberi kita bukan roh ketakutan, tapi roh yang membangkitkan kekuatan, kasih, dan ketertiban."</p>
-                            <cite>(2 Timotius 1:7)</cite>
-                        </blockquote>
-
-                        <p>Jangan lupa, kita bukan budak ketakutan, kita adalah anak yang dikasihi-Nya.</p>
-                    </section>
-
-                    <section class="post-section">
-                        <h2>Change the Atmosphere, Change the Frequency</h2>
-                        
-                        <p>Kadang saya harus sadar banget buat switch suasana hati.</p>
-
-                        <p>Nggak bisa sendirian terus sama ketakutan, karena makin lama makin berat.</p>
-
-                        <p>Ketemu temen, gabung komunitas, ikut ibadah, itu semua bantu banget.</p>
-
-                        <p>Setiap kali saya worship, somehow, rasa takut mulai luntur dan pelan-pelan diganti sama rasa damai.</p>
-
-                        <p><strong>Don't let fear write your story. Let faith lead the way.</strong></p>
-
-                        <blockquote class="quote">
-                            <p>"Waktu aku takut, aku ini percaya kepada-Mu."</p>
-                            <cite>(Mazmur 56:4)</cite>
-                        </blockquote>
-
-                        <p>Masalah kita memang kadang kelihatan besar banget, tapi iman bikin kita inget, nothing's too big for God.</p>
-                    </section>
-
-                    <section class="post-section">
-                        <h2>Tonight, Let Faith Lead You</h2>
-                        
-                        <p>Hari ini, kalau takut datang lagi, saya bakal coba duduk sebentar, hadapin, dan tanya:</p>
-
-                        <p><em>"Kamu ini nyata, atau cuma bayangan aja?"</em></p>
-
-                        <p>Habis itu, saya bawa semua ketakutan itu ke Tuhan.</p>
-
-                        <p>Biar iman pelan-pelan gantiin suasana hati.</p>
-
-                        <p>Hidup dalam iman nggak selalu mudah, tapi saya tahu, saya nggak pernah sendirian.</p>
-
-                        <p>Atmosfer berubah. Saya pun berubah.</p>
-
-                        <p><strong>So, let's change the atmosphere, from fear to faith.</strong></p>
-
-                        <p><strong>Let faith lead the way.</strong></p>
-
-                        <p>Ingat, kita itu berharga, dicintai, dan nggak pernah sendirian. Tuhan selalu ada, bahkan waktu nggak kelihatan sekalipun. You got this, because He's got you.</p>
-
-                        <div class="post-signature">
-                            <p><strong>Warm regards,<br>YHZ</strong></p>
-                        </div>
-                    </section>
-                </div>
-
-                <footer class="post-footer">
-                    <div class="share-links">
-                        <h4>Share this post:</h4>
-                        <a href="https://twitter.com/intent/tweet?text=Changing the Atmosphere: From Living in Fear to Living in Faith&url=" class="share-link">Twitter</a>
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-link">Facebook</a>
-                        <a href="mailto:?subject=Check this out&body=Here is an interesting post about changing from fear to faith:" class="share-link">Email</a>
-                    </div>
-                    <div class="post-navigation">
-                        <a href="../index.html" class="nav-button">← Back to Home</a>
-                        <a href="fullness-of-christ.html" class="nav-button">Next Post →</a>
-                    </div>
-                </footer>
-            </article>
+  <!-- Hero -->
+  <section class="post-hero">
+    <div class="container">
+      <div class="post-hero-card">
+        <div class="post-kicker">Iman &nbsp;·&nbsp; Ketakutan &nbsp;·&nbsp; Perubahan Atmosfer</div>
+        <h1 class="post-title">Changing the Atmosphere</h1>
+        <span class="post-title-sub">From Living in Fear to Living in Faith</span>
+        <p class="post-subtitle">
+          Semua orang pernah takut — termasuk saya. Tapi ada perbedaan besar antara rasa takut yang mendorong kita bertumbuh dan rasa takut yang memenjara kita di tempat yang sama bertahun-tahun. Dan iman yang sejati bukan tentang tidak pernah takut, tapi tentang siapa yang kamu percayai di tengah rasa takut itu.
+        </p>
+        <div class="post-meta-bar">
+          <span class="pill">📅 31 Juli 2025</span>
+          <span class="pill">⏱ Bacaan ~12 menit</span>
+          <span class="pill">✍️ Yehezkiel</span>
+          <a class="pill" href="../index.html">← Back to Home</a>
         </div>
-    </main>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3 class="footer-title">Stay Connected</h3>
-                    <p>Subscribe to receive updates on new posts and insights.</p>
-                    <form class="subscription-form" id="subscriptionForm">
-                        <div class="form-group">
-                            <input type="email" id="emailInput" placeholder="Enter your email" class="email-input" required>
-                            <button type="submit" class="subscribe-btn">Subscribe</button>
-                        </div>
-                    </form>
-                </div>
-                
-                <div class="footer-section">
-                    <h3 class="footer-title">Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="../about.html">About</a></li>
-                        <li><a href="#" class="social-link">Twitter</a></li>
-                        <li><a href="#" class="social-link">Facebook</a></li>
-                        <li><a href="https://www.instagram.com/yhzrio?igsh=dnE0amZlZWlhOXYy&utm_source=qr" class="social-link" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-                    </ul>
-                </div>
+  <!-- Body -->
+  <main class="post-shell">
+    <div class="container">
+      <div class="post-grid">
+
+        <article class="post-card main-card" aria-label="Post content">
+          <div class="post-content">
+
+            <!-- LEAD -->
+            <div class="lead-text" id="intro">
+              <p>Setiap orang pasti pernah takut. Ya, termasuk saya juga.</p>
+              <p>Kadang rasa takut itu muncul tiba-tiba di malam hari saat semua sudah sepi dan tidak ada distraksi yang bisa menutup suara pikiran sendiri. Kadang ia datang di tengah keramaian, di acara yang seharusnya menyenangkan — tapi ada sesuatu di dalam yang berbisik, <em>"Kamu nggak cukup. Kamu nggak akan berhasil. Lihat yang lain, mereka jauh lebih siap."</em></p>
+              <p>Dan jujur? Rasa takut itu bisa sangat melelahkan. Bukan hanya karena isinya yang berat, tapi karena ia datang terus-menerus, seperti notifikasi yang tidak bisa di-mute. Tapi hari ini saya mau mengajak kita melihat rasa takut lebih jujur — dari sisinya yang membentuk, dari sisinya yang memenjara, dan dari sisi yang dunia seringkali salah pahami.</p>
             </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2025 Yehezkiel's Insight. Walking with Faith, Living with Purpose.</p>
+
+            <div class="section-divider"><div class="sdots"><span></span><span></span><span></span></div></div>
+
+            <!-- SECTION 1: DUA WAJAH TAKUT -->
+            <div id="duawajah" class="anchor"></div>
+            <div class="post-label amber">Memahami Rasa Takut</div>
+            <h2 class="post-h2">Dua Wajah Rasa Takut — Nggak Semua Sama</h2>
+
+            <p>Ini hal yang jarang kita bicarakan dengan jujur: tidak semua rasa takut itu musuh. Ada rasa takut yang sehat, yang fungsinya seperti alarm — memberi sinyal bahwa ada sesuatu yang perlu diperhatikan, sesuatu yang perlu disiapkan lebih serius.</p>
+
+            <div class="contrast-grid">
+              <div class="contrast-card good">
+                <span class="contrast-label">Takut yang Membentuk</span>
+                <p>Mendorong kita untuk bersiap lebih baik, lebih berhati-hati, lebih bertanggung jawab. Rasa takut ini seperti bensin — memberi energi untuk bergerak.</p>
+              </div>
+              <div class="contrast-card bad">
+                <span class="contrast-label">Takut yang Memenjara</span>
+                <p>Membuat kita freeze, menghindari, menarik diri. Rasa takut ini seperti rem tangan yang tidak pernah dilepas — mesin menyala, tapi tidak kemana-mana.</p>
+              </div>
             </div>
+
+            <p>Saya jadi inget masa kecil — ada teman yang nakalnya luar biasa. Dinasihati orang tua tidak mempan, sama kakaknya pun tidak bergeming. Tapi anehnya, begitu ketemu gurunya, dia bisa langsung berubah jadi anak yang nurut dan baik. Dari situ saya sadar: rasa takut yang tepat, kepada sosok yang tepat, bisa menggerakkan seseorang ke arah yang lebih baik.</p>
+
+            <p>Atau waktu saya harus presentasi besar. Karena takut banget kalau salah dan bikin malu, saya latihan terus sampai presentasi itu berjalan lancar — jauh lebih baik dari yang saya bayangkan. Kalau tidak ada rasa takut itu, mungkin saya akan santai-santai saja sampai hari-H dan hasilnya jauh berbeda.</p>
+
+            <div class="illustration">
+              <div class="illus-label">Ilustrasi</div>
+              <p>Seorang pemanjat tebing profesional tidak memanjat tanpa rasa takut sama sekali. Justru rasa takutnya yang membuat dia memeriksa tali dengan teliti, memilih jalur dengan cermat, dan tidak sembrono mengambil keputusan di ketinggian. Rasa takutnya sehat — ia memberitahu bahwa situasi ini serius dan perlu dihormati.</p>
+              <p>Tapi kalau rasa takut itu berkembang menjadi "saya tidak akan pernah memanjat lagi karena terlalu berbahaya," ia sudah berhenti jadi alarm dan berubah menjadi penjara.</p>
+            </div>
+
+            <div class="section-divider"><div class="sdots"><span></span><span></span><span></span></div></div>
+
+            <!-- SECTION 2: TAKUT YANG MELUMPUHKAN -->
+            <div id="lumpuh" class="anchor"></div>
+            <div class="post-label red">Yang Perlu Kita Jujur</div>
+            <h2 class="post-h2">Ketakutan yang Melumpuhkan — Saul, Goliat, dan Kita</h2>
+
+            <p>Tapi jujur aja — tidak semua rasa takut bisa jadi motivasi. Ada ketakutan yang justru membuat kita stuck, freeze, tidak berani melangkah, sampai akhirnya kesempatan yang baik lewat begitu saja dan kita hanya bisa menyaksikannya dari kejauhan.</p>
+
+            <p>Langsung keinget kisah Raja Saul dan tentaranya. Orang-orang pilihan, terlatih, diperlengkapi. Tapi begitu Goliat muncul dan mulai bicara dengan suara besarnya, semuanya langsung ciut. Empat puluh hari — setiap pagi dan sore Goliat maju dan menantang, dan empat puluh hari itu tidak ada satu pun dari tentara Israel yang berani maju.</p>
+
+            <div class="illustration">
+              <div class="illus-label">Bayangkan ini</div>
+              <p>Empat puluh hari berarti delapan puluh kali Goliat maju menantang. Delapan puluh kali seluruh tentara Israel — yang dilatih untuk perang, yang membawa senjata, yang jumlahnya jauh lebih banyak — memilih untuk tidak bergerak. Bukan karena mereka tidak mampu secara fisik. Tapi karena rasa takut sudah mengambil alih narasinya: <em>"Dia terlalu besar. Kami tidak mungkin menang."</em></p>
+              <p>Dan menariknya, Daud yang datang — anak remaja yang awalnya cuma disuruh mengantar roti — justru yang paling polos dalam memandang situasi itu. Dia tidak melihat Goliat yang terlalu besar untuk dikalahkan. Dia melihat Goliat yang terlalu besar untuk meleset.</p>
+            </div>
+
+            <p>Lalu ada kisah hamba yang menerima satu talenta di Matius 25. Alasannya sederhana dan terdengar masuk akal:</p>
+
+            <div class="verse-box">
+              <p>"Karena itu aku takut dan pergi menyembunyikan talenta tuan itu di dalam tanah. Ini, terimalah kepunyaanmu."</p>
+              <p class="verse-ref">Matius 25:25</p>
+            </div>
+
+            <p>Dia tidak membuang talenta itu. Dia tidak menggunakannya untuk hal yang jahat. Dia hanya menyembunyikannya — karena takut. Dan itu yang membuat tuannya marah. Bukan karena hamba itu gagal mencoba, tapi karena ia tidak pernah mencoba sama sekali.</p>
+
+            <div class="personal-note">
+              <p>Saya pernah ada di posisi hamba itu. Bukan soal uang, tapi soal potensi dan kesempatan. Ada proyek yang saya tahu saya bisa kerjakan, tapi saya tunda terus karena <em>"nanti saja kalau sudah siap."</em> Satu minggu jadi satu bulan, satu bulan jadi setahun. Dan waktu akhirnya saya mau memulai, momentumnya sudah lewat. Kesempatan itu tidak menunggu saya untuk merasa cukup berani.</p>
+            </div>
+
+            <div class="section-divider"><div class="sdots"><span></span><span></span><span></span></div></div>
+
+            <!-- SECTION 3: FILOSOFIS -->
+            <div id="filosofi" class="anchor"></div>
+            <div class="post-label red">Perlu Kita Periksa Bersama</div>
+            <h2 class="post-h2">"Hadapi Ketakutanmu" — Filosofi yang Benar Setengahnya</h2>
+
+            <p>Ada filosofi yang sangat populer di dunia self-development sekarang, dan saya mau kita periksa bersama dengan jujur:</p>
+
+            <div class="philo-box">
+              <div class="philo-header">
+                <div class="philo-icon">💬</div>
+                <div class="philo-title">Filosofi Populer: "Feel the Fear and Do It Anyway"</div>
+              </div>
+              <div class="philo-claim">
+                <p>"Kunci untuk mengatasi ketakutan adalah dengan melawannya langsung. Berani adalah otot yang perlu dilatih. Semakin sering kamu melawan rasa takut, semakin kuat kamu jadinya. Kamu yang menentukan hidupmu sendiri."</p>
+              </div>
+              <div class="philo-response">
+                <div class="philo-response-label">Perspektif Alkitab</div>
+                <p>Ada kebenaran di sini — tindakan memang penting, dan Alkitab pun berulang kali mendorong kita untuk "be strong and courageous." Tapi ada satu hal yang berbeda secara fundamental: <strong>sumber keberanian itu dari mana?</strong></p>
+                <p>Filosofi "feel the fear and do it anyway" menempatkan diri sendiri sebagai sumber kekuatan — saya yang cukup kuat, saya yang cukup disiplin, saya yang cukup berani. Ini terdengar powerful, tapi ia runtuh di hadapan ketakutan yang benar-benar di luar kapasitas kita. Apa yang terjadi ketika kita sudah "lawan ketakutan" dan tetap gagal? Sistemnya tidak punya jawaban selain "kurang keras berusahanya."</p>
+                <p>Alkitab menawarkan fondasi yang berbeda: keberanian bukan dari dalam diri kita yang sudah cukup kuat, tapi dari kepercayaan pada Tuhan yang tidak pernah meninggalkan. Yosua 1:9 berkata, <em>"Kuatkan dan teguhkan hatimu, janganlah takut dan jangan gemetar, sebab TUHAN, Allahmu, menyertai engkau ke manapun engkau pergi."</em> Sumber keberaniannya bukan kapasitas Yosua — tapi kehadiran Tuhan.</p>
+              </div>
+            </div>
+
+            <div class="philo-box">
+              <div class="philo-header">
+                <div class="philo-icon">💬</div>
+                <div class="philo-title">Filosofi Stoikisme: "Fokus Hanya pada yang Bisa Kamu Kontrol"</div>
+              </div>
+              <div class="philo-claim">
+                <p>"Ketakutan muncul karena kita khawatir tentang hal-hal yang tidak bisa kita kendalikan. Solusinya sederhana: bedakan yang bisa dan tidak bisa dikontrol, lalu lepaskan yang kedua. Terima saja realita sebagaimana adanya."</p>
+              </div>
+              <div class="philo-response">
+                <div class="philo-response-label">Perspektif Alkitab</div>
+                <p>Stoikisme adalah salah satu filsafat paling sehat yang pernah dihasilkan manusia, dan banyak elemen-nya yang resonate dengan Alkitab — termasuk gagasan tentang tidak terlalu melekat pada hal-hal yang bersifat sementara. Tapi ada jurang yang penting di sini.</p>
+                <p>Stoikisme mengajarkan penerimaan dan detachment sebagai solusi — kamu berdamai dengan realita karena kamu belajar tidak peduli terlalu dalam. Alkitab mengajarkan sesuatu yang berbeda: bukan detachment, tapi <em>surrender</em> kepada Tuhan yang peduli. Bukan karena hasilnya tidak penting, tapi karena ada yang memegang hasil itu yang lebih besar dari kita.</p>
+                <p>Filipi 4:6-7 berkata, <em>"Janganlah hendaknya kamu kuatir tentang apapun juga, tetapi nyatakanlah dalam segala hal keinginanmu kepada Allah dalam doa."</em> Ini bukan "lupakan dan lepaskan" — ini adalah hubungan aktif dengan Pribadi yang nyata, yang mendengar, dan yang bertindak.</p>
+              </div>
+            </div>
+
+            <div class="section-divider"><div class="sdots"><span></span><span></span><span></span></div></div>
+
+            <!-- SECTION 4: TAKUT DI KEGELAPAN -->
+            <div id="terang" class="anchor"></div>
+            <div class="post-label">Ketika Terang Masuk</div>
+            <h2 class="post-h2">Takut Tumbuh di Tempat Gelap — dan Apa yang Terjadi Ketika Terang Masuk</h2>
+
+            <p>Takut itu biasanya tumbuh subur di tempat gelap — di area yang tidak kita mengerti, di <em>the unknown</em>, di semua skenario terburuk yang kita bangun sendiri di kepala pada pukul dua pagi.</p>
+
+            <p>Takut periksa ke dokter — bukan karena sakitnya, tapi karena takut mendengar hasil labnya. Takut public speaking — takut dibanding-bandingin, takut tidak cukup bagus, takut tidak ada yang mendengarkan. Takut memulai sesuatu yang baru — takut investasi waktu dan energinya berakhir sia-sia.</p>
+
+            <div class="illustration">
+              <div class="illus-label">Ilustrasi</div>
+              <p>Waktu kecil, saya pernah sangat takut sama pojok tertentu di kamar — karena gelap dan saya bisa membayangkan apa saja yang mungkin ada di sana. Tapi begitu lampu dinyalakan, pojok itu cuma berisi tumpukan baju dan kotak sepatu. Bukan monster. Bukan ancaman. Hanya benda-benda biasa yang kelihatan menakutkan karena tidak terlihat jelas.</p>
+              <p>Sebagian besar ketakutan kita bekerja persis seperti itu. Bukan karena ancamannya nyata dan sebesar yang kita bayangkan — tapi karena gelapnya membuat imajinasi kita bekerja lembur tanpa pengawasan fakta.</p>
+            </div>
+
+            <p>Menurut research, sekitar 85% ketakutan yang kita rasakan tidak pernah terjadi sama sekali. Sisanya, kalau pun terjadi, seringkali tidak separah yang sudah kita bayangkan berhari-hari. Kita menghabiskan energi emosional yang sangat besar untuk mensimulasikan bencana yang sebagian besar hanya hidup di dalam kepala kita.</p>
+
+            <div class="verse-box">
+              <p>"Kamu akan mengenal kebenaran, dan kebenaran itu akan memerdekakan kamu."</p>
+              <p class="verse-ref">Yohanes 8:32</p>
+            </div>
+
+            <p>Saya belajar satu hal yang mengubah cara saya menghadapi rasa takut: begitu saya membawa ketakutan ke hadapan Tuhan — secara jujur, bukan dengan kata-kata rohani yang indah tapi dengan kejujuran yang mentah — pelan-pelan rasa takut itu mulai mengecil. Bukan karena situasinya berubah, tapi karena terang kebenaran masuk ke ruangan yang tadinya gelap.</p>
+
+            <div class="testimony">
+              <span class="testimony-label">Pengalaman Nyata</span>
+              <p>Saya pernah berbulan-bulan takut dengan satu situasi di pekerjaan — takut akan dinilai tidak kompeten, takut akan kehilangan kepercayaan orang-orang sekitar. Setiap malam saya mensimulasikan skenario terburuknya sampai detail.</p>
+              <p>Suatu malam saya akhirnya jujur ke Tuhan: <em>"Aku takut. Bukan takut kecil-kecilan — aku benar-benar takut dan aku lelah pura-pura tidak apa-apa."</em> Dan yang terjadi setelah itu bukan semua masalahnya langsung hilang. Tapi ada sesuatu yang berubah di dalam — ada jarak antara saya dan rasa takut itu yang mulai terbentuk. Saya masih bisa melihatnya, tapi ia tidak lagi menduduki seluruh ruang pikiran saya.</p>
+              <p>Pertanyaan yang saya pelajari untuk ditanyakan ke diri sendiri: <em>"Ketakutan ini, seberapa banyak yang real dan seberapa banyak yang cuma hidup di kepalaku?"</em></p>
+            </div>
+
+            <div class="section-divider"><div class="sdots"><span></span><span></span><span></span></div></div>
+
+            <!-- SECTION 5: IMAN vs TAKUT -->
+            <div id="iman" class="anchor"></div>
+            <div class="post-label purple">Lawan Kata yang Tepat</div>
+            <h2 class="post-h2">Lawan Kata dari Takut Bukan "Berani" — Tapi Iman</h2>
+
+            <p>Ini satu hal yang membuka pandangan saya. Selama ini kita sering berpikir bahwa lawan dari takut adalah keberanian — <em>"be brave, be bold, you can do this."</em> Tapi ada yang lebih dalam dari itu.</p>
+
+            <p>Berani biasanya muncul dari self-confidence — dari merasa <em>"I can do this, I have what it takes."</em> Dan itu bisa sangat kuat — sampai datang situasi yang benar-benar di luar kapasitas kita. Di titik itu, self-confidence mulai goyah.</p>
+
+            <p>Tapi iman? Iman adalah tentang percaya bahwa Tuhan tetap pegang kendali, <em>even</em> waktu saya lagi tidak yakin sama diri sendiri. Bukan "aku bisa" — tapi "Dia yang menyertaiku bisa."</p>
+
+            <div class="concept-card">
+              <div class="concept-card-label">Perbedaan Kunci</div>
+              <p>"Keberanian berkata: 'Aku cukup kuat untuk menghadapi ini.' Iman berkata: 'Aku mungkin tidak cukup kuat — tapi aku tidak sendirian menghadapi ini.' Keberanian bergantung pada kondisi diri. Iman bergantung pada karakter Tuhan yang tidak berubah."</p>
+            </div>
+
+            <p>Dan yang paling menyentuh buat saya: bahkan Yesus pun mengalami apa yang kita sebut ketakutan.</p>
+
+            <div class="verse-box">
+              <p>"Ia sangat ketakutan dan makin bersungguh-sungguh berdoa. Peluhnya menjadi seperti titik-titik darah yang bertetesan ke tanah."</p>
+              <p class="verse-ref">Lukas 22:44</p>
+            </div>
+
+            <p>Di taman Getsemani, Yesus tidak pura-pura semuanya baik-baik saja. Dia tidak menekan rasa takutnya dengan afirmasi positif. Dia membawanya ke Bapa — dengan sungguh-sungguh, dengan jujur, bahkan sampai peluhnya seperti darah. Dan dari sana, Dia bangkit dan melangkah.</p>
+
+            <p>Itu model yang Alkitab berikan: bukan <em>suppress</em> rasa takut, bukan <em>ignore</em> rasa takut, tapi <em>bring it to God</em>. Bawa ke tempat yang tepat.</p>
+
+            <div class="verse-box">
+              <p>"Karena Ia sendiri telah menderita dan dicobai, maka Ia dapat menolong mereka yang dicobai."</p>
+              <p class="verse-ref">Ibrani 2:18</p>
+            </div>
+
+            <div class="section-divider"><div class="sdots"><span></span><span></span><span></span></div></div>
+
+            <!-- SECTION 6: ROMA 8 / IDENTITAS -->
+            <div id="identitas" class="anchor"></div>
+            <div class="post-label">Identitas yang Mengubah Segalanya</div>
+            <h2 class="post-h2">Kamu Bukan Budak Ketakutan — Ini Identitasmu yang Sesungguhnya</h2>
+
+            <p>Kadang rasa takut itu terasa seperti rantai tak kasat mata yang menahan langkah. Pikiran mulai overthinking: <em>"Gimana kalau hal buruk itu beneran terjadi? Gimana kalau aku tidak cukup baik? Gimana kalau aku kecewakan semua orang?"</em></p>
+
+            <p>Dan banyak dari kita tidak sadar bahwa kita sudah hidup dalam pola ketakutan itu begitu lama sampai ia terasa normal — terasa seperti bagian dari siapa kita.</p>
+
+            <div class="verse-box">
+              <p>"Sebab kamu tidak menerima roh perbudakan yang membuat kamu menjadi takut lagi, tetapi kamu telah menerima Roh yang menjadikan kamu anak Allah."</p>
+              <p class="verse-ref">Roma 8:15</p>
+            </div>
+
+            <p>Kata <em>"perbudakan"</em> di sini bukan hiperbola. Ketakutan yang tidak diserahkan kepada Tuhan memang bekerja seperti sistem perbudakan — ia memberi perintah, kita menurut. Ia menentukan ke mana kita boleh pergi, apa yang boleh kita coba, seberapa jauh kita boleh bermimpi. Dan lama-lama kita tidak lagi mempertanyakannya karena terasa seperti bagian dari diri sendiri.</p>
+
+            <p>Tapi Roma 8:15 berkata: itu bukan identitasmu. Kamu sudah menerima Roh yang berbeda — Roh yang menjadikanmu anak Allah. Dan seorang anak yang mengenal bapanya tidak hidup dalam rasa takut yang melumpuhkan — dia hidup dalam rasa aman yang memungkinkan dia untuk mengambil risiko.</p>
+
+            <div class="verse-box">
+              <p>"Sebab Allah memberikan kepada kita bukan roh ketakutan, melainkan roh yang membangkitkan kekuatan, kasih dan ketertiban."</p>
+              <p class="verse-ref">2 Timotius 1:7</p>
+            </div>
+
+            <ul class="bullets">
+              <li><strong>Kekuatan</strong> — bukan dari kapasitas diri sendiri, tapi dari koneksi dengan Tuhan yang tidak terbatas.</li>
+              <li><strong>Kasih</strong> — kasih yang sempurna mengusir ketakutan (1 Yoh. 4:18). Saat kita mengerti betapa dalamnya kita dikasihi, takut akan penolakan dan kegagalan mulai kehilangan kekuatannya.</li>
+              <li><strong>Ketertiban</strong> — pikiran yang terkendali, yang tidak dibiarkan spiral tak terkontrol ke semua skenario terburuk yang belum tentu terjadi.</li>
+            </ul>
+
+            <div class="section-divider"><div class="sdots"><span></span><span></span><span></span></div></div>
+
+            <!-- SECTION 7: UBAH ATMOSFER -->
+            <div id="atmosfer" class="anchor"></div>
+            <div class="post-label amber">Langkah Praktis</div>
+            <h2 class="post-h2">Mengubah Atmosfer — Dari Dalam Keluar</h2>
+
+            <p>Kadang saya harus sadar banget untuk bisa switch suasana hati yang sudah dikuasai rasa takut. Karena ketakutan yang dibiarkan terlalu lama sendirian hanya akan tumbuh makin besar — ia akan selalu menemukan "bukti" baru untuk mendukung narasinya.</p>
+
+            <p>Ini yang saya pelajari tentang mengubah atmosfer:</p>
+
+            <ul class="bullets">
+              <li><strong>Bawa ketakutan ke terang — jangan sembunyikan.</strong> Ketakutan yang dipendam tidak hilang, ia hanya tersimpan di tempat yang lebih dalam dan muncul kembali dengan cara yang lebih merusak. Jujurlah kepada Tuhan. Jujurlah kepada orang yang kamu percaya.</li>
+              <li><strong>Tanya pertanyaan yang tepat.</strong> Bukan "gimana kalau ini terjadi?" tapi "apakah ketakutan ini berdasarkan fakta, atau imajinasi yang bekerja lembur?" Ada perbedaan besar antara kekhawatiran yang realistis dan kecemasan yang sudah jauh melampaui bukti yang ada.</li>
+              <li><strong>Jangan sendirian terlalu lama.</strong> Ketemu teman, gabung komunitas, ikut ibadah — bukan pelarian, tapi pengingat bahwa kamu tidak sedang berjuang sendiri. Atmosfer berubah saat kita berada di antara orang-orang yang percaya hal yang sama.</li>
+              <li><strong>Worship di tengah rasa takut.</strong> Setiap kali saya worship — bahkan di momen yang paling tidak terasa "mood-nya" — ada sesuatu yang bergeser. Rasa takut itu tidak langsung hilang, tapi ia menemukan proporsinya yang lebih tepat di hadapan Tuhan yang jauh lebih besar.</li>
+            </ul>
+
+            <div class="testimony">
+              <span class="testimony-label">Pengalaman Nyata</span>
+              <p>Ada satu malam di mana kecemasan saya terasa di puncaknya. Alih-alih scroll media sosial atau menonton sesuatu untuk mengalihkan, saya coba hal berbeda: saya putar satu lagu pujian dan duduk diam.</p>
+              <p>Nggak ada momen dramatis. Nggak ada suara dari langit. Tapi setelah beberapa menit, ada shift yang nyata di dalam hati — bukan karena situasinya berubah, tapi karena perspektif saya yang berubah. Tiba-tiba masalah yang terasa raksasa tadi mulai kelihatan seukuran sebenarnya, di hadapan Tuhan yang jauh lebih besar dari masalah itu.</p>
+              <p>Worship itu bukan mengabaikan masalah. Worship itu menempatkan masalah pada perspektif yang tepat.</p>
+            </div>
+
+            <div class="verse-box">
+              <p>"Waktu aku takut, aku ini percaya kepada-Mu."</p>
+              <p class="verse-ref">Mazmur 56:4</p>
+            </div>
+
+            <p>Perhatikan struktur ayat ini: <em>"waktu aku takut"</em> — bukan "waktu aku sudah tidak takut lagi." Penulis Mazmur tidak sedang berkata bahwa imannya menghilangkan rasa takutnya sebelum ia bisa percaya. Dia percaya <em>di tengah</em> rasa takutnya. Itulah iman yang hidup — bukan absennya rasa takut, tapi kehadiran kepercayaan yang mengatasi rasa takut.</p>
+
+            <div class="section-divider"><div class="sdots"><span></span><span></span><span></span></div></div>
+
+            <!-- CLOSING -->
+            <div id="closing" class="anchor"></div>
+            <div class="post-label amber">Penutup</div>
+            <h2 class="post-h2">Tonight, Let Faith Lead You</h2>
+
+            <p>Hari ini, kalau rasa takut itu datang lagi — dan kemungkinan besar ia akan datang — saya mau mengajak kamu untuk mencoba satu hal yang berbeda. Bukan langsung melawannya dengan self-talk yang positif. Bukan langsung menekannya karena merasa tidak boleh takut sebagai orang beriman.</p>
+
+            <p>Coba duduk sebentar. Hadapi. Dan tanyakan dengan jujur: <em>"Kamu ini nyata, atau cuma bayangan? Dan Tuhan — apa yang Engkau mau aku lakukan dengan rasa takut ini?"</em></p>
+
+            <p>Karena masalah kita memang kadang kelihatan besar sekali. Tapi iman mengingatkan kita bahwa tidak ada yang terlalu besar bagi Tuhan. Dan tidak ada rasa takut yang terlalu kecil untuk dibawa kepada-Nya.</p>
+
+            <div class="closing-note">
+              <p>Atmosfer berubah bukan ketika semua ketakutan hilang — tapi ketika iman mulai mengambil lebih banyak ruang dari sebelumnya. Pelan-pelan. Langkah demi langkah.</p>
+              <p><strong>Don't let fear write your story. Let faith lead the way.</strong></p>
+              <p>Ingat: kamu berharga, dicintai, dan tidak pernah sendirian. Tuhan selalu ada — bahkan waktu tidak kelihatan sekalipun. You got this, because He's got you.</p>
+              <p class="closing-signature">— Warm regards, YHZ</p>
+            </div>
+
+            <div class="footer-note">
+              <p>✦ &nbsp;Ditulis untuk kamu yang sedang bergulat dengan rasa takut yang terasa terlalu besar — dan untuk kamu yang butuh pengingat bahwa iman bukan tentang tidak pernah takut, tapi tentang siapa yang kamu percayai di tengah rasa takut itu.</p>
+            </div>
+
+            <nav class="post-nav" aria-label="Post navigation">
+              <a href="../index.html">← Back to Home</a>
+              <a href="fullness-of-christ.html">Next Post →</a>
+            </nav>
+
+          </div>
+        </article>
+
+        <!-- TOC -->
+        <aside class="post-card toc" aria-label="Table of contents">
+          <p class="toc-title">On This Page</p>
+          <a href="#intro">Pembukaan</a>
+          <a href="#duawajah">Dua Wajah Rasa Takut</a>
+          <a href="#lumpuh">Saul, Goliat & Talenta</a>
+          <a href="#filosofi">Filosofi yang Perlu Diperiksa</a>
+          <a href="#terang">Takut di Tempat Gelap</a>
+          <a href="#iman">Iman vs Keberanian</a>
+          <a href="#identitas">Identitasmu Sesungguhnya</a>
+          <a href="#atmosfer">Mengubah Atmosfer</a>
+          <a href="#closing">Penutup</a>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3 class="footer-title">Stay Connected</h3>
+          <p>Subscribe untuk mendapatkan tulisan-tulisan terbaru.</p>
+          <form class="subscription-form" id="subscriptionForm">
+            <div class="form-group">
+              <input type="email" id="emailInput" placeholder="Enter your email" class="email-input" required />
+              <button type="submit" class="subscribe-btn">Subscribe</button>
+            </div>
+          </form>
         </div>
-    </footer>
+        <div class="footer-section">
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="https://www.instagram.com/yhzrio?igsh=dnE0amZlZWlhOXYy&utm_source=qr" class="social-link" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="#" class="social-link">Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Yehezkiel's Insight. Walking with Faith, Living with Purpose.</p>
+      </div>
+    </div>
+  </footer>
 
-    <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script>
+    const bar = document.getElementById('readProgress');
+    window.addEventListener('scroll', () => {
+      const total = document.documentElement.scrollHeight - window.innerHeight;
+      if (bar) bar.style.width = Math.min((window.scrollY / total) * 100, 100) + '%';
+    }, { passive: true });
+
+    const tocLinks = document.querySelectorAll('.toc a[href^="#"]');
+    const anchors  = [...document.querySelectorAll('.anchor')];
+    function updateTOC() {
+      const scrollY = window.scrollY + 130;
+      let current = '';
+      anchors.forEach(el => { if (el.offsetTop <= scrollY) current = el.id; });
+      tocLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
+    }
+    window.addEventListener('scroll', updateTOC, { passive: true });
+    updateTOC();
+  </script>
 </body>
 </html>
