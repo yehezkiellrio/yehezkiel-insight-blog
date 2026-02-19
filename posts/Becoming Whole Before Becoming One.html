@@ -1,267 +1,689 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Becoming Whole Before Becoming One</title>
-  <meta name="description" content="Becoming Whole Before Becoming One" />
+  <title>Becoming Whole Before Becoming One — Yehezkiel's Insight</title>
+  <meta name="description" content="Refleksi tentang single vs alone, keutuhan, dan bagaimana Tuhan membentuk kita sebelum masuk ke hubungan yang sehat." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="../assets/css/main.css" />
   <link rel="stylesheet" href="../assets/css/enhancements.css" />
 
   <style>
-    /* ==========================
-       POST-ONLY STYLES (SAFE)
-       ========================== */
-    body.post-page { --post-max: 1120px; --content-max: 760px; }
+    /* =========================================================
+       POST PAGE — Enhanced design, faithful to site's DNA
+       ========================================================= */
+    .post-page { --post-max: 1120px; --content-max: 720px; }
+    .post-page .container { max-width: var(--post-max); }
 
-    body.post-page .container { max-width: var(--post-max); }
-
-    /* Hero */
-    .post-hero { padding: 26px 0 10px; }
-    .post-hero-card{
-      border-radius: 22px;
-      padding: 26px 22px 18px;
-      border: 1px solid rgba(255,255,255,0.12);
-      background:
-        radial-gradient(900px 420px at 15% 20%, rgba(168,85,247,0.26), transparent 58%),
-        radial-gradient(900px 420px at 90% 12%, rgba(59,130,246,0.22), transparent 56%),
-        linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
-      box-shadow: 0 18px 55px rgba(0,0,0,0.18);
-      backdrop-filter: blur(8px);
+    /* ── Reading Progress Bar ─────────────────────────── */
+    .read-progress {
+      position: fixed;
+      top: 0; left: 0;
+      height: 3px;
+      width: 0%;
+      background: linear-gradient(90deg, #a855f7, #3b82f6, #a855f7);
+      background-size: 200% 100%;
+      animation: shimmer 2s linear infinite;
+      z-index: 9999;
+      transition: width 0.1s linear;
     }
-    body:not(.dark-mode) .post-hero-card{
+    @keyframes shimmer {
+      0% { background-position: 0% 0%; }
+      100% { background-position: 200% 0%; }
+    }
+
+    /* ── HERO ─────────────────────────────────────────── */
+    .post-hero { padding: 32px 0 8px; }
+
+    .post-hero-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 24px;
+      padding: 36px 32px 28px;
+      border: 1px solid rgba(255,255,255,0.13);
+      background:
+        radial-gradient(900px 380px at 15% 10%, rgba(168,85,247,0.30) 0%, transparent 55%),
+        radial-gradient(700px 350px at 90% 15%, rgba(59,130,246,0.24) 0%, transparent 55%),
+        radial-gradient(500px 300px at 50% 90%, rgba(236,72,153,0.12) 0%, transparent 60%),
+        linear-gradient(160deg, rgba(255,255,255,0.07) 0%, rgba(255,255,255,0.02) 100%);
+      box-shadow: 0 24px 64px rgba(0,0,0,0.22), inset 0 1px 0 rgba(255,255,255,0.08);
+      backdrop-filter: blur(12px);
+    }
+    body:not(.dark-mode) .post-hero-card {
       border-color: rgba(15,23,42,0.10);
       background:
-        radial-gradient(900px 420px at 15% 20%, rgba(168,85,247,0.14), transparent 58%),
-        radial-gradient(900px 420px at 90% 12%, rgba(59,130,246,0.12), transparent 56%),
-        linear-gradient(135deg, rgba(15,23,42,0.03), rgba(15,23,42,0.01));
-      box-shadow: 0 18px 55px rgba(15,23,42,0.10);
+        radial-gradient(900px 380px at 15% 10%, rgba(168,85,247,0.13) 0%, transparent 55%),
+        radial-gradient(700px 350px at 90% 15%, rgba(59,130,246,0.11) 0%, transparent 55%),
+        radial-gradient(500px 300px at 50% 90%, rgba(236,72,153,0.06) 0%, transparent 60%),
+        linear-gradient(160deg, rgba(255,255,255,0.9) 0%, rgba(247,250,252,0.8) 100%);
+      box-shadow: 0 24px 64px rgba(15,23,42,0.10), inset 0 1px 0 rgba(255,255,255,0.9);
     }
 
-    .post-kicker{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:8px 12px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,0.14);
-      background:rgba(255,255,255,0.06);
-      font-size:0.92rem;
-      opacity:0.95;
-      margin-bottom:12px;
+    /* Decorative corner glow */
+    .post-hero-card::after {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 220px; height: 220px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(168,85,247,0.18) 0%, transparent 70%);
+      pointer-events: none;
     }
-    body:not(.dark-mode) .post-kicker{
+
+    .post-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(168,85,247,0.30);
+      background: rgba(168,85,247,0.10);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: #c084fc;
+      margin-bottom: 18px;
+    }
+    body:not(.dark-mode) .post-kicker {
+      color: #7c3aed;
+      border-color: rgba(124,58,237,0.25);
+      background: rgba(124,58,237,0.07);
+    }
+    .post-kicker::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: #a855f7;
+      flex-shrink: 0;
+    }
+
+    .post-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: clamp(2.1rem, 3.6vw, 3.2rem);
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+      margin: 0 0 14px;
+      max-width: 16ch;
+      /* Ensure title is always visible — both light and dark mode */
+      color: #f1f5f9;
+    }
+    body:not(.dark-mode) .post-title {
+      color: #1e293b;
+    }
+    .post-title em {
+      font-style: italic;
+      /* Safe gradient text — fallback color ensures visibility in all modes */
+      color: #c084fc;
+      background: linear-gradient(135deg, #c084fc, #60a5fa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    /* Fallback: if gradient text not supported or fails, show solid color */
+    @supports not (-webkit-background-clip: text) {
+      .post-title em { color: #c084fc; }
+    }
+    body:not(.dark-mode) .post-title em {
+      color: #7c3aed;
+      background: linear-gradient(135deg, #7c3aed, #2563eb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .post-subtitle {
+      max-width: 64ch;
+      line-height: 1.75;
+      opacity: 0.80;
+      margin: 0 0 20px;
+      font-size: 1.05rem;
+      color: #cbd5e1;
+    }
+    body:not(.dark-mode) .post-subtitle {
+      color: #475569;
+      opacity: 1;
+    }
+
+    .post-meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.10);
+    }
+    body:not(.dark-mode) .post-meta-bar { border-top-color: rgba(15,23,42,0.10); }
+
+    .pill {
+      display: inline-flex;
+      gap: 6px;
+      align-items: center;
+      padding: 7px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.06);
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      backdrop-filter: blur(6px);
+    }
+    body:not(.dark-mode) .pill {
       border-color: rgba(15,23,42,0.12);
-      background: rgba(15,23,42,0.03);
+      background: rgba(15,23,42,0.04);
+    }
+    .pill:hover {
+      transform: translateY(-2px);
+      background: rgba(168,85,247,0.12);
+      border-color: rgba(168,85,247,0.30);
     }
 
-    .post-title{
-      font-family:"Playfair Display", serif;
-      font-weight:700;
-      letter-spacing:-0.4px;
-      line-height:1.12;
-      margin:0 0 10px;
-      font-size:clamp(2.0rem, 3.2vw, 3.0rem);
-    }
-    .post-subtitle{
-      max-width:72ch;
-      line-height:1.75;
-      opacity:0.9;
-      margin:0 0 14px;
-      font-size:1.05rem;
-    }
+    /* ── MAIN SHELL & GRID ────────────────────────────── */
+    .post-shell { padding: 20px 0 64px; }
 
-    .meta-row{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      align-items:center;
-      margin-top:10px;
-    }
-    .pill{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:8px 12px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,0.14);
-      background:rgba(255,255,255,0.05);
-      font-size:0.92rem;
-      text-decoration:none;
-      opacity:0.95;
-    }
-    body:not(.dark-mode) .pill{
-      border-color: rgba(15,23,42,0.12);
-      background: rgba(15,23,42,0.03);
-    }
-    .pill:hover{ transform: translateY(-1px); }
-
-    /* Grid */
-    .post-shell{ padding: 16px 0 56px; }
-    .post-grid{
-      display:grid;
+    .post-grid {
+      display: grid;
       grid-template-columns: 1fr;
-      gap:18px;
-      margin-top:14px;
+      gap: 18px;
+      margin-top: 16px;
     }
-    @media (min-width: 980px){
-      .post-grid{
-        grid-template-columns: minmax(0, 1fr) 320px;
-        align-items:start;
-        gap:22px;
+    @media (min-width: 980px) {
+      .post-grid {
+        grid-template-columns: minmax(0, 1fr) 270px;
+        align-items: start;
+        gap: 24px;
       }
     }
 
-    .cardish{
-      border-radius:18px;
-      border:1px solid rgba(255,255,255,0.12);
-      background:rgba(255,255,255,0.04);
-      overflow:hidden;
+    /* Main article card */
+    .post-card {
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.11);
+      background: rgba(255,255,255,0.035);
+      overflow: hidden;
+      backdrop-filter: blur(4px);
     }
-    body:not(.dark-mode) .cardish{
-      border-color: rgba(15,23,42,0.10);
-      background: rgba(15,23,42,0.02);
+    body:not(.dark-mode) .post-card {
+      border-color: rgba(15,23,42,0.09);
+      background: rgba(255,255,255,0.70);
+      box-shadow: 0 4px 24px rgba(15,23,42,0.06);
     }
 
-    .post-content{
+    /* Colorful top border on main card */
+    .post-card.main-card {
+      position: relative;
+    }
+    .post-card.main-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #a855f7, #3b82f6, #ec4899, #a855f7);
+      background-size: 300% 100%;
+      animation: gradientSlide 6s ease infinite;
+    }
+    @keyframes gradientSlide {
+      0%, 100% { background-position: 0% 0%; }
+      50% { background-position: 100% 0%; }
+    }
+
+    .post-content {
       max-width: var(--content-max);
       margin: 0 auto;
-      padding: 22px 18px 28px;
+      padding: 32px 24px 36px;
     }
-    @media (min-width: 680px){
-      .post-content{ padding: 26px 26px 32px; }
-    }
-
-    /* Typography */
-    .post-content p{ line-height: 1.9; font-size: 1.02rem; margin: 12px 0; }
-    .lead p{ font-size: 1.06rem; opacity: 0.97; }
-    .h2{
-      font-weight: 800;
-      margin: 30px 0 12px;
-      font-size: 1.18rem;
-      letter-spacing:-0.2px;
+    @media (min-width: 680px) {
+      .post-content { padding: 36px 36px 40px; }
     }
 
-    .divider{ height:1px; background: rgba(255,255,255,0.10); margin: 22px 0; }
-    body:not(.dark-mode) .divider{ background: rgba(15,23,42,0.12); }
+    /* ── TYPOGRAPHY ───────────────────────────────────── */
+    .post-content p {
+      line-height: 1.9;
+      font-size: 1.02rem;
+      margin: 0 0 1.2em;
+      color: var(--text-color);
+    }
+    /* Dark mode: slightly softer white for long-form reading comfort */
+    .dark-mode .post-content p { color: #cbd5e1; }
 
-    .section-divider{
-      display:flex;
-      align-items:center;
-      justify-content:center;
+    .post-content .lead {
+      font-size: 1.08rem;
+      line-height: 1.92;
+      padding-bottom: 24px;
+      margin-bottom: 8px;
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+    }
+    body:not(.dark-mode) .post-content .lead {
+      border-bottom-color: rgba(15,23,42,0.10);
+    }
+    .dark-mode .post-content .lead p { color: #e2e8f0; }
+
+    /* Section headings */
+    .post-h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.38rem;
+      line-height: 1.25;
+      margin: 36px 0 12px;
+      letter-spacing: -0.2px;
+      color: var(--text-color);
+    }
+    .dark-mode .post-h2 { color: #f1f5f9; }
+
+    .post-label {
+      display: inline-block;
+      font-weight: 700;
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #a855f7;
+      margin: 32px 0 10px;
+      padding: 5px 10px;
+      border-radius: 6px;
+      background: rgba(168,85,247,0.10);
+      border: 1px solid rgba(168,85,247,0.20);
+    }
+    body:not(.dark-mode) .post-label {
+      color: #7c3aed;
+      background: rgba(124,58,237,0.07);
+      border-color: rgba(124,58,237,0.18);
+    }
+
+    /* Horizontal rules */
+    .rule {
+      height: 1px;
+      background: rgba(255,255,255,0.10);
+      margin: 28px 0;
+      border: none;
+    }
+    body:not(.dark-mode) .rule { background: rgba(15,23,42,0.10); }
+
+    /* Section divider — pill style */
+    .section-divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 30px 0;
+    }
+    .section-divider::before,
+    .section-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(255,255,255,0.10);
+    }
+    body:not(.dark-mode) .section-divider::before,
+    body:not(.dark-mode) .section-divider::after {
+      background: rgba(15,23,42,0.10);
+    }
+    .section-divider-inner {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+    .section-divider-inner span {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #a855f7, #3b82f6);
+    }
+    .section-divider-inner span:nth-child(2) { opacity: 0.5; width: 4px; height: 4px; }
+    .section-divider-inner span:nth-child(3) { opacity: 0.25; width: 3px; height: 3px; }
+
+    /* ── QUOTE / CALLOUT ──────────────────────────────── */
+    .quote {
+      position: relative;
+      border-left: 3px solid #a855f7;
+      padding: 18px 18px 18px 22px;
       margin: 24px 0;
-      opacity:0.9;
+      background: rgba(168,85,247,0.06);
+      border-radius: 0 14px 14px 0;
+      overflow: hidden;
     }
-    .section-divider span{
-      display:inline-block;
-      padding:8px 12px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,0.14);
-      background: rgba(255,255,255,0.05);
-      font-size:0.92rem;
-      letter-spacing:0.02em;
+    body:not(.dark-mode) .quote { background: rgba(168,85,247,0.05); }
+    .quote::before {
+      content: '\201C';
+      position: absolute;
+      top: -8px; left: 12px;
+      font-family: 'Playfair Display', serif;
+      font-size: 3.6rem;
+      color: rgba(168,85,247,0.20);
+      line-height: 1;
+      pointer-events: none;
     }
-    body:not(.dark-mode) .section-divider span{
-      border-color: rgba(15,23,42,0.12);
-      background: rgba(15,23,42,0.03);
+    .quote p {
+      margin: 0 0 8px !important;
+      font-style: italic;
+      line-height: 1.8;
+      font-size: 1.0rem !important;
     }
-
-    .quote{
-      border-left: 3px solid rgba(168,85,247,0.95);
-      padding: 12px 14px;
-      margin: 18px 0;
-      background: rgba(255,255,255,0.05);
-      border-radius: 14px;
-    }
-    body:not(.dark-mode) .quote{ background: rgba(15,23,42,0.03); }
-    .quote p{ margin:0; }
-
-    .callout-title{
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-size: 0.92rem;
-      margin: 26px 0 10px;
-      opacity: 0.95;
+    .quote p:last-child { margin-bottom: 0 !important; }
+    .quote cite {
+      display: block;
+      margin-top: 10px;
+      font-size: 0.82rem;
+      opacity: 0.7;
+      font-style: normal;
+      font-weight: 500;
     }
 
-    .bullets{ margin: 10px 0 10px 18px; }
-    .bullets li{ margin: 8px 0; line-height: 1.85; }
-
-    .footer-note{
-      margin-top: 26px;
-      padding: 14px 16px;
+    /* ── VERSE BOX ────────────────────────────────────── */
+    .verse-box {
+      margin: 24px 0;
+      padding: 22px 24px;
       border-radius: 16px;
-      border: 1px solid rgba(255,255,255,0.14);
-      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(59,130,246,0.25);
+      background: rgba(59,130,246,0.07);
+      position: relative;
+      overflow: hidden;
     }
-    body:not(.dark-mode) .footer-note{
-      border-color: rgba(15,23,42,0.12);
-      background: rgba(15,23,42,0.03);
+    body:not(.dark-mode) .verse-box { background: rgba(59,130,246,0.05); }
+    .verse-box::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 2px;
+      background: linear-gradient(90deg, #3b82f6, #a855f7);
     }
-
-    /* TOC */
-    .toc{ padding: 16px; }
-    @media (min-width: 980px){
-      .toc{ position: sticky; top: 92px; }
+    .verse-box p {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.06rem !important;
+      line-height: 1.75 !important;
+      margin-bottom: 10px !important;
     }
-    .toc h3{
-      margin: 4px 0 10px;
-      font-size: 0.95rem;
-      letter-spacing: 0.06em;
+    .verse-ref {
+      font-family: 'Inter', sans-serif !important;
+      font-size: 0.78rem !important;
+      font-style: normal !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      opacity: 0.9;
+      color: #60a5fa;
+      margin-bottom: 0 !important;
     }
-    .toc a{
-      display:block;
-      padding: 10px 12px;
-      border-radius: 12px;
-      text-decoration:none;
-      border:1px solid transparent;
-      opacity:0.92;
+    body:not(.dark-mode) .verse-ref { color: #2563eb; }
+
+    /* ── CONCEPT CARD (dark invert) ───────────────────── */
+    .concept-card {
+      margin: 28px 0;
+      padding: 24px 26px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #0f0f1a 0%, #1a1030 100%);
+      border: 1px solid rgba(168,85,247,0.25);
+      color: #e2e8f0;
+      position: relative;
+      overflow: hidden;
     }
-    .toc a:hover{
-      background: rgba(255,255,255,0.05);
-      border-color: rgba(255,255,255,0.10);
-      transform: translateY(-1px);
+    body:not(.dark-mode) .concept-card {
+      background: linear-gradient(135deg, #1e1b4b 0%, #1e293b 100%);
     }
-    body:not(.dark-mode) .toc a:hover{
+    .concept-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, #a855f7, #3b82f6, #ec4899);
+    }
+    .concept-card-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #c084fc;
+      margin-bottom: 12px;
+    }
+    .concept-card p {
+      color: rgba(226,232,240,0.90) !important;
+      font-size: 1.05rem !important;
+      line-height: 1.8 !important;
+      margin-bottom: 0 !important;
+      font-style: italic;
+    }
+
+    /* ── PERSONAL NOTE ────────────────────────────────── */
+    .personal-note {
+      margin: 24px 0;
+      padding: 18px 20px;
+      border-radius: 14px;
+      border: 1px solid rgba(236,72,153,0.22);
+      background: rgba(236,72,153,0.06);
+      border-left: 3px solid #ec4899;
+    }
+    .personal-note p {
+      margin-bottom: 0 !important;
+      font-size: 0.98rem !important;
+      line-height: 1.85 !important;
+    }
+
+    /* ── BULLETS ──────────────────────────────────────── */
+    .bullets {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0 20px;
+    }
+    .bullets li {
+      position: relative;
+      padding: 10px 12px 10px 36px;
+      margin-bottom: 8px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      line-height: 1.75;
+      font-size: 0.98rem;
+    }
+    body:not(.dark-mode) .bullets li {
       background: rgba(15,23,42,0.03);
+      border-color: rgba(15,23,42,0.08);
+    }
+    .bullets li::before {
+      content: '';
+      position: absolute;
+      left: 14px; top: 18px;
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #a855f7, #3b82f6);
+    }
+
+    /* ── MYTH CARDS ───────────────────────────────────── */
+    .myth-grid { margin: 20px 0; display: flex; flex-direction: column; gap: 12px; }
+
+    .myth-item {
+      padding: 16px 18px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.035);
+      transition: all 0.2s ease;
+    }
+    body:not(.dark-mode) .myth-item {
+      border-color: rgba(15,23,42,0.09);
+      background: rgba(15,23,42,0.025);
+    }
+    .myth-item:hover {
+      transform: translateX(4px);
+      border-color: rgba(168,85,247,0.25);
+      background: rgba(168,85,247,0.05);
+    }
+    .myth-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #f472b6;
+      margin-bottom: 5px;
+    }
+    body:not(.dark-mode) .myth-label { color: #db2777; }
+    .myth-text {
+      font-style: italic;
+      font-size: 0.97rem;
+      margin-bottom: 8px;
+      opacity: 0.90;
+    }
+    .myth-answer {
+      font-size: 0.875rem;
+      line-height: 1.7;
+      opacity: 0.78;
+    }
+
+    /* ── CLOSING NOTE ─────────────────────────────────── */
+    .closing-note {
+      margin-top: 36px;
+      padding: 28px 30px;
+      border-radius: 18px;
+      text-align: center;
+      border: 1px solid rgba(168,85,247,0.22);
+      background: rgba(168,85,247,0.06);
+      position: relative;
+      overflow: hidden;
+    }
+    .closing-note::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, #ec4899, #a855f7, #3b82f6);
+    }
+    .closing-note p {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.08rem !important;
+      line-height: 1.85 !important;
+      margin-bottom: 0 !important;
+    }
+
+    /* ── FOOTER NOTE ──────────────────────────────────── */
+    .footer-note {
+      margin-top: 28px;
+      padding: 16px 18px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.05);
+    }
+    body:not(.dark-mode) .footer-note {
       border-color: rgba(15,23,42,0.10);
-    }
-
-    .post-nav{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      margin-top:20px;
-    }
-    .post-nav a{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:10px 14px;
-      border-radius:999px;
-      text-decoration:none;
-      border:1px solid rgba(255,255,255,0.14);
-      background: rgba(255,255,255,0.05);
-    }
-    body:not(.dark-mode) .post-nav a{
-      border-color: rgba(15,23,42,0.12);
       background: rgba(15,23,42,0.03);
     }
-    .post-nav a:hover{ transform: translateY(-1px); }
 
-    .anchor{ scroll-margin-top: 110px; }
+    /* ── POST NAV ─────────────────────────────────────── */
+    .post-nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+    .post-nav a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.05);
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+    body:not(.dark-mode) .post-nav a {
+      border-color: rgba(15,23,42,0.12);
+      background: rgba(15,23,42,0.04);
+    }
+    .post-nav a:hover {
+      transform: translateY(-2px);
+      background: rgba(168,85,247,0.10);
+      border-color: rgba(168,85,247,0.30);
+    }
+
+    /* ── TOC SIDEBAR ──────────────────────────────────── */
+    /* Remove card background from TOC wrapper */
+    .post-card.toc {
+      border: none !important;
+      background: none !important;
+      box-shadow: none !important;
+      backdrop-filter: none !important;
+    }
+
+    .toc {
+      padding: 24px 8px 20px;
+    }
+    @media (min-width: 980px) {
+      .toc { position: sticky; top: 92px; }
+    }
+
+    /* "ON THIS PAGE" heading — Playfair serif, bold, dark */
+    .toc-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-color);
+      opacity: 1;
+      margin: 0 0 18px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+    }
+    body:not(.dark-mode) .toc-title {
+      border-bottom-color: rgba(15,23,42,0.10);
+    }
+
+    /* Section labels hidden — keep it clean */
+    .toc-section-label { display: none; }
+
+    /* TOC links — simple, blue, indented */
+    .toc a {
+      display: block;
+      padding: 9px 0 9px 16px;
+      border-radius: 0;
+      text-decoration: none;
+      font-size: 0.93rem;
+      font-weight: 400;
+      color: var(--accent-color);
+      opacity: 1;
+      border: none;
+      border-left: 2px solid transparent;
+      transition: all 0.18s ease;
+      line-height: 1.4;
+      margin-bottom: 0;
+    }
+    .toc a:hover {
+      background: none;
+      border-left-color: var(--accent-color);
+      padding-left: 20px;
+      opacity: 0.85;
+    }
+    .toc a.active {
+      background: none;
+      border-left-color: #a855f7;
+      color: #a855f7;
+      font-weight: 500;
+      opacity: 1;
+    }
+    body:not(.dark-mode) .toc a.active {
+      color: #7c3aed;
+      border-left-color: #7c3aed;
+    }
+
+    /* ── ANCHOR OFFSET ────────────────────────────────── */
+    .anchor { scroll-margin-top: 100px; }
+
+    /* ── FADE IN ──────────────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .post-hero { animation: fadeUp 0.55s ease both; }
+    .post-grid { animation: fadeUp 0.55s ease 0.12s both; }
   </style>
 </head>
 
 <body class="post-page">
+  <!-- Reading progress -->
+  <div class="read-progress" id="readProgress"></div>
+
   <!-- Header -->
   <header class="header" id="header">
     <div class="container">
@@ -285,13 +707,14 @@
   <section class="post-hero">
     <div class="container">
       <div class="post-hero-card">
-        <div class="post-kicker">Faith • Identity • Singleness</div>
-        <h1 class="post-title">Becoming Whole Before Becoming One</h1>
+        <div class="post-kicker">Faith &nbsp;·&nbsp; Identity &nbsp;·&nbsp; Singleness</div>
+        <h1 class="post-title">Becoming <em>Whole</em><br>Before Becoming One</h1>
         <p class="post-subtitle">
-          Refleksi tentang “single” vs “alone”, keutuhan, pemulihan, dan bagaimana Tuhan membentuk kita sebelum masuk ke hubungan yang sehat.
+          Refleksi tentang perbedaan "single" vs "alone", keutuhan diri, pemulihan, dan bagaimana Tuhan membentuk kita sebelum masuk ke hubungan yang benar-benar sehat.
         </p>
-        <div class="meta-row">
-          <span class="pill">⏱️ Long read</span>
+        <div class="post-meta-bar">
+          <span class="pill">⏱ Bacaan panjang</span>
+          <span class="pill">✍️ Yehezkiel</span>
           <a class="pill" href="../index.html">← Back to Home</a>
         </div>
       </div>
@@ -303,254 +726,247 @@
     <div class="container">
       <div class="post-grid">
 
-        <!-- CONTENT -->
-        <article class="cardish" aria-label="Post content">
+        <!-- ── CONTENT ─────────────────────────────── -->
+        <article class="post-card main-card" aria-label="Post content">
           <div class="post-content">
 
+            <!-- LEAD -->
             <div class="lead" id="intro">
-              <p>Pernah nggak sih kamu lagi kumpul bareng keluarga atau temen, lalu tiba-tiba muncul pertanyaan keramat: 'Kapan nikah? Kok betah banget sendiri?' Di dunia yang seringkali mengukur kebahagiaan dari status relationship, kadang kita jadi merasa ada yang salah dengan diri kita kalau kita masih melangkah sendirian. Kita didikte oleh standar dunia bahwa memiliki pasangan adalah garis finish dari kebahagiaan. Tapi hari ini, saya mau ajak kita membongkar paradigma itu. Mari kita lihat dari kacamata Tuhan. Dan sebelum kita mulai, saya mau jujur dulu: tulisan ini lahir bukan dari teori semata. Ini lahir dari perjalanan. Dari malam-malam yang panjang scroll medsos dan ngeliat orang-orang posting foto wedding, sangjit, foto couple dan ngerasa ada yang "kurang" dalam hidup saya. Dari pertanyaan-pertanyaan yang jujurnya nggak enak dijawab pas lebaran atau natal.</p>
+              <p>Pernah nggak sih kamu lagi kumpul bareng keluarga atau temen, lalu tiba-tiba muncul pertanyaan keramat: <em>"Kapan nikah? Kok betah banget sendiri?"</em> Di dunia yang seringkali mengukur kebahagiaan dari status relationship, kadang kita jadi merasa ada yang salah dengan diri kita kalau kita masih melangkah sendirian. Kita didikte oleh standar dunia bahwa memiliki pasangan adalah garis finish dari kebahagiaan. Tapi hari ini, saya mau ajak kita membongkar paradigma itu — dari kacamata Tuhan.</p>
+              <p>Dan sebelum kita mulai, saya mau jujur dulu: tulisan ini lahir bukan dari teori semata. Ini lahir dari perjalanan. Dari malam-malam yang panjang scroll medsos dan ngeliat orang-orang posting foto wedding, sangjit, foto couple dan ngerasa ada yang "kurang" dalam hidup saya.</p>
             </div>
 
-            <div class="section-divider"><span>________________________________________</span></div>
+            <div class="section-divider"><div class="section-divider-inner"><span></span><span></span><span></span></div></div>
 
+            <!-- CERITA -->
             <div id="cerita" class="anchor"></div>
-            <p>Saya masih ingat banget, lebaran tahun lalu, umur saya 24 tahun. Lebaran di rumah bude. Baru lima menit duduk, tante-tante sudah bergerak seperti tim investigasi terlatih hehe:3. 'Rio, udah ada yang spesial belum? Jangan milih-milih terus nanti keburu tua.' Dan saya cuma senyum-senyum canggung, pura-pura sibuk nambah opor ayam supaya nggak perlu jawab.</p>
-            <p>Tapi di dalam hati, ada sesuatu yang perlu dijawab. Bukan untuk mereka  tapi untuk saya sendiri. Apakah saya benar-benar baik-baik saja? Apakah ada yang kurang dalam diri saya karena saya masih sendiri?</p>
-            <p>Dan ketika saya membawa pertanyaan itu ke hadapan Tuhan, jawabannya justru membalik seluruh cara pandang saya. Ternyata bukan masalah saya sendiri atau tidak. Yang jadi masalah sesungguhnya adalah: apakah saya sudah utuh? apakah saya benar-benar butuh pasangan, atau saya hanya takut kesepian?</p>
-            <p>Dua hal yang kelihatannya sama, tapi sebetulnya sangat berbeda.</p>
+            <p>Saya masih ingat banget, lebaran tahun lalu, umur saya 24 tahun. Baru lima menit duduk di rumah bude, tante-tante sudah bergerak seperti tim investigasi terlatih. <em>"Rio, udah ada yang spesial belum? Jangan milih-milih terus nanti keburu tua."</em> Dan saya cuma senyum-senyum canggung, pura-pura sibuk nambah opor ayam supaya nggak perlu jawab.</p>
+            <p>Tapi di dalam hati, ada pertanyaan yang perlu dijawab. Bukan untuk mereka — tapi untuk saya sendiri. Apakah saya benar-benar baik-baik saja? Apakah ada yang kurang dalam diri saya karena saya masih sendiri?</p>
+            <p>Dan ketika saya membawa pertanyaan itu ke hadapan Tuhan, jawabannya justru membalik seluruh cara pandang saya. Ternyata bukan masalah saya sendiri atau tidak. Yang jadi masalah sesungguhnya adalah: <strong>apakah saya sudah utuh?</strong> Apakah saya benar-benar butuh pasangan, atau saya hanya takut kesepian? Dua hal yang kelihatannya sama, tapi sebetulnya sangat berbeda.</p>
 
-            <div class="section-divider"><span>________________________________________</span></div>
+            <div class="section-divider"><div class="section-divider-inner"><span></span><span></span><span></span></div></div>
 
+            <!-- KALIMAT KUNCI -->
             <div id="kalimat" class="anchor"></div>
-            <h2 class="h2">Baca Kalimat Ini Pelan-Pelan:</h2>
-            <div class="quote">
-              <p>"Baik atau buruknya suatu hubungan ,pertemanan, pacaran atau bahkan pernikahan  tergantung dari siapa saja yang terlibat dari hubungan itu."</p>
+            <div class="concept-card">
+              <div class="concept-card-label">Prinsip Kunci</div>
+              <p>"Baik atau buruknya suatu hubungan — pertemanan, pacaran, atau bahkan pernikahan — tergantung dari siapa saja yang terlibat dari hubungan itu."</p>
             </div>
 
-            <div class="section-divider"><span>________________________________________</span></div>
+            <div class="section-divider"><div class="section-divider-inner"><span></span><span></span><span></span></div></div>
 
+            <!-- OMELET -->
             <div id="omelet" class="anchor"></div>
-            <p class="callout-title">OMELET TELUR BUSUK</p>
+            <div class="post-label">Ilustrasi</div>
+            <h2 class="post-h2">Omelet Telur Busuk</h2>
 
-            <p>Temen-temen, kalo dipikirin dan direnungin maka kalimat di atas bener banget... Relationship kita dengan orang lain, tentu terkait erat dengan pribadi orang itu sesungguhnya. Seorang tokoh motivasi terkenal pernah bilang, kita ini kurang lebih cerminan dari orang-orang yang paling sering bersama kita/circle kita. Artinya, siapa yang ada di sekeliling kita sangat mempengaruhi cara kita berpikir, bersikap, dan menjalani hidup.</p>
-            <p>Contoh nyata dehh: Omelet, alias telor dadar / orak-arik. Dia akan menjadi makanan yang enak banget (terutama buat yang laper) kalo terbuat dari telur-telur yang segar dan baik. Tapi saya pernah bikin omelet dari 4 telur nih dan ternyata waktu saya pecahin telur ke-4 dan tercampur dengan 3 yang lain, telur ke-4 itu udah busuk. Wakzz..., Apa temen-temen ada yang mau omelet dari 3 telur bagus dan 1 telur busuk? Tentu ga akan ada yang mau, because the 4th egg has made the whole things going bad. Yup, si telur busuk tadi udah mempengaruhi/merusak telur-telur yang baik. Dan kabar buruknya adalah: Omelet itu ga bisa kembali jadi telur lagi.</p>
-            <p>Seringkali, masalah utama kita adalah kita terlalu 'lapar' akan cinta, sampai-sampai kita mengabaikan bau busuk dari telur yang mau kita campurkan ke dalam hidup kita. Kita tahu karakternya bermasalah, kita tahu dia tidak membawa kita makin deket sama Tuhan, tapi karena takut kesepian, takut kalau nanti dapet pasangan yang lebih buruk, kita tetep memecahkan 'telur' itu ke dalam wajan kehidupan kita. Dan saat semuanya sudah terlanjur hancur dan tercampur, kita baru sadar bahwa kompromi itu harganya terlalu mahal.</p>
+            <p>Relationship kita dengan orang lain tentu terkait erat dengan pribadi orang itu sesungguhnya. Kita ini kurang lebih cerminan dari orang-orang yang paling sering bersama kita.</p>
+            <p>Contoh nyata: Omelet. Dia akan menjadi makanan yang enak kalau terbuat dari telur-telur yang segar. Tapi saya pernah bikin omelet dari 4 telur dan ternyata waktu saya pecahin telur ke-4, telur itu sudah busuk dan tercampur dengan 3 yang lain. <em>The 4th egg has made the whole thing go bad.</em> Dan kabar buruknya: omelet itu nggak bisa kembali jadi telur lagi.</p>
+            <p>Seringkali, masalah utama kita adalah kita terlalu <em>lapar</em> akan cinta, sampai-sampai mengabaikan bau busuk dari telur yang mau kita campurkan ke dalam hidup kita. Kita tahu karakternya bermasalah, kita tahu dia tidak membawa kita makin deket sama Tuhan — tapi karena takut kesepian, kita tetap memecahkan 'telur' itu ke dalam wajan kehidupan kita.</p>
 
             <div class="quote">
-              <p>“Saya pernah ada di titik itu. Mempertahankan hubungan yang sudah jelas-jelas toxic, hanya karena takut sendirian dan takut kalaui ga dapet pasangan lagi yang sebaik dia. Hasilnya? Dua tahun produktivitas saya habis, banyak kesempatan karir yang terlewatkan, kepercayaan diri terkikis dan saya keluar dari hubungan itu bukan sebagai versi yang lebih baik, tapi sebagai orang yang lebih hancur dari sebelumnya. Omelet sudah terlanjur busuk.” <br>-seorang teman yang pernah berbagi cerita kepada saya.</p>
+              <p>"Saya pernah ada di titik itu. Mempertahankan hubungan yang sudah jelas-jelas toxic, hanya karena takut sendirian. Hasilnya? Dua tahun produktivitas habis, banyak kesempatan karir terlewatkan, kepercayaan diri terkikis — dan saya keluar dari hubungan itu sebagai orang yang lebih hancur dari sebelumnya. Omelet sudah terlanjur busuk."</p>
+              <cite>— seorang teman yang pernah berbagi cerita</cite>
             </div>
 
-           <p>Ilustrasi di atas, ga jauh beda dengan relationship yang kita alami dengan teman-teman kita, termasuk juga dalam pernikahan. Relationship hanya bisa seindah dengan siapa kita menjalin hubungan itu. Kalo dalam pernikahan sudah diaduk menjadi satu dan jika baru ketahuan kalau telur yang satu busuk dan mengalahkan telur yang baik... owww... that's terrible.</p>
-<p>Tapi ini yang lebih bikin kita perlu jujur pada diri sendiri: Kita sering fokus mencari 'telur yang baik' untuk pasangan kita, tapi kita lupa mengecek diri sendiri terlebih dahulu. Apakah saya adalah telur yang segar? Apakah saya, dalam kondisi rohani dan emosionalku saat ini, justru menjadi berkat atau justru menjadi beban bagi orang lain?</p>
-<p>Karena faktanya, kita bisa jadi telur yang terlihat bagus dari luar, tapi busuk di dalamnya. Luka masa lalu yang belum diselesaikan. Ketakutan yang tidak pernah dihadapi. Identitas yang tidak pernah ditemukan. Itu semua bisa jadi 'bau busuk' yang tidak kita sadari, tapi dirasakan oleh orang-orang di sekitar kita.</p>
+            <p>Tapi ini yang lebih bikin kita perlu jujur pada diri sendiri: kita sering fokus mencari 'telur yang baik' untuk pasangan, tapi lupa mengecek diri sendiri. Apakah saya adalah telur yang segar? Luka masa lalu yang belum diselesaikan, ketakutan yang tidak pernah dihadapi, identitas yang tidak pernah ditemukan — itu semua bisa jadi 'bau busuk' yang tidak kita sadari.</p>
 
-<div id="kejadian-218" class="anchor"></div>
-<h2 class="h2">Kejadian 2:18 - Titik Awal Segalanya</h2>
-<p>Now, kita lihat pada ayat di bawah ini, ayat yang mengawali tentang relationship antar manusia...</p>
+            <div class="section-divider"><div class="section-divider-inner"><span></span><span></span><span></span></div></div>
 
-<div class="quote">
-  <p>TUHAN Allah berfirman: 'Tidak baik, kalau manusia itu seorang diri saja. Aku akan menjadikan penolong baginya, yang sepadan dengan dia.' - Kejadian 2:18</p>
-  <p style="margin-top:10px;">King James Version mengatakan: 'And the LORD God said, It is not good that the man should be alone; I will make him an help meet for him.'</p>
-</div>
+            <!-- KEJADIAN 2:18 -->
+            <div id="kejadian" class="anchor"></div>
+            <div class="post-label">Firman Tuhan</div>
+            <h2 class="post-h2">Kejadian 2:18 — Titik Awal Segalanya</h2>
 
-<p>Jika manusia seorang diri / Alone: Tuhan katakan itu "Tidak Baik."</p>
-<p>Seorang diri = alone / sendirian, bukan single.</p>
-<p>Manusia yang Alone artinya: sendiri saja, eksklusif, terisolasi, menyendiri, tersendiri, tidak ada teman. Ini adalah kondisi yang tidak baik.</p>
-<p>Mengapa TIDAK BAIK jika manusia seorang diri saja?</p>
+            <div class="verse-box">
+              <p>"TUHAN Allah berfirman: 'Tidak baik, kalau manusia itu seorang diri saja. Aku akan menjadikan penolong baginya, yang sepadan dengan dia.'"</p>
+              <p class="verse-ref">Kejadian 2:18</p>
+            </div>
 
-<ul class="bullets">
-  <li>Karena KASIH. Sifat dasar kasih adalah MEMBERI, to give. God is Love, maka Tuhan menciptakan manusia agar Tuhan bisa mencurahkan kasihNya.</li>
-  <li>Untuk memperoleh keturunan, harus berpasangan dengan lawan jenis.</li>
-  <li>Karena talenta dan kemampuan kita dapat dikembangkan sendirian saja. Tetapi untuk mengembangkan Karakter, diperlukan orang lain!</li>
-</ul>
+            <p>Kata kuncinya: <strong>alone</strong>, bukan <em>single</em>. Manusia yang alone artinya sendiri, terisolasi, tidak ada teman. Tuhan tidak bilang: "It's not good to be single." Yang Dia bilang: "It's not good to be alone."</p>
 
-<p>Karakter kita itu diasah bukan saat kita lagi sembunyi di kamar sendirian, tapi justru saat kita bergesekan dengan orang lain. Saat kita dikecewakan dan dituntut untuk mengampuni, saat ego kita ditekan, di situlah buah Roh diuji. Tuhan mendesain kita untuk hidup di dalam komunitas yang saling menajamkan.</p>
-<p>Ini yang saya pelajari dari teman-teman di komunitas: ada orang-orang yang saat sendirian kelihatannya sangat rohani, sangat sabar, sangat baik. Tapi begitu masuk ke dalam hubungan, entah itu persahabatan yang intim atau pacarana, semua 'karakter' itu mulai retak. Bukan karena pasangannya yang salah, tapi karena gesekan relationship itu mengungkap apa yang selama ini tersembunyi.</p>
+            <p>Mengapa tidak baik jika manusia seorang diri?</p>
+            <ul class="bullets">
+              <li><strong>Karena kasih.</strong> Sifat dasar kasih adalah memberi. God is Love — Tuhan menciptakan manusia agar kasih-Nya bisa dicurahkan dan dialirkan.</li>
+              <li><strong>Untuk keturunan.</strong> Manusia perlu berpasangan dengan lawan jenis untuk menghasilkan keturunan.</li>
+              <li><strong>Untuk karakter.</strong> Talenta bisa dikembangkan sendirian — tapi untuk mengembangkan karakter, diperlukan gesekan dengan orang lain.</li>
+            </ul>
 
-<p>Makanya Amsal 27:17 bilang, 'Besi menajamkan besi, orang menajamkan sesamanya.' Proses saling menajamkan itu nggak nyaman. Pasti menyakitkan, muncul panas dan friksi. Tapi itulah cara Tuhan membentuk kita menjadi manusia yang semakin matang dan dewasa.</p>
-<p>Betul kan? You see guys? It's not good for a man to be alone (sendiri, eksklusif, menyendiri, tidak berteman)</p>
-<p>But it's good to be SINGLE!</p>
-<p>SINGLE artinya: tunggal, whole, utuh, complete, terpisah, unik (English Dictionary), whole, unique, undivided... Tuhan tidak bilang: It's not good to be single, tapi yang Dia bilang: It's not good to be alone.</p>
-<p>Adam adalah pribadi yang Single, artinya complete, utuh, sempurna. Dikatakan di Alkitab 'Allah melihat segala yang dijadikanNya itu sungguh amat baik'. Ini berarti Adam adalah pribadi yang utuh, single, complete and nothing wrong with Adam as a person. Tidak pernah dikatakan bahwa Adam sibuk mencari pasangan untuk mengisi kekosongan jiwanya. Tidak pernah dikatakan bahwa Adam merasa lonely/kesepian. Tidak!!</p>
-<p>Yang tercatat adalah: Adam mengusahakan dan memelihara Taman Eden, sendirian... Termasuk kerjaan yang mahaberat, yaitu memberi nama segala makhluk hidup yang ada di bumi. Begitu sibuknya dia, sampai Adam nggak sadar kalau dia perlu teman. Justru Tuhanlah yang bilang, bahwa 'It's not good for a man to be alone.' Adam sibuk, concern dengan pekerjaannya sehingga dia tidak merasa membutuhkan teman. Inisiatif berpasangan, justru dari Tuhan.</p>
-<p>Ini poin yang luar biasa. Adam tidak membuang-buang waktunya meratapi nasib karena dia sendirian. Dia sibuk dengan purpose hidupnya. Dia sibuk menghidupi panggilan Tuhan atas hidupnya. Nah, kadang, kita terlalu sibuk mencari 'siapa' yang tepat buat kita, sampai kita lupa mengerjakan 'apa' yang Tuhan percayakan di tangan kita saat ini. Fokus pada panggilanmu, rawat 'Taman Eden'-mu, biarkan Tuhan yang menjadi sutradara untuk mendatangkan penolong yang sepadan di waktu-Nya yang paling presisi. Karena, menurut saya, kita sudah siap memiliki pasangan Adalah pada saat kita merasa kitab isa sendiri dan tidak butuh teman hidup/pasangan.</p>
-<p>Taman Eden-mu hari ini mungkin adalah pekerjaanmu, pelayananmu, studimu, atau mimpi-mimpi yang Tuhan taruh di hatimu. Rawat itu baik-baik. Kerjakan dengan sepenuh hati. Karena saat kamu setia di Taman Eden-mu, Tuhan yang akan mengurus bagian lainnya.</p>
-<p>Perhatiin deh, pada saat Adam setia menjalankan panggilannya, maka Tuhan kasih bonus yaitu Pasangan Hidup. Nah, temen-temen dah pada setia belom nihh? Hehe... Ayo kita setia, maka yang terbaik pasti Tuhan sediakan buat kita.</p>
-<p>Waktu Tuhan menciptakan Hawa, wanita diciptakan BUKAN untuk membuat Adam menjadi complete. Why? Karena Adam sudah complete sejak sebelum dia ketemu wanita. Tujuan penciptaan wanita, sebagai penolong bagi Adam. The Lord said, 'I'm going to make him a helper.'</p>
-<p>Ilustrasinya gini: Untuk mengangkat kursi sendirian, saya bisa melakukannya. Tetapi dengan adanya penolong, maka akan membuat segala sesuatu menjadi lebih mudah, right? Sekalipun saat itu Adam masih sendirian, tetapi dia tidak merasa kesepian. Temen-temen perlu ingat bahwa alone, belum tentu kesepian / lonely. Adam memang tidak kesepian karena ada Tuhan di situ, tetapi jelas bahwa Tuhan bilang 'it's not good for a man to be alone.'</p>
+            <div class="verse-box">
+              <p>"Besi menajamkan besi, orang menajamkan sesamanya."</p>
+              <p class="verse-ref">Amsal 27:17</p>
+            </div>
 
-<div id="alone" class="anchor"></div>
-<h2 class="h2">Alone Bukan Berarti Kesepian</h2>
+            <p>Ada orang-orang yang saat sendirian kelihatannya sangat rohani, sangat sabar, sangat baik. Tapi begitu masuk ke dalam hubungan, semua 'karakter' itu mulai retak. Bukan karena pasangannya yang salah — tapi karena gesekan relationship mengungkap apa yang selama ini tersembunyi.</p>
 
-<p>Ada bedanya sendirian dan kesepian. Lonely itu bukan soal ada orang di sekitarmu atau tidak, lonely itu soal koneksi.</p>
-<p>Saya pernah berada di tengah kerumunan, di acara yang ramai, dikelilingi banyak orang  dan merasa sangat kesepian. Dan saya pernah ada sendirian di kamar, cuma duduk bersama Tuhan dan merasa sangat utuh, sangat damai, sangat complete.</p>
-<p>Penelitian Harvard selama 85 tahun membuktikan bahwa yang bikin orang bahagia dan sehat itu bukan seberapa banyak relasinya, tapi seberapa berkualitas hubungan yang dia punya. Kita bisa punya satu hubungan yang benar-benar sehat dan itu lebih bernilai dari seratus hubungan yang dangkal.</p>
-<p>Dan hubungan paling fundamental itu adalah hubunganmu dengan Tuhan. Saat itu beres, kekosongan yang sering kita coba isi dengan hubungan romantis itu akan terisi oleh sumber yang tepat.</p>
+            <div class="section-divider"><div class="section-divider-inner"><span></span><span></span><span></span></div></div>
 
-<div id="singleness" class="anchor"></div>
-<h2 class="h2">'SINGLE'NESS</h2>
+            <!-- SINGLE -->
+            <div id="alone" class="anchor"></div>
+            <div class="post-label">Konsep Kunci</div>
+            <h2 class="post-h2">SINGLE = Utuh, Whole, Complete</h2>
 
-<p>Guys, kapan kita tahu bahwa kita siap untuk menerima pasangan? Yaitu pada saat kita merasa tidak membutuhkan pasangan, karena di situlah kita merasa Complete.</p>
-<p>Adam telah membuktikannya. Hawa datang bukan pada saat dia sedang sibuk sana-sini mencari pasangan. Tuhan memberikan pasangan, justru pada saat Adam ada dalam kondisi terbaik, saat sedang complete, utuh, single dan menikmati panggilannya.</p>
-<p>Singleness, adalah suatu tahapan yang harus dicapai oleh setiap orang yang akan menikah. Hanya orang yang SINGLE, utuh - complete - matang - unik - secure - aman, hanya Single person yang siap masuk ke dalam arena pernikahan. Sebab pernikahan seharusnya terjadi antara two single persons, antara laki-laki yang utuh dan wanita yang utuh. Tetapi seringkali faktanya, pernikahan terjadi antara dua orang yang saling tidak utuh, yang saling mencari keutuhan dari diri pasangannya masing-masing.</p>
-<p>Ilustrasinya gini: Ada dua gelas berisi air yang tidak penuh, diibaratkan sebagai seorang individu. Pada masa pranikah, seringkali seseorang berkata 'ohh..., pasangan saya adalah orang yang bisa memenuhi hidup saya' atau 'bersama dengan pasangan saya, hidup saya menjadi utuh / complete'. Faktanya adalah: setelah gelas yang satu mengisi gelas yang lain, apa yang terjadi? Maka salah satu dari gelas itu akan menjadi kosong!</p>
-<p>Faktanya? Kalau dua gelas sama-sama setengah kosong, yang terjadi adalah saling menguras.</p>
-<p>Makanya Yesus berkata:</p>
+            <p><strong>SINGLE</strong> artinya: tunggal, whole, utuh, complete, unique, undivided. Tuhan tidak bilang "It's not good to be single" — tapi "It's not good to be alone." <strong>It's good to be SINGLE!</strong></p>
 
-<div class="quote">
-  <p>Matius 22:39 — Kasihilah sesamamu seperti dirimu sendiri.</p>
-</div>
+            <p>Adam adalah pribadi yang Single — artinya complete, utuh, sempurna. Tidak pernah dikatakan Adam sibuk mencari pasangan untuk mengisi kekosongan. Yang tercatat: Adam mengusahakan dan memelihara Taman Eden, sendirian. Adam tidak meratapi nasib — <strong>dia sibuk dengan purpose hidupnya.</strong></p>
 
-<p>Kalau kita tidak bisa mengasihi diri sendiri (bukan egois ya, tapi menerima dan utuh), kita tidak bisa mengasihi orang lain dengan sehat.</p>
-<p>Kalau kita belum utuh, hubungan pacaran atau pranikah cuma akan jadi ajang mencari pengakuan dan validasi. Dikit-dikit berantem cuma gara-gara status di media sosial nggak di-update, atau menuntut pasangan buat terus-terusan show off hubungan kita ke dunia hanya demi nutupin rasa insecure di dalam hati kita sendiri. Kita menyedot energi pasangan kita karena kita sendiri sebenarnya kosong.</p>
+            <div class="personal-note">
+              <p>Saya pernah ada di fase di mana saya merasa hidup kurang lengkap kalau nggak ada yang dituju setiap hari. Timeline Instagram penuh wedding. Dan saya mulai ngerasa: <em>"Apa aku kurang ya?"</em> Sampai Tuhan kayak ngomong pelan: <strong>"Kalau kamu butuh manusia buat merasa berharga, berarti identitasmu belum selesai di dalam Aku."</strong> Kalimat itu bikin saya berhenti. Sejak itu saya belajar menikmati proses pemulihan — belajar menerima diri, belajar tidak buru-buru. Dan anehnya, damai itu balik.</p>
+            </div>
 
-<div class="quote">
-  <p>'Di generasi kita sekarang, banyak hubungan yang sebetulnya bukan tentang cinta, tapi tentang konten. Foto bareng yang estetik. Caption mesra yang viral. Tapi di balik layar, dua orang itu sedang saling menguras. Keduanya lapar validasi, dan mereka mencarinya dari satu sama lain. Padahal dua orang yang lapar nggak bisa memberi makan satu sama lain.'</p>
-</div>
+            <p>Waktu Tuhan menciptakan Hawa, wanita diciptakan <em>bukan</em> untuk membuat Adam menjadi complete — karena Adam sudah complete sejak sebelum ketemu wanita. Tujuannya sebagai penolong. Inisiatif berpasangan justru dari Tuhan — bukan dari Adam yang kebingungan mencari-cari.</p>
 
-<p>Saya pernah ada di fase di mana saya merasa hidup saya kurang lengkap kalau nggak ada yang dituju setiap hari.</p>
-<p>Temen-temen udah pada punya pasangan.</p>
-<p>Timeline Instagram penuh wedding.</p>
-<p>Undangan nikah berdatangan.</p>
-<p>Dan saya mulai ngerasa: “Apa aku kurang ya?”</p>
-<p>Sampai Tuhan kayak ngomong pelan:</p>
-<p>“Kalau kamu butuh manusia buat merasa berharga, berarti identitasmu belum selesai di dalam Aku.”</p>
-<p>Kalimat itu bikin saya berhenti.</p>
-<p>Sejak itu saya belajar menikmati proses pemulihan.</p>
-<p>Belajar menerima diri.</p>
-<p>Belajar tidak buru-buru.</p>
-<p>Dan anehnya, damai itu balik.</p>
+            <div class="section-divider"><div class="section-divider-inner"><span></span><span></span><span></span></div></div>
 
-<p>Temen-temen, pernikahan tidak akan menjadi baik kalau ternyata kita mendapatkan orang yang tidak single / tidak complete / tidak utuh. Perbuatan yang salah, jika kita mencari seseorang yang bisa mengisi kekosongan dalam hati kita. Bahkan, beberapa diantara kita mungkin udah mulai mencari-cari orang lain yang bisa mengisi kekosongan dirinya, sejak dari kecil...!! SMP mungkin?</p>
-<p>Dan ini bukan salah kita sepenuhnya, temen-temen. Seringkali pola ini terbentuk dari pengalaman masa kecil. Kurangnya affection dari orang tua, luka penolakan di masa sekolah, rasa tidak cukup baik yang terus-menerus ditanamkan - semua itu menciptakan lubang yang kita coba tambal dengan kehadiran seseorang. Tapi lubang itu terlalu dalam untuk diisi oleh manusia mana pun. Hanya Tuhan yang sanggup menjangkau sedalam itu.</p>
-<p>Lebih aman tidak menikah dulu, daripada menikah tapi belum utuh.</p>
-<p>Pernikahan paling berbahaya adalah dua orang yang sama-sama kosong saling menuntut untuk diisi.</p>
-<p>Orang yang tidak utuh:</p>
+            <!-- SINGLENESS -->
+            <div id="singleness" class="anchor"></div>
+            <div class="post-label">Tentang Kesiapan</div>
+            <h2 class="post-h2">'SINGLE'ness — Tahapan yang Harus Dicapai</h2>
 
-<ul class="bullets">
-  <li>Mudah cemburu berlebihan</li>
-  <li>Mudah insecure</li>
-  <li>Mudah mencari pelarian</li>
-  <li>Mudah selingkuh</li>
-</ul>
+            <p>Kapan kita tahu siap untuk menerima pasangan? Yaitu pada saat kita merasa <em>tidak membutuhkan</em> pasangan — karena di situlah kita merasa complete.</p>
+            <p>Singleness adalah suatu tahapan yang harus dicapai oleh setiap orang yang akan menikah. Pernikahan seharusnya terjadi antara <em>two single persons</em> — antara laki-laki yang utuh dan wanita yang utuh.</p>
 
-<p>Karena dia mencari pemenuhan, bukan membangun perjanjian.</p>
+            <p>Ilustrasinya: ada dua gelas berisi air yang tidak penuh. Setelah gelas yang satu mengisi gelas yang lain, apa yang terjadi? Salah satu jadi kosong. <strong>Dua gelas setengah kosong tidak saling mengisi — mereka saling menguras.</strong></p>
 
-<div class="section-divider"><span>________________________________________</span></div>
+            <div class="verse-box">
+              <p>"Kasihilah sesamamu manusia seperti dirimu sendiri."</p>
+              <p class="verse-ref">Matius 22:39</p>
+            </div>
 
-<p>Matius 22:39 - Dan hukum yang kedua, yang sama dengan itu, ialah: Kasihilah sesamamu manusia seperti dirimu sendiri. Yesus berkata, supaya kita bisa mengasihi sesama kita, baik itu pasangan kita, istri/suami kita, maka kita harus bisa mengasihi diri sendiri. Tidak bisa mengasihi dirimu sendiri = tentu tidak bisa mengasihi sesamamu manusia. Perlu dicatat bahwa mengasihi diri sendiri: bukan berarti selfish, self center, atau egois, melainkan menjadi utuh, complete, dan Single!!</p>
-<p>Lantas bagaimana caranya mengasihi dirimu sendiri?</p>
+            <p>Kalau kita tidak bisa mengasihi diri sendiri (bukan egois — tapi menerima dan utuh), kita tidak bisa mengasihi orang lain dengan sehat. Kalau kita belum utuh, hubungan cuma jadi ajang mencari pengakuan dan validasi.</p>
 
-<ul class="bullets">
-  <li>Mengenal diri kita sendiri. Do you know who you are? Do you know why you are in God? Do you know why you are here? Do you know your identity? Yesus adalah pribadi yang mengetahui siapa diriNya, sehingga Dia bisa mengasihi orang lain. (Yoh 14:6, 10:9, 10:11, 6:35, 8:12, 11:25)</li>
-  <li>Menerima diri kita, apa adanya - artinya kita memiliki gambar diri yang telah dipulihkan dalam Kristus.</li>
-  <li>Mengampuni diri sendiri. Banyak dari kita yang hidup menanggung rasa bersalah bertahun-tahun. Atas kesalahan masa lalu, atas hubungan yang gagal, atas dosa yang sudah diakui tapi belum kita maafkan dalam diri sendiri. Kalau Tuhan sudah mengampuni, siapa kita yang terus menghukum diri sendiri?</li>
-  <li>Merawat diri - jiwa, pikiran, dan tubuh. Ini bukan soal skincare routine atau gym aesthetic. Ini soal apakah kamu memberi dirimu sendiri waktu untuk beristirahat, waktu bersama Tuhan, waktu untuk bertumbuh. Orang yang belajar merawat dirinya sendiri akan jadi jauh lebih siap merawat orang lain.</li>
-</ul>
+            <div class="quote">
+              <p>'Di generasi kita sekarang, banyak hubungan yang sebetulnya bukan tentang cinta, tapi tentang konten. Foto bareng yang estetik. Caption mesra yang viral. Tapi di balik layar, dua orang itu sedang saling menguras. Dua orang yang lapar nggak bisa memberi makan satu sama lain.'</p>
+            </div>
 
-<p>Pernikahan yang tidak baik ialah dua individu yang tidak bisa mengasihi diri sendiri, tidak mengenal dirinya sendiri, tidak bisa menerima dirinya sendiri, tetapi berusaha untuk saling mengasihi. Lihat contohnya di Sinetron.</p>
-<p>Beberapa relationship pranikah atau malah pernikahan, sebetulnya 'mengosongkan' diri kita, atau 'dries you up', atau membuat kondisi kita menjadi kering, yaitu pada saat pasangan kita berusaha memenuhi kekosongan dirinya. Jika pasangan kita sedikit-sedikit telepon kita dan bilang, 'Kenapa sih lo nggak telepon gue?', atau sedikit-sedikit 'Kenapa sih lo nggak perhatiin gue?', atau 'Kenapa sih lo nggak seperti pasangan yang lain?'</p>
-<p>Sesungguhnya, kalau kita Single (complete, utuh, whole), maka kita tidak segitu butuhnya diperhatiin, karena kita bisa mengasihi diri sendiri dan siap mengasihi orang lain. Yesus adalah pribadi yang tahu persis siapa dirinya, apa tujuan hidupnya, dan kenapa Dia ada di muka bumi ini. (Yohanes 8:14)</p>
+            <p>Orang yang tidak utuh mudah cemburu berlebihan, mudah insecure, mudah mencari pelarian — karena dia mencari pemenuhan, bukan membangun perjanjian.</p>
 
-<div id="more-important" class="anchor"></div>
-<h2 class="h2">IT'S MORE IMPORTANT TO BE SINGLE</h2>
+            <div class="section-divider"><div class="section-divider-inner"><span></span><span></span><span></span></div></div>
 
-<p>Ternyata jika ditelaah lebih jauh, lebih penting untuk menjadi Single lebih dahulu ketimbang menikah. Adalah lebih aman untuk tidak menikah lebih dahulu, daripada menikah tapi kita belum menjadi single.</p>
-<p>Hal yang paling berbahaya dalam pernikahan adalah orang yang tidak Single/utuh, menikah dengan orang yang tidak Single/utuh. Itulah penyebab perceraian dan memudarnya kebahagiaan dalam pernikahan.</p>
-<p>Ilustrasi: Masih mending kalau gelas tadi berisi 50% : 50%. Yang lebih parah, jika yang satu dalam kondisi yang di bawah 50%. Jika individu yang satu tidak bisa memenuhi yang lain, maka pasangannya akan mencari orang lain, yang dianggap bisa memenuhi kekosongan dirinya dan terjadilah perselingkuhan yang berujung pada perzinahan. Lihatlah pada realita yang ada, orang yang tidak utuh/complete/single menikah dengan yang tidak utuh, maka tinggal menunggu waktu saja dan dalam hitungan jari, tahun-tahun pernikahan mereka akan segera berakhir.</p>
-<p>Sama kayak waktu saya lagi lari sore atau jogging. Kalau napas saya sendiri belum teratur, langkah kaki saya masih berat, dan endurance saya belum stabil, gimana mungkin saya mau lari berdampingan sama orang lain dan jadi partner lari buat dia? Yang ada kita berdua malah saling menjatuhkan atau saling nggandulin satu sama lain. Kita harus punya daya tahan secara individu dulu.</p>
-<p>Pernah lihat orang yang baru mulai lari tapi langsung ajak temannya untuk maraton bareng? Hasilnya: dua-duanya nggak sampai garis finish, saling nunggu, saling nge-drag. Tapi lihat pelari yang sudah terlatih, yang nafasnya sudah teratur, langkahnya sudah steady, dia bisa berlari berdampingan, bahkan memberi semangat kepada pasangannya tanpa kehilangan ritmenya sendiri. Itulah gambar pernikahan yang sehat - dua pelari yang sudah terlatih, berlari bersama.</p>
-<p>It's more important to you to be SINGLE first, then get married.</p>
-<p>Kalaupun sekarang kita belum get married, yang terpenting kita menjadi SINGLE, maka dengan demikian kita tetap bersukacita. Sebab, orang yang tidak SINGLE, tidak utuh, tidak dapat menguasai dirinya (Amsal 25:28). Bagaimana mungkin orang yang kosong / tidak utuh akan dapat mengendalikan dirinya? Dia hanya bisa mengendalikan sebagian dari dirinya, tidak sepenuhnya. Tentu saja, hanya orang yang Single, yang complete / penuh / utuh, akan dapat mengendalikan hidupnya.</p>
-<p>Orang yang tidak utuh/complete, tidak dapat memberikan apa-apa untuk pasangannya karena memang tujuan awal dia mencari pasangan adalah selfish, hanya untuk mengisi kekosongan dirinya sendiri. Pasangan seperti ini hanya akan banyak menuntut, banyak minta diperhatiin dsb. Dia akan mengganggu konsentrasi hidup kita, pekerjaan, karier, bisnis, dll. This person will dries you up.</p>
+            <!-- MENGASIHI DIRI -->
+            <div id="matius" class="anchor"></div>
+            <div class="post-label">Praktis</div>
+            <h2 class="post-h2">Bagaimana Mengasihi Diri Sendiri?</h2>
 
-<div id="marriage" class="anchor"></div>
-<h2 class="h2">The Marriage That Looked Perfect</h2>
+            <ul class="bullets">
+              <li><strong>Mengenal diri kita sendiri.</strong> Do you know who you are? Do you know your identity in God? Yesus mengetahui siapa diri-Nya, sehingga Dia bisa mengasihi orang lain. (Yoh 14:6, 10:9, 8:12)</li>
+              <li><strong>Menerima diri kita, apa adanya.</strong> Artinya memiliki gambar diri yang telah dipulihkan dalam Kristus.</li>
+              <li><strong>Mengampuni diri sendiri.</strong> Banyak dari kita yang hidup menanggung rasa bersalah bertahun-tahun. Kalau Tuhan sudah mengampuni, siapa kita yang terus menghukum diri sendiri?</li>
+              <li><strong>Merawat diri — jiwa, pikiran, dan tubuh.</strong> Apakah kamu memberi dirimu sendiri waktu untuk beristirahat, waktu bersama Tuhan, waktu untuk bertumbuh? Orang yang belajar merawat dirinya akan jauh lebih siap merawat orang lain.</li>
+            </ul>
 
-<p>Saya punya pasangan sahabat yang menikah muda. Dari luar, semua kelihatan indah - foto pernikahan yang cantik, bulan madu yang epic, caption media sosial yang penuh cinta. Tapi tidak sampai dua tahun, semuanya retak.</p>
-<p>Bukan karena mereka tidak saling cinta. Tapi karena dua duanya masuk ke pernikahan dengan luka yang belum sembuh. Dia mencari rasa aman dari pernikahan. Pasangannya mencari pengakuan. Dua kekosongan yang saling berhadapan dan mengira bisa saling mengisi, padahal yang terjadi justru sebaliknya: saling menguras.</p>
-<p>Setelah berpisah, si pria bilang kepada saya: 'Gue kira nikah bakal bikin gue lebih baik. Ternyata gue harus jadi lebih baik dulu, baru bisa punya pernikahan yang baik.' Satu kalimat sederhana, tapi dalamnya luar biasa.</p>
-<p>Dan itu yang Tuhan sudah tahu sejak awal. Makanya Dia tidak bilang 'I will make him a wife,' tapi Dia bilang 'I will make him a helper - someone who is fit for him.' Yang sepadan. Bukan yang sempurna, tapi yang sepadan. Artinya, ada level kematangan yang perlu kita capai dulu, supaya kita bisa bertemu dengan seseorang yang benar-benar sepadan dengan kita.</p>
+            <div class="section-divider"><div class="section-divider-inner"><span></span><span></span><span></span></div></div>
 
-<div id="wrong-myth" class="anchor"></div>
-<h2 class="h2">IT'S A WRONG MYTH</h2>
+            <!-- MARRIAGE -->
+            <div id="perfect" class="anchor"></div>
+            <div class="post-label">Kisah Nyata</div>
+            <h2 class="post-h2">The Marriage That Looked Perfect</h2>
 
-<p>Mitos yang keliru ialah: Menikah adalah kunci menuju kebahagiaan, seakan belum lengkap kalau belum menikah. Ini menyebabkan kebanyakan orang sejak muda berpikir untuk mencari seseorang, untuk mengisi kekosongan dirinya. It's completely wrong guys. Why?? Karena kekosongan hidup kita hanya bisa diisi oleh Tuhan. Makanya Tuhan Yesus bilang, 'Seek ye first the Kingdom of God', Mat 6:33. Tuhanlah yang seharusnya menjadi pusat, sumber dan inspirasi untuk mengisi kekosongan hati kita. Kita semua tahu, bahwa kita tidak perlu menikah untuk menjadi complete.</p>
+            <p>Saya punya pasangan sahabat yang menikah muda. Dari luar, semua kelihatan indah — foto pernikahan yang cantik, bulan madu yang epic, caption medsos yang penuh cinta. Tapi tidak sampai dua tahun, semuanya retak.</p>
+            <p>Bukan karena mereka tidak saling cinta. Tapi karena dua-duanya masuk ke pernikahan dengan luka yang belum sembuh. Dua kekosongan yang saling berhadapan dan mengira bisa saling mengisi — padahal yang terjadi justru sebaliknya: saling menguras.</p>
 
-<div id="myths" class="anchor"></div>
-<h2 class="h2">Mitos-Mitos yang Perlu Kita Bongkar Bersama</h2>
+            <div class="quote">
+              <p>"Gue kira nikah bakal bikin gue lebih baik. Ternyata gue harus jadi lebih baik dulu, baru bisa punya pernikahan yang baik."</p>
+              <cite>— si pria setelah berpisah</cite>
+            </div>
 
-<p>Mitos 1: 'Nanti kalau sudah ketemu yang tepat, hidupku akan baik-baik aja.'</p>
-<p>Salah. Kalau hidupmu belum baik-baik aja sekarang, kehadiran seseorang tidak otomatis membuatnya jadi baik. Yang terjadi justru sebaliknya, masalahmu akan jadi masalah berdua. Kamu perlu beres dulu, sebelum beres bersama.</p>
-<p>Mitos 2: 'Umurku sudah sekian, harusnya sudah nikah.'</p>
-<p>Tuhan tidak punya kalender seperti yang dimiliki tante-tante di arisan buat. Dia punya waktu yang sempurna. Dan waktu yang tepat bukan yang paling cepat, tapi yang paling presisi. His timing is not early, not late - always perfect.</p>
-<p>Mitos 3: 'Kalau ada yang suka sama aku, itu tanda dari Tuhan.'</p>
-<p>Hati-hati dengan logika ini. Banyak orang yang 'merasa' itu konfirmasi Tuhan, padahal sebenarnya itu hanya konfirmasi rasa kesepian mereka sendiri. Doa, hikmat, komunitas rohani, dan buah dari hubungan itu - itulah yang perlu kita pertimbangkan, bukan sekadar perasaan.</p>
-<p>Mitos 4: 'Sendirian berarti ada yang salah dengan aku.'</p>
-<p>Tidak. Sendirian bisa berarti Tuhan sedang menyiapkanmu. Ada 'Taman Eden' yang Dia mau kamu kerjakan terlebih dahulu. Ada kedewasaan yang perlu terbentuk. Ada luka yang perlu disembuhkan. Masa single bukan hukuman, itu investasi.</p>
+            <p>Makanya Tuhan tidak bilang <em>'I will make him a wife'</em> — tapi <em>'I will make him a helper, someone who is fit for him.'</em> Yang sepadan. Bukan yang sempurna, tapi yang sepadan. Ada level kematangan yang perlu dicapai dulu.</p>
 
-<p>Pernikahan tidak selalu menambah urapan dalam diri kita, tidak selalu akan menjadikan kita sebagai berkat bagi orang lain. That's not the point of a marriage. Kepenuhan panggilan kita hanya bisa didapat di dalam Tuhan, yaitu pada saat kita tahu siapa diri kita, kita bisa menerima diri kita sendiri, kita tahu kenapa kita ada di sini dan kita memahami apa tujuan hidup kita.</p>
-<p>Kunci menerima kebahagiaan yang sebenarnya adalah: apabila kita menjadi single/utuh/complete, mengenali siapa kita di dalam Tuhan dan mengetahui tujuan hidup kita, baik dalam keadaan menikah atau tidak menikah.</p>
-<p>Ada orang-orang yang masih sendirian, belum berpasangan/menikah, tetapi dia tidak pernah merasa kesepian karena dia Single, utuh/complete dalam panggilannya. Tidak dipungkiri, bisa saja sewaktu-waktu ada keinginan memiliki pasangan, tetapi keinginan itu tidak pernah membuat dia menjadi goyah dan tetap maksimal dalam panggilannya.</p>
+            <div class="section-divider"><div class="section-divider-inner"><span></span><span></span><span></span></div></div>
 
-<div id="one-who-completes" class="anchor"></div>
-<h2 class="h2">The One Who Completes Us</h2>
+            <!-- MITOS -->
+            <div id="mitos" class="anchor"></div>
+            <div class="post-label">Pembongkaran</div>
+            <h2 class="post-h2">Mitos-Mitos yang Perlu Kita Bongkar</h2>
 
-<p>Banyak orang yang sendirian tapi dia belum utuh/kosong/sepi, hidupnya banyak diisi dengan usaha-usaha untuk memenuhi kekosongan dirinya dan menjadi orang yang sibuk sana-sini mencari tulang rusuknya. Cobain sana, cobain sini, lirik sana-sini, jadian sana-sini, putus sana-sini, parah deh pokoknya.</p>
-<p>Jika dia menikah, bisa jadi dia malah akan merusak pasangannya jika pasangannya adalah orang yang Single. Ingat ilustrasi omelet. Telur yang busuk akan merusak telur yang baik. Nah, jika pasangannya tidak Single/utuh, wahh... akan lebih parah lagi. Mereka akan saling mengeringkan, saling menuntut, saling menyakiti dan tidak dewasa, dan akan berakibat pada ketidakbahagiaan dan perceraian.</p>
-<p>Guys, sekali lagi pahamilah, bahwa rasa kesepian dan tidak utuh, TIDAK BISA DIISI OLEH PASANGAN KITA, melainkan hanya oleh Tuhan Yesus.</p>
+            <div class="myth-grid">
+              <div class="myth-item">
+                <div class="myth-label">Mitos 1</div>
+                <p class="myth-text">"Nanti kalau sudah ketemu yang tepat, hidupku akan baik-baik aja."</p>
+                <p class="myth-answer">Salah. Kalau hidupmu belum baik-baik aja sekarang, kehadiran seseorang tidak otomatis membuatnya jadi baik. Kamu perlu beres dulu, sebelum beres bersama.</p>
+              </div>
+              <div class="myth-item">
+                <div class="myth-label">Mitos 2</div>
+                <p class="myth-text">"Umurku sudah sekian, harusnya sudah nikah."</p>
+                <p class="myth-answer">Tuhan tidak punya kalender seperti tante-tante di arisan. His timing is not early, not late — always perfect.</p>
+              </div>
+              <div class="myth-item">
+                <div class="myth-label">Mitos 3</div>
+                <p class="myth-text">"Kalau ada yang suka sama aku, itu tanda dari Tuhan."</p>
+                <p class="myth-answer">Hati-hati. Banyak yang 'merasa' itu konfirmasi Tuhan, padahal itu hanya konfirmasi rasa kesepian mereka sendiri.</p>
+              </div>
+              <div class="myth-item">
+                <div class="myth-label">Mitos 4</div>
+                <p class="myth-text">"Sendirian berarti ada yang salah dengan aku."</p>
+                <p class="myth-answer">Tidak. Sendirian bisa berarti Tuhan sedang menyiapkanmu. Masa single bukan hukuman — itu investasi.</p>
+              </div>
+            </div>
 
-<div id="most-complete" class="anchor"></div>
-<h2 class="h2">The Most Complete Man Who Ever Lived</h2>
+            <div class="section-divider"><div class="section-divider-inner"><span></span><span></span><span></span></div></div>
 
-<p>Mau tahu contoh paling sempurna dari seseorang yang Single - utuh, complete, penuh - yang pernah ada di muka bumi ini? Yesus Kristus.</p>
-<p>Yesus tidak pernah menikah. Tapi tidak ada satu momen pun dalam Injil di mana Yesus kelihatan tidak lengkap, tidak utuh, atau mencari validasi dari orang lain. Sebaliknya, Dia yang justru menjadi sumber bagi orang lain. Dia memberikan diri, bukan karena Dia butuh menerima, tapi karena Dia sudah penuh.</p>
-<p>Yohanes 4 - saat Yesus berjumpa dengan perempuan Samaria di sumur. Perempuan itu sudah lima kali menikah dan masih merasa kosong. Dan Yesus berkata padanya: 'Barangsiapa minum air yang akan Kuberikan kepadanya, ia tidak akan haus untuk selama-lamanya.' Artinya: apa yang kamu cari dari hubungan ke hubungan, dari orang ke orang, hanya Aku yang bisa memberikannya secara permanen.</p>
-<p>Perempuan itu hidup dengan mitos bahwa pria ke-enam-lah yang akan mengisi hidupnya. Tapi Yesus menunjukkan bahwa yang dia butuhkan bukan pria ke-enam - tapi Satu Pribadi yang benar: Yesus Kristus sendiri.</p>
-<p>Justru pernikahan yang sempurna, hanya bisa dilakukan oleh dua orang Single, yaitu mereka yang telah utuh dan complete. Mereka berdua tidak akan saling mengeringkan, tapi saling memberi pujian, saling mendukung, saling menunjang dan tidak saling menuntut.</p>
-<p>These two Single persons akan menghasilkan sesuatu yang baik, kekuatan yang baru, berkat bagi sekeliling, dll. Tidak heran jika setelah pernikahan, maka baik sang pria maupun sang wanita, akan menjadi individu yang semakin berkualitas, yang mengalami kepenuhan panggilannya di dalam Kristus.</p>
-<p>Berbahagialah kita jika menikah dengan pribadi yang Single, pribadi yang utuh/complete, punya kedewasaan dan panggilan dalam Kristus.</p>
-<p>Pernikahan terbaik yang pernah saya saksikan bukan yang pasangannya selalu sempurna - tapi yang dua-duanya sudah berdamai dengan diri mereka sendiri, sehingga mereka bisa hadir sepenuhnya untuk satu sama lain, tanpa agenda tersembunyi, tanpa kekosongan yang menuntut diisi.</p>
+            <!-- YESUS -->
+            <div id="yesus" class="anchor"></div>
+            <div class="post-label">Contoh Sempurna</div>
+            <h2 class="post-h2">The Most Complete Man Who Ever Lived</h2>
 
-<div class="section-divider"><span>________________________________________</span></div>
+            <p>Mau tahu contoh paling sempurna dari seseorang yang Single — utuh, complete, penuh — yang pernah ada di muka bumi ini? Yesus Kristus. Dia tidak pernah menikah. Tapi tidak ada satu momen pun di mana Yesus kelihatan tidak lengkap atau mencari validasi dari orang lain. Sebaliknya, Dia yang justru menjadi sumber bagi orang lain.</p>
 
-<div id="greatest-gift" class="anchor"></div>
-<h2 class="h2">The Greatest Gift You Can Become</h2>
+            <p>Yohanes 4 — perempuan Samaria yang sudah lima kali menikah dan masih merasa kosong. Yesus berkata:</p>
 
-<p>Remember: Hubungan kita hanya sebaik dengan siapa saja yang terlibat dalam hubungan itu. To be single should be the goal of every person.</p>
-<p>Dan entah kita menikah atau tidak, sudah menikah atau belum, STAY SINGLE!!</p>
-<p>Kalau kamu hari ini masih sendirian dan sedang berjuang dengan rasa kesepian atau pertanyaan 'kapan giliran saya' - saya mau bilang ini kepadamu:</p>
-<p>Masa single-mu bukan ruang tunggu yang membosankan. Itu ruang persiapan yang sakral. Tuhan sedang mengerjakan sesuatu yang dalam di dalam dirimu yang tidak bisa Dia kerjakan saat kamu terburu-buru menuju mezbah pernikahan.</p>
-<p>Rawat hubunganmu dengan Tuhan. Kerjakan panggilanmu. Sembuhkan luka-lukamu. Kenali dirimu. Terima dirimu. Dan ketika saatnya tiba - dan itu akan tiba di waktu yang paling presisi - kamu akan berdiri bukan sebagai orang yang akhirnya menemukan seseorang untuk 'melengkapi' dirimu, tapi sebagai orang yang sudah utuh, yang siap berbagi hidup dengan seseorang yang juga sudah utuh.</p>
-<p>Dan ingat: pribadi yang benar-benar utuh di dalam Kristus adalah hadiah terindah yang bisa kamu berikan, bukan hanya untuk pasangan masa depanmu, tapi juga untuk dirimu sendiri.</p>
+            <div class="verse-box">
+              <p>"Barangsiapa minum air yang akan Kuberikan kepadanya, ia tidak akan haus untuk selama-lamanya."</p>
+              <p class="verse-ref">Yohanes 4:14</p>
+            </div>
 
-<div class="section-divider"><span>________________________________________</span></div>
+            <p>Perempuan itu hidup dengan mitos bahwa pria ke-enam-lah yang akan mengisi hidupnya. Tapi Yesus menunjukkan bahwa yang dia butuhkan bukan pria ke-enam — tapi Satu Pribadi yang benar.</p>
 
-<div class="footer-note">
-  <p>•	Ditulis dengan doa dan harapan, untuk kamu yang sedang berjalan dalam proses. Kamu tidak sendirian. Dan kamu lebih utuh dari yang kamu kira.</p>
-</div>
+            <p>Pernikahan terbaik yang pernah saya saksikan bukan yang pasangannya selalu sempurna — tapi yang dua-duanya sudah berdamai dengan diri mereka sendiri, sehingga bisa hadir sepenuhnya untuk satu sama lain, tanpa agenda tersembunyi, tanpa kekosongan yang menuntut diisi.</p>
 
-<nav class="post-nav" aria-label="Post navigation">
-  <a href="../index.html">← Back to Home</a>
-  <a href="#intro">↑ Back to Top</a>
-</nav>
+            <div class="section-divider"><div class="section-divider-inner"><span></span><span></span><span></span></div></div>
 
+            <!-- CLOSING -->
+            <div id="gift" class="anchor"></div>
+            <h2 class="post-h2">The Greatest Gift You Can Become</h2>
+
+            <p>Kalau kamu hari ini masih sendirian dan sedang berjuang dengan rasa kesepian atau pertanyaan <em>'kapan giliran saya'</em> — saya mau bilang ini kepadamu:</p>
+            <p>Masa single-mu bukan ruang tunggu yang membosankan. <strong>Itu ruang persiapan yang sakral.</strong> Rawat hubunganmu dengan Tuhan. Kerjakan panggilanmu. Sembuhkan luka-lukamu. Kenali dirimu. Terima dirimu. Dan ketika saatnya tiba — dan itu akan tiba di waktu yang paling presisi — kamu akan berdiri bukan sebagai orang yang akhirnya menemukan seseorang untuk 'melengkapi' dirimu, tapi sebagai orang yang sudah utuh, yang siap berbagi hidup dengan seseorang yang juga sudah utuh.</p>
+
+            <div class="closing-note">
+              <p>Pribadi yang benar-benar utuh di dalam Kristus adalah hadiah terindah yang bisa kamu berikan — bukan hanya untuk pasangan masa depanmu, tapi juga untuk dirimu sendiri.<br><br><em>Kamu tidak sendirian. Dan kamu lebih utuh dari yang kamu kira.</em></p>
+            </div>
+
+            <div class="section-divider"><div class="section-divider-inner"><span></span><span></span><span></span></div></div>
+
+            <div class="footer-note">
+              <p>✦ &nbsp;Ditulis dengan doa dan harapan, untuk kamu yang sedang berjalan dalam proses.</p>
+            </div>
 
             <nav class="post-nav" aria-label="Post navigation">
               <a href="../index.html">← Back to Home</a>
               <a href="#intro">↑ Back to Top</a>
             </nav>
-
           </div>
         </article>
 
-        <!-- TOC -->
-        <aside class="cardish toc" aria-label="Table of contents">
-          <h3>On this page</h3>
+        <!-- ── TOC SIDEBAR ─────────────────────────── -->
+        <aside class="post-card toc" aria-label="Table of contents">
+          <p class="toc-title">On this page</p>
+          <span class="toc-section-label">Pembukaan</span>
           <a href="#intro">Intro</a>
           <a href="#cerita">Cerita Lebaran</a>
-          <a href="#kalimat">Kalimat Kunci</a>
+          <a href="#kalimat">Prinsip Kunci</a>
+          <span class="toc-section-label">Fondasi</span>
           <a href="#omelet">Omelet Telur Busuk</a>
+          <a href="#kejadian">Kejadian 2:18</a>
+          <a href="#alone">Single vs Alone</a>
+          <span class="toc-section-label">Kesiapan</span>
+          <a href="#singleness">Singleness</a>
+          <a href="#matius">Mengasihi Diri Sendiri</a>
+          <a href="#perfect">Marriage Looked Perfect</a>
+          <span class="toc-section-label">Pembongkaran</span>
+          <a href="#mitos">Mitos-Mitos</a>
+          <a href="#yesus">Yesus Kristus</a>
+          <a href="#gift">Greatest Gift</a>
         </aside>
 
       </div>
@@ -567,5 +983,29 @@
   </footer>
 
   <script src="../assets/js/main.js"></script>
+  <script>
+    // Reading progress
+    const bar = document.getElementById('readProgress');
+    window.addEventListener('scroll', () => {
+      const scrolled = window.scrollY;
+      const total = document.documentElement.scrollHeight - window.innerHeight;
+      if (bar) bar.style.width = Math.min((scrolled / total) * 100, 100) + '%';
+    }, { passive: true });
+
+    // Active TOC highlight
+    const tocLinks = document.querySelectorAll('.toc a[href^="#"]');
+    const anchors  = [...document.querySelectorAll('.anchor')];
+
+    function updateTOC() {
+      const scrollY = window.scrollY + 120;
+      let current = '';
+      anchors.forEach(el => { if (el.offsetTop <= scrollY) current = el.id; });
+      tocLinks.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+      });
+    }
+    window.addEventListener('scroll', updateTOC, { passive: true });
+    updateTOC();
+  </script>
 </body>
 </html>
