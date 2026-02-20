@@ -14,20 +14,31 @@
             const toggleButton = document.getElementById('darkModeToggle');
             if (!toggleButton) return;
 
-            // Load preference from localStorage
-            const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
-            if (darkModeEnabled) {
-                document.documentElement.classList.add('dark-mode');
-                toggleButton.textContent = 'Dark Mode On';
-            } else {
-                toggleButton.textContent = 'Dark Mode Off';
+            const icon = toggleButton.querySelector('.dm-icon');
+            const label = toggleButton.querySelector('.dm-label');
+
+            function setDarkMode(enabled) {
+                if (enabled) {
+                    document.documentElement.classList.add('dark-mode');
+                    if (icon) icon.textContent = '☀️';
+                    if (label) label.textContent = 'Light Mode';
+                    toggleButton.setAttribute('aria-label', 'Switch to light mode');
+                } else {
+                    document.documentElement.classList.remove('dark-mode');
+                    if (icon) icon.textContent = '🌙';
+                    if (label) label.textContent = 'Dark Mode';
+                    toggleButton.setAttribute('aria-label', 'Switch to dark mode');
+                }
+                localStorage.setItem('darkMode', enabled);
             }
 
+            // Load preference from localStorage
+            const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
+            setDarkMode(darkModeEnabled);
+
             toggleButton.addEventListener('click', () => {
-                document.documentElement.classList.toggle('dark-mode');
                 const isDark = document.documentElement.classList.contains('dark-mode');
-                toggleButton.textContent = isDark ? 'Dark Mode On' : 'Dark Mode Off';
-                localStorage.setItem('darkMode', isDark);
+                setDarkMode(!isDark);
             });
         } catch (error) {
             console.error('Error initializing dark mode:', error);

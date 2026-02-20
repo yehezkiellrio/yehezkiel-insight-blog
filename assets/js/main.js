@@ -49,6 +49,7 @@
             initSubscriptionForm();
             initSmoothScrolling();
             initAnimations();
+            initTopicFilter();
 
             console.log('Yehezkiel\'s Insight Blog initialized successfully');
         } catch (error) {
@@ -379,6 +380,38 @@
                 description: `${context}: ${error.message}`,
                 fatal: false
             });
+        }
+    }
+
+    /**
+     * Initialize topic/category filter buttons in sidebar
+     */
+    function initTopicFilter() {
+        try {
+            const topicButtons = document.querySelectorAll('.topic-tag');
+            if (!topicButtons.length) return;
+
+            topicButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Update active state
+                    topicButtons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const tag = btn.dataset.tag;
+
+                    postCards.forEach(card => {
+                        if (tag === 'all') {
+                            card.style.display = 'block';
+                        } else {
+                            const cardTag = card.querySelector('.post-tag');
+                            const matches = cardTag && cardTag.textContent.trim() === tag;
+                            card.style.display = matches ? 'block' : 'none';
+                        }
+                    });
+                });
+            });
+        } catch (error) {
+            console.error('Error initializing topic filter:', error);
         }
     }
 

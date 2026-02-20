@@ -26,14 +26,18 @@
                     <ul class="nav-list">
                         <li><a href="index.html" class="nav-link active">Home</a></li>
                         <li><a href="about.html" class="nav-link">About</a></li>
-                        <li><button id="darkModeToggle" class="dark-mode-toggle" type="button">Dark Mode Off</button></li>
                     </ul>
                 </nav>
+                <!-- Dark mode toggle moved outside nav, as its own control -->
+                <button id="darkModeToggle" class="dark-mode-toggle" type="button" aria-label="Toggle dark mode">
+                    <span class="dm-icon">🌙</span>
+                    <span class="dm-label">Dark Mode</span>
+                </button>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section (Personal & Modern) -->
+    <!-- Hero Section -->
     <section class="hero hero-modern">
         <div class="container">
             <div class="hero-content">
@@ -43,7 +47,6 @@
                     Discover insights, reflections, and encouragement for your spiritual journey.
                     Every step matters, every story has meaning.
                 </p>
-
                 <div class="hero-actions">
                     <a class="btn btn-primary" href="about.html">About me</a>
                     <a class="btn" href="#latest">Latest posts</a>
@@ -64,27 +67,35 @@
                         <h2 class="section-title">Recent Posts</h2>
                         <p class="section-subtitle">A quick set of reflections you can read anytime.</p>
                     </div>
-<!-- ✅ NEW POST: The Second Fire -->
-<article class="post-card card">
-    <div class="post-content-wrapper">
-        <div class="post-meta meta">
-            <time datetime="2026-02-19">19 Februari 2026</time>
-        </div>
-        <h3 class="post-title">
-            <a href="posts/the-second-fire.html">The Second Fire: Ketika Tuhan Menemui Kamu Tepat di Tempat Kamu Gagal</a>
-        </h3>
-        <div class="post-excerpt">
-            <p>Saya mau mulai dengan sebuah pertanyaan yang mungkin terdengar aneh: Kenapa jutaan orang tiap tahun rela terbang ribuan kilometer, bayar mahal-mahal, antre panjang... hanya untuk melihat sebuah gua kosong? Dan justru karena kosong itulah, tempat itu menjadi salah satu tempat paling powerful di muka bumi.</p>
-        </div>
-        <a href="posts/the-second-fire.html" class="read-more readmore">Read More →</a>
-    </div>
-</article>
 
-                    <!-- Becoming Whole Before Becoming One -->
+                    <article class="post-card card">
+                        <div class="post-content-wrapper">
+                            <div class="post-meta meta">
+                                <time datetime="2026-02-19">19 Februari 2026</time>
+                                <span class="post-tag">Faith</span>
+                                <span class="read-time">📖 5 min read</span>
+                            </div>
+                            <h3 class="post-title">
+                                <a href="posts/the-second-fire.html">The Second Fire: Ketika Tuhan Menemui Kamu Tepat di Tempat Kamu Gagal</a>
+                            </h3>
+                            <div class="post-excerpt">
+                                <p>Saya mau mulai dengan sebuah pertanyaan yang mungkin terdengar aneh: Kenapa jutaan orang tiap tahun rela terbang ribuan kilometer, bayar mahal-mahal, antre panjang... hanya untuk melihat sebuah gua kosong? Dan justru karena kosong itulah, tempat itu menjadi salah satu tempat paling powerful di muka bumi.</p>
+                            </div>
+                            <div class="post-actions">
+                                <a href="posts/the-second-fire.html" class="read-more readmore">Read More →</a>
+                                <a href="https://wa.me/?text=Baca%20ini%20yuk%3A%20The%20Second%20Fire%20-%20https%3A%2F%2Fyehezkielinsight.com%2Fposts%2Fthe-second-fire.html" class="share-wa" target="_blank" rel="noopener noreferrer" aria-label="Share to WhatsApp">
+                                    <span>🟢 Share</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
                     <article class="post-card card">
                         <div class="post-content-wrapper">
                             <div class="post-meta meta">
                                 <time datetime="2026-02-18">18 Februari 2026</time>
+                                <span class="post-tag">Relationships</span>
+                                <span class="read-time">📖 6 min read</span>
                             </div>
                             <h3 class="post-title">
                                 <a href="posts/becoming-whole-before-becoming-one.html">Becoming Whole Before Becoming One</a>
@@ -92,28 +103,43 @@
                             <div class="post-excerpt">
                                 <p>Pernah nggak sih kamu lagi kumpul bareng keluarga atau temen, lalu tiba-tiba muncul pertanyaan keramat: 'Kapan nikah? Kok betah banget sendiri?' Di dunia yang seringkali mengukur kebahagiaan dari status relationship, kadang kita jadi merasa ada yang salah dengan diri kita kalau kita masih melangkah sendirian.</p>
                             </div>
-                            <a href="posts/becoming-whole-before-becoming-one.html" class="read-more readmore">Read More →</a>
+                            <div class="post-actions">
+                                <a href="posts/becoming-whole-before-becoming-one.html" class="read-more readmore">Read More →</a>
+                                <a href="https://wa.me/?text=Baca%20ini%20yuk%3A%20Becoming%20Whole%20Before%20Becoming%20One%20-%20https%3A%2F%2Fyehezkielinsight.com%2Fposts%2Fbecoming-whole-before-becoming-one.html" class="share-wa" target="_blank" rel="noopener noreferrer" aria-label="Share to WhatsApp">
+                                    <span>🟢 Share</span>
+                                </a>
+                            </div>
                         </div>
                     </article>
-<!-- (18 Feb 2026): When Staying Alive Is the Victory -->
-<article class="post-card card">
-    <div class="post-content-wrapper">
-        <div class="post-meta meta">
-            <time datetime="2026-02-18">18 Februari 2026</time>
-        </div>
-        <h3 class="post-title">
-            <a href="posts/when-staying-alive-is-the-victory.html">When Staying Alive Is the Victory</a>
-        </h3>
-        <div class="post-excerpt">
-            <p>Boleh jadi kamu tidak baik-baik saja. Dan itu tidak apa-apa. Hidup ini memang berat, dan kamu tidak gila karena merasa seperti itu. Di tengah semua yang mencoba membuatmu menyerah, fakta bahwa kamu masih di sini adalah sesuatu yang luar biasa.</p>
-        </div>
-        <a href="posts/when-staying-alive-is-the-victory.html" class="read-more readmore">Read More →</a>
-    </div>
-</article>
+
+                    <article class="post-card card">
+                        <div class="post-content-wrapper">
+                            <div class="post-meta meta">
+                                <time datetime="2026-02-18">18 Februari 2026</time>
+                                <span class="post-tag">Mental Health</span>
+                                <span class="read-time">📖 4 min read</span>
+                            </div>
+                            <h3 class="post-title">
+                                <a href="posts/when-staying-alive-is-the-victory.html">When Staying Alive Is the Victory</a>
+                            </h3>
+                            <div class="post-excerpt">
+                                <p>Boleh jadi kamu tidak baik-baik saja. Dan itu tidak apa-apa. Hidup ini memang berat, dan kamu tidak gila karena merasa seperti itu. Di tengah semua yang mencoba membuatmu menyerah, fakta bahwa kamu masih di sini adalah sesuatu yang luar biasa.</p>
+                            </div>
+                            <div class="post-actions">
+                                <a href="posts/when-staying-alive-is-the-victory.html" class="read-more readmore">Read More →</a>
+                                <a href="https://wa.me/?text=Baca%20ini%20yuk%3A%20When%20Staying%20Alive%20Is%20the%20Victory%20-%20https%3A%2F%2Fyehezkielinsight.com%2Fposts%2Fwhen-staying-alive-is-the-victory.html" class="share-wa" target="_blank" rel="noopener noreferrer" aria-label="Share to WhatsApp">
+                                    <span>🟢 Share</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
                     <article class="post-card card">
                         <div class="post-content-wrapper">
                             <div class="post-meta meta">
                                 <time datetime="2026-02-14">14 Februari 2026</time>
+                                <span class="post-tag">Community</span>
+                                <span class="read-time">📖 5 min read</span>
                             </div>
                             <h3 class="post-title">
                                 <a href="posts/rows-to-circles.html">From Rows to Circles: Menemukan Shalom di Tengah Keriuhan</a>
@@ -121,35 +147,56 @@
                             <div class="post-excerpt">
                                 <p>Seringkali kita salah mengartikan kata "Shalom". Kita pikir artinya nggak ada konflik. Tapi ternyata, Shalom itu bukan "nggak ada konflik", tapi hadirnya keutuhan di tengah konflik. Temukan bagaimana kita bergerak dari sekadar barisan penonton menjadi lingkaran keluarga yang saling memulihkan.</p>
                             </div>
-                            <a href="posts/rows-to-circles.html" class="read-more readmore">Read More →</a>
+                            <div class="post-actions">
+                                <a href="posts/rows-to-circles.html" class="read-more readmore">Read More →</a>
+                                <a href="https://wa.me/?text=Baca%20ini%20yuk%3A%20From%20Rows%20to%20Circles%20-%20https%3A%2F%2Fyehezkielinsight.com%2Fposts%2Frows-to-circles.html" class="share-wa" target="_blank" rel="noopener noreferrer" aria-label="Share to WhatsApp">
+                                    <span>🟢 Share</span>
+                                </a>
+                            </div>
                         </div>
                     </article>
-<article class="post-card card">
-  <div class="post-content-wrapper">
-    <div class="post-meta meta">
-      <time datetime="2025-11-17">17 November 2025</time>
-    </div>
-    <h3 class="post-title">
-      <a href="posts/life-on-purpose.html">Life on Purpose: More Than Just Existing</a>
-    </h3>
-    <div class="post-excerpt">
-      <p>Hi! Kalau kamu lagi baca ini, anggep aja ini ajakan buat nge-pause sejenak dan nanya ke diri sendiri: Why are we here? Kenapa kita lahir di zaman ini, di timeline ini, di kota ini, di keluarga ini, dengan talenta dan “quirks” yang unik ini?</p>
-    </div>
-    <a href="posts/life-on-purpose.html" class="read-more readmore">Read More →</a>
-  </div>
-</article>
+
+                    <article class="post-card card">
+                        <div class="post-content-wrapper">
+                            <div class="post-meta meta">
+                                <time datetime="2025-11-17">17 November 2025</time>
+                                <span class="post-tag">Purpose</span>
+                                <span class="read-time">📖 5 min read</span>
+                            </div>
+                            <h3 class="post-title">
+                                <a href="posts/life-on-purpose.html">Life on Purpose: More Than Just Existing</a>
+                            </h3>
+                            <div class="post-excerpt">
+                                <p>Hi! Kalau kamu lagi baca ini, anggep aja ini ajakan buat nge-pause sejenak dan nanya ke diri sendiri: Why are we here? Kenapa kita lahir di zaman ini, di timeline ini, di kota ini, di keluarga ini, dengan talenta dan "quirks" yang unik ini?</p>
+                            </div>
+                            <div class="post-actions">
+                                <a href="posts/life-on-purpose.html" class="read-more readmore">Read More →</a>
+                                <a href="https://wa.me/?text=Baca%20ini%20yuk%3A%20Life%20on%20Purpose%20-%20https%3A%2F%2Fyehezkielinsight.com%2Fposts%2Flife-on-purpose.html" class="share-wa" target="_blank" rel="noopener noreferrer" aria-label="Share to WhatsApp">
+                                    <span>🟢 Share</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
                     <article class="post-card card">
                         <div class="post-content-wrapper">
                             <div class="post-meta meta">
                                 <time datetime="2025-10-14">14 Oktober 2025</time>
+                                <span class="post-tag">Faith</span>
+                                <span class="read-time">📖 6 min read</span>
                             </div>
                             <h3 class="post-title">
-                                <a href="posts/real-life-gods-way.html">Real Life, God’s Way: Menemukan 'Zoe' di Tengah Rutinitas</a>
+                                <a href="posts/real-life-gods-way.html">Real Life, God's Way: Menemukan 'Zoe' di Tengah Rutinitas</a>
                             </h3>
                             <div class="post-excerpt">
                                 <p>Kadang saya mikir, berapa banyak dari kita yang sebenarnya cuma hidup di autopilot? Kita kerja, ibadah, tidur, bangun, lalu repeat lagi. Yesus datang bukan supaya kita sekedar bertahan hidup (survive), tapi supaya kita memiliki Zoe—hidup berkualitas ilahi yang penuh makna.</p>
                             </div>
-                            <a href="posts/real-life-gods-way.html" class="read-more readmore">Read More →</a>
+                            <div class="post-actions">
+                                <a href="posts/real-life-gods-way.html" class="read-more readmore">Read More →</a>
+                                <a href="https://wa.me/?text=Baca%20ini%20yuk%3A%20Real%20Life%20God's%20Way%20-%20https%3A%2F%2Fyehezkielinsight.com%2Fposts%2Freal-life-gods-way.html" class="share-wa" target="_blank" rel="noopener noreferrer" aria-label="Share to WhatsApp">
+                                    <span>🟢 Share</span>
+                                </a>
+                            </div>
                         </div>
                     </article>
 
@@ -157,14 +204,21 @@
                         <div class="post-content-wrapper">
                             <div class="post-meta meta">
                                 <time datetime="2025-07-31">31 Juli 2025</time>
+                                <span class="post-tag">Faith</span>
+                                <span class="read-time">📖 7 min read</span>
                             </div>
                             <h3 class="post-title">
                                 <a href="posts/fullness-of-christ.html">Fullness of Christ: Ketika Hidup Nggak Selalu Sesuai Ekspektasi</a>
                             </h3>
                             <div class="post-excerpt">
-                                <p>Kadang, kita punya pikiran, "Kalau saya ikut Yesus, hidup bakal lebih gampang dong, ya?" Well, kenyataannya sering kali nggak kayak gitu. Mengikut Yesus bukan berarti bebas dari masalah atau otomatis semua jadi lancar. Learn about walking with Jesus and finding the fullness of Christ when life doesn't meet expectations.</p>
+                                <p>Kadang, kita punya pikiran, "Kalau saya ikut Yesus, hidup bakal lebih gampang dong, ya?" Well, kenyataannya sering kali nggak kayak gitu. Mengikut Yesus bukan berarti bebas dari masalah atau otomatis semua jadi lancar.</p>
                             </div>
-                            <a href="posts/fullness-of-christ.html" class="read-more readmore">Read More →</a>
+                            <div class="post-actions">
+                                <a href="posts/fullness-of-christ.html" class="read-more readmore">Read More →</a>
+                                <a href="https://wa.me/?text=Baca%20ini%20yuk%3A%20Fullness%20of%20Christ%20-%20https%3A%2F%2Fyehezkielinsight.com%2Fposts%2Ffullness-of-christ.html" class="share-wa" target="_blank" rel="noopener noreferrer" aria-label="Share to WhatsApp">
+                                    <span>🟢 Share</span>
+                                </a>
+                            </div>
                         </div>
                     </article>
 
@@ -172,6 +226,8 @@
                         <div class="post-content-wrapper">
                             <div class="post-meta meta">
                                 <time datetime="2025-07-31">31 Juli 2025</time>
+                                <span class="post-tag">Faith</span>
+                                <span class="read-time">📖 5 min read</span>
                             </div>
                             <h3 class="post-title">
                                 <a href="posts/changing-the-atmosphere.html">Changing the Atmosphere: From Living in Fear to Living in Faith</a>
@@ -179,7 +235,12 @@
                             <div class="post-excerpt">
                                 <p>Setiap orang pasti pernah takut, yes, termasuk saya juga. Kadang rasa takut itu muncul tiba-tiba, diem-diem di malam hari, atau bahkan pas lagi sibuk di tengah keramaian. Learn how to change the atmosphere from fear to faith and let faith lead the way.</p>
                             </div>
-                            <a href="posts/changing-the-atmosphere.html" class="read-more readmore">Read More →</a>
+                            <div class="post-actions">
+                                <a href="posts/changing-the-atmosphere.html" class="read-more readmore">Read More →</a>
+                                <a href="https://wa.me/?text=Baca%20ini%20yuk%3A%20Changing%20the%20Atmosphere%20-%20https%3A%2F%2Fyehezkielinsight.com%2Fposts%2Fchanging-the-atmosphere.html" class="share-wa" target="_blank" rel="noopener noreferrer" aria-label="Share to WhatsApp">
+                                    <span>🟢 Share</span>
+                                </a>
+                            </div>
                         </div>
                     </article>
 
@@ -187,86 +248,109 @@
                         <div class="post-content-wrapper">
                             <div class="post-meta meta">
                                 <time datetime="2025-07-29">29 Juli 2025</time>
+                                <span class="post-tag">Growth</span>
+                                <span class="read-time">📖 6 min read</span>
                             </div>
                             <h3 class="post-title">
                                 <a href="posts/its-a-marathon-not-a-sprint.html">It's a Marathon – Not a Sprint</a>
                             </h3>
                             <div class="post-excerpt">
-                                <p>Kadang hidup rasanya kayak lomba lari sprint, pengen semuanya serba cepet, semua pengen instan, bahkan ekspektasi orang di sekitar seringkali nuntut kita selalu "langsung jadi." Dulu saya juga sempat mikir begitu, ngerasa gagal kalau progress hidup nggak secepat yang saya mau. Tapi ternyata, semakin banyak pengalaman, semakin saya sadar: real life is a marathon, bukan sprint.</p>
+                                <p>Kadang hidup rasanya kayak lomba lari sprint, pengen semuanya serba cepet, semua pengen instan, bahkan ekspektasi orang di sekitar seringkali nuntut kita selalu "langsung jadi." Dulu saya juga sempat mikir begitu, ngerasa gagal kalau progress hidup nggak secepat yang saya mau.</p>
                             </div>
-                            <a href="posts/its-a-marathon-not-a-sprint.html" class="read-more readmore">Read More →</a>
+                            <div class="post-actions">
+                                <a href="posts/its-a-marathon-not-a-sprint.html" class="read-more readmore">Read More →</a>
+                                <a href="https://wa.me/?text=Baca%20ini%20yuk%3A%20It's%20a%20Marathon%20Not%20a%20Sprint%20-%20https%3A%2F%2Fyehezkielinsight.com%2Fposts%2Fits-a-marathon-not-a-sprint.html" class="share-wa" target="_blank" rel="noopener noreferrer" aria-label="Share to WhatsApp">
+                                    <span>🟢 Share</span>
+                                </a>
+                            </div>
                         </div>
                     </article>
 
                     <article class="post-card card">
-                        <div class="post-thumbnail">
-                            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=500&fit=crop&crop=center" alt="Person in contemplation and prayer" class="post-image">
-                        </div>
                         <div class="post-content-wrapper">
                             <div class="post-meta meta">
                                 <time datetime="2025-07-29">29 Juli 2025</time>
+                                <span class="post-tag">Growth</span>
+                                <span class="read-time">📖 5 min read</span>
                             </div>
                             <h3 class="post-title">
                                 <a href="posts/when-hurt-speaks.html">When Hurt Speaks: Revealing the Lesson Behind the Struggle</a>
                             </h3>
                             <div class="post-excerpt">
-                                <p>Kadang kita pikir semangat itu soal happy vibes dan strong all the time, padahal semangat yang sejati seringkali justru diuji saat kita ada di titik terendah, waktu hati lagi drop, tubuh nggak fit, atau pikiran lagi "keracunan" masalah. Tapi di situlah, kita bisa belajar: pain is not the enemy, sometimes, pain is the messenger.</p>
+                                <p>Kadang kita pikir semangat itu soal happy vibes dan strong all the time, padahal semangat yang sejati seringkali justru diuji saat kita ada di titik terendah. Di situlah, kita bisa belajar: pain is not the enemy, sometimes, pain is the messenger.</p>
                             </div>
-                            <a href="posts/when-hurt-speaks.html" class="read-more readmore">Read More →</a>
+                            <div class="post-actions">
+                                <a href="posts/when-hurt-speaks.html" class="read-more readmore">Read More →</a>
+                                <a href="https://wa.me/?text=Baca%20ini%20yuk%3A%20When%20Hurt%20Speaks%20-%20https%3A%2F%2Fyehezkielinsight.com%2Fposts%2Fwhen-hurt-speaks.html" class="share-wa" target="_blank" rel="noopener noreferrer" aria-label="Share to WhatsApp">
+                                    <span>🟢 Share</span>
+                                </a>
+                            </div>
                         </div>
                     </article>
 
                     <article class="post-card card">
-                        <div class="post-thumbnail">
-                            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=500&fit=crop&crop=center" alt="New life and spiritual growth" class="post-image">
-                        </div>
                         <div class="post-content-wrapper">
                             <div class="post-meta meta">
                                 <time datetime="2025-07-28">28 Juli 2025</time>
+                                <span class="post-tag">Spirituality</span>
+                                <span class="read-time">📖 6 min read</span>
                             </div>
                             <h3 class="post-title">
                                 <a href="posts/renewed-from-within.html">Renewed from Within: A New Life That Begins Inside</a>
                             </h3>
                             <div class="post-excerpt">
-                                <p>Kadang kita suka mikir, "Andai saja lingkungan saya berubah, pasti hidup saya juga lebih gampang." Akhirnya, kita sibuk ngerapihin hal-hal di luar—ganti gaya, upgrade skill, bahkan rajin upload sisi terbaik di social media. Honestly, itu semua nggak salah. Tapi kadang, setelah semua upaya itu, kita masih nemuin satu ruang kosong yang nggak bisa diisi dari luar.</p>
+                                <p>Kadang kita suka mikir, "Andai saja lingkungan saya berubah, pasti hidup saya juga lebih gampang." Akhirnya, kita sibuk ngerapihin hal-hal di luar—ganti gaya, upgrade skill, bahkan rajin upload sisi terbaik di social media. Tapi kadang, setelah semua upaya itu, kita masih nemuin satu ruang kosong yang nggak bisa diisi dari luar.</p>
                             </div>
-                            <a href="posts/renewed-from-within.html" class="read-more readmore">Read More →</a>
+                            <div class="post-actions">
+                                <a href="posts/renewed-from-within.html" class="read-more readmore">Read More →</a>
+                                <a href="https://wa.me/?text=Baca%20ini%20yuk%3A%20Renewed%20from%20Within%20-%20https%3A%2F%2Fyehezkielinsight.com%2Fposts%2Frenewed-from-within.html" class="share-wa" target="_blank" rel="noopener noreferrer" aria-label="Share to WhatsApp">
+                                    <span>🟢 Share</span>
+                                </a>
+                            </div>
                         </div>
                     </article>
 
                     <article class="post-card card">
-                        <div class="post-thumbnail">
-                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=500&fit=crop&crop=center" alt="Heaven and divine light" class="post-image">
-                        </div>
                         <div class="post-content-wrapper">
                             <div class="post-meta meta">
                                 <time datetime="2025-07-28">28 Juli 2025</time>
+                                <span class="post-tag">Excellence</span>
+                                <span class="read-time">📖 7 min read</span>
                             </div>
                             <h3 class="post-title">
                                 <a href="posts/heavens-standard-excellence.html">Heaven's Standard of Excellence – There's a Life Beyond Worldly Rewards</a>
                             </h3>
                             <div class="post-excerpt">
-                                <p>Setiap orang pernah gagal. Setiap manusia pernah jatuh. Rasanya tidak ada satu pun di antara kita yang bisa angkat tangan dan berkata, "Saya tidak pernah berbuat salah." Bahkan waktu saya tulis kalimat ini, saya tersenyum sendiri, karena kalau ada yang berani mengaku sempurna, justru saat itulah ia sedang jatuh dalam kesombongan—alias, justru berbuat dosa.</p>
+                                <p>Setiap orang pernah gagal. Setiap manusia pernah jatuh. Rasanya tidak ada satu pun di antara kita yang bisa angkat tangan dan berkata, "Saya tidak pernah berbuat salah." Bahkan waktu saya tulis kalimat ini, saya tersenyum sendiri.</p>
                             </div>
-                            <a href="posts/heavens-standard-excellence.html" class="read-more readmore">Read More →</a>
+                            <div class="post-actions">
+                                <a href="posts/heavens-standard-excellence.html" class="read-more readmore">Read More →</a>
+                                <a href="https://wa.me/?text=Baca%20ini%20yuk%3A%20Heaven's%20Standard%20of%20Excellence%20-%20https%3A%2F%2Fyehezkielinsight.com%2Fposts%2Fheavens-standard-excellence.html" class="share-wa" target="_blank" rel="noopener noreferrer" aria-label="Share to WhatsApp">
+                                    <span>🟢 Share</span>
+                                </a>
+                            </div>
                         </div>
                     </article>
 
                     <article class="post-card card">
-                        <div class="post-thumbnail">
-                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=500&fit=crop&crop=center" alt="New beginning and fresh start" class="post-image">
-                        </div>
                         <div class="post-content-wrapper">
                             <div class="post-meta meta">
                                 <time datetime="2025-07-28">28 Juli 2025</time>
+                                <span class="post-tag">Personal</span>
+                                <span class="read-time">📖 3 min read</span>
                             </div>
                             <h3 class="post-title">
                                 <a href="posts/hello-world.html">A New Beginning: Why I Started This Blog</a>
                             </h3>
                             <div class="post-excerpt">
-                                <p>Hello, and welcome to my blog! I decided to start this blog because I believe that every journey, no matter how small, holds a special meaning and valuable lessons. Many times, God speaks through our daily experiences, simple reflections, or even a few words that may seem ordinary—but can give us strength when we need it most.</p>
+                                <p>Hello, and welcome to my blog! I decided to start this blog because I believe that every journey, no matter how small, holds a special meaning and valuable lessons. Many times, God speaks through our daily experiences, simple reflections, or even a few words that may seem ordinary.</p>
                             </div>
-                            <a href="posts/hello-world.html" class="read-more readmore">Read More →</a>
+                            <div class="post-actions">
+                                <a href="posts/hello-world.html" class="read-more readmore">Read More →</a>
+                                <a href="https://wa.me/?text=Baca%20ini%20yuk%3A%20A%20New%20Beginning%20-%20https%3A%2F%2Fyehezkielinsight.com%2Fposts%2Fhello-world.html" class="share-wa" target="_blank" rel="noopener noreferrer" aria-label="Share to WhatsApp">
+                                    <span>🟢 Share</span>
+                                </a>
+                            </div>
                         </div>
                     </article>
 
@@ -282,30 +366,36 @@
                         </div>
                     </div>
 
+                    <!-- Replaced redundant Recent Posts with Topics -->
                     <div class="sidebar-widget card">
-                        <h3 class="widget-title">Recent Posts</h3>
-                        <ul class="recent-posts">
-                            <!-- ✅ NEW POST: The Second Fire -->
-<li><a href="posts/the-second-fire.html">The Second Fire: Ketika Tuhan Menemui Kamu Tepat di Tempat Kamu Gagal</a></li>
-                            <li><a href="posts/when-staying-alive-is-the-victory.html">When Staying Alive Is the Victory</a></li>
-                            <!-- Becoming Whole Before Becoming One -->
-                            <li><a href="posts/Becoming Whole Before Becoming One.html">Becoming Whole Before Becoming One</a></li>
+                        <h3 class="widget-title">Browse by Topic</h3>
+                        <div class="topic-tags">
+                            <button class="topic-tag active" data-tag="all">All</button>
+                            <button class="topic-tag" data-tag="Faith">Faith</button>
+                            <button class="topic-tag" data-tag="Growth">Growth</button>
+                            <button class="topic-tag" data-tag="Mental Health">Mental Health</button>
+                            <button class="topic-tag" data-tag="Purpose">Purpose</button>
+                            <button class="topic-tag" data-tag="Relationships">Relationships</button>
+                            <button class="topic-tag" data-tag="Community">Community</button>
+                            <button class="topic-tag" data-tag="Spirituality">Spirituality</button>
+                        </div>
+                    </div>
 
-                            <li><a href="posts/rows-to-circles.html">From Rows to Circles: Menemukan Shalom di Tengah Keriuhan</a></li>
-                            <li><a href="posts/real-life-gods-way.html">Real Life, God’s Way: Menemukan 'Zoe' di Tengah Rutinitas</a></li>
-                            <li><a href="posts/fullness-of-christ.html">Fullness of Christ: Ketika Hidup Nggak Selalu Sesuai Ekspektasi</a></li>
-                            <li><a href="posts/changing-the-atmosphere.html">Changing the Atmosphere: From Living in Fear to Living in Faith</a></li>
-                            <li><a href="posts/its-a-marathon-not-a-sprint.html">It's a Marathon – Not a Sprint</a></li>
-                        </ul>
+                    <div class="sidebar-widget card sidebar-quote">
+                        <h3 class="widget-title">Verse of the Day</h3>
+                        <blockquote class="sidebar-verse">
+                            <p>"For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you, plans to give you hope and a future."</p>
+                            <cite>— Jeremiah 29:11</cite>
+                        </blockquote>
                     </div>
 
                     <div class="sidebar-widget card">
-                        <h3 class="widget-title">About</h3>
-                        <p class="about-text">Welcome to my personal space where I share insights on faith, life, and spiritual growth. Join me on this journey of discovery and encouragement.</p>
+                        <h3 class="widget-title">Connect</h3>
+                        <p class="about-text">Punya pertanyaan, cerita, atau ingin diskusi? Yuk, connect di Instagram!</p>
                         <div class="social-links">
-                            <a href="javascript:void(0)" class="social-link" aria-disabled="true">Twitter</a>
-                            <a href="javascript:void(0)" class="social-link" aria-disabled="true">Facebook</a>
-                            <a href="https://www.instagram.com/yhzrio?igsh=dnE0amZlZWlhOXYy&utm_source=qr" class="social-link" target="_blank" rel="noopener noreferrer">Instagram</a>
+                            <a href="https://www.instagram.com/yhzrio?igsh=dnE0amZlZWlhOXYy&utm_source=qr" class="social-link social-link--instagram" target="_blank" rel="noopener noreferrer">
+                                📸 Instagram
+                            </a>
                         </div>
                     </div>
                 </aside>
@@ -319,13 +409,12 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3 class="footer-title">Stay Connected</h3>
-                    <p>Subscribe to receive updates on new posts and insights.</p>
-                    <form class="subscription-form" id="subscriptionForm">
-                        <div class="form-group">
-                            <input type="email" id="emailInput" placeholder="Enter your email" class="email-input" required>
-                            <button type="submit" class="subscribe-btn">Subscribe</button>
-                        </div>
-                    </form>
+                    <p>Follow perkembangan terbaru lewat Instagram, atau kirim pesan langsung.</p>
+                    <div class="footer-connect-actions">
+                        <a href="https://www.instagram.com/yhzrio?igsh=dnE0amZlZWlhOXYy&utm_source=qr" class="footer-social-btn" target="_blank" rel="noopener noreferrer">
+                            📸 Instagram
+                        </a>
+                    </div>
                 </div>
 
                 <div class="footer-section">
@@ -333,9 +422,6 @@
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
-                        <li><a href="javascript:void(0)" class="social-link" aria-disabled="true">Twitter</a></li>
-                        <li><a href="javascript:void(0)" class="social-link" aria-disabled="true">Facebook</a></li>
-                        <li><a href="https://www.instagram.com/yhzrio?igsh=dnE0amZlZWlhOXYy&utm_source=qr" class="social-link" target="_blank" rel="noopener noreferrer">Instagram</a></li>
                     </ul>
                 </div>
             </div>
