@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Wisdom Blueprint: Building a Life That Withstands the Storms | Yehezkiel's Insight</title>
+  <meta name="description" content="Di dunia yang penuh noise dan distraksi, kita tidak hanya butuh informasi — kita butuh hikmat. Dan hikmat sejati selalu dimulai dari satu tempat yang mungkin paling kita abaikan." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <link rel="stylesheet" href="../assets/css/enhancements.css" />
+
+  <style>
+    /* ── Post Shell ─────────────────────────────── */
+    .post-shell { padding: 32px 0 64px; }
+    .post-wrap  { max-width: 900px; margin: 0 auto; }
+
+    /* ── Header ─────────────────────────────────── */
+    .post-header   { margin: 12px 0 24px; }
+    .post-kicker {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 12px; border-radius: 999px;
+      background: rgba(66,153,225,0.12);
+      color: var(--accent-color);
+      margin-bottom: 14px;
+    }
+    .post-title-big {
+      font-family: "Playfair Display", serif;
+      font-weight: 700;
+      font-size: clamp(1.7rem, 4vw, 2.6rem);
+      letter-spacing: -0.4px;
+      line-height: 1.18;
+      margin: 0 0 18px;
+    }
+    .post-meta-row {
+      display: flex; align-items: center; flex-wrap: wrap; gap: 10px;
+      font-size: 0.9rem; opacity: 0.8; margin-bottom: 4px;
+    }
+    .meta-sep { opacity: 0.35; }
+    .meta-tag {
+      background: rgba(159,122,234,0.14); color: var(--accent-secondary);
+      padding: 2px 10px; border-radius: 999px; font-weight: 500; font-size: 0.8rem;
+    }
+
+    /* ── Cover Quote ────────────────────────────── */
+    .post-cover {
+      margin: 24px 0;
+      padding: 24px 26px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: linear-gradient(135deg, rgba(66,153,225,0.07) 0%, rgba(159,122,234,0.08) 100%);
+      position: relative; overflow: hidden;
+    }
+    body:not(.dark-mode) .post-cover {
+      border-color: rgba(15,23,42,0.12);
+      background: linear-gradient(135deg, rgba(66,153,225,0.05) 0%, rgba(159,122,234,0.06) 100%);
+    }
+    .post-cover::before {
+      content: '\201C';
+      position: absolute; top: -10px; left: 16px;
+      font-family: "Playfair Display", serif;
+      font-size: 6rem; opacity: 0.06; line-height: 1;
+      color: var(--accent-color);
+    }
+
+    /* ── Dividers ───────────────────────────────── */
+    .hrline {
+      margin: 28px 0; padding: 0; border: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
+    }
+    body:not(.dark-mode) .hrline {
+      background: linear-gradient(90deg, transparent, rgba(15,23,42,0.12), transparent);
+    }
+
+    /* ── Typography ─────────────────────────────── */
+    .lead { font-size: 1.06rem; line-height: 1.88; }
+    .h2 {
+      font-family: "Playfair Display", serif;
+      font-weight: 700; font-size: 1.3rem;
+      margin: 32px 0 12px; letter-spacing: -0.2px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .h2-icon { font-size: 1.1rem; }
+
+    /* ── Blockquote ─────────────────────────────── */
+    .blockquote {
+      border-left: 3px solid rgba(159,122,234,0.85);
+      padding: 12px 18px;
+      margin: 22px 0;
+      background: rgba(159,122,234,0.06);
+      border-radius: 0 14px 14px 0;
+    }
+    body:not(.dark-mode) .blockquote { background: rgba(159,122,234,0.05); }
+    .blockquote p { margin: 0; font-style: italic; line-height: 1.75; }
+    .blockquote .cite { display: block; margin-top: 10px; opacity: 0.75; font-size: 0.9rem; font-style: normal; font-weight: 500; }
+
+    /* ── Callout / Note ─────────────────────────── */
+    .note {
+      margin: 22px 0; padding: 16px 20px; border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.05);
+      font-size: 1.02rem;
+    }
+    body:not(.dark-mode) .note { border-color: rgba(15,23,42,0.13); background: rgba(15,23,42,0.03); }
+    .note.accent {
+      border-color: rgba(66,153,225,0.25);
+      background: rgba(66,153,225,0.06);
+    }
+    body:not(.dark-mode) .note.accent {
+      border-color: rgba(66,153,225,0.18);
+      background: rgba(66,153,225,0.04);
+    }
+
+    /* ── Illustration Block ─────────────────────── */
+    .illus {
+      margin: 26px 0; padding: 26px 28px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(26,54,93,0.07) 0%, rgba(66,153,225,0.06) 100%);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    body:not(.dark-mode) .illus {
+      background: linear-gradient(135deg, rgba(26,54,93,0.04) 0%, rgba(66,153,225,0.04) 100%);
+      border-color: rgba(15,23,42,0.12);
+    }
+    .illus-label {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; opacity: 0.5; margin-bottom: 10px;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .illus-label::before { content: ''; display: inline-block; width: 18px; height: 1px; background: currentColor; }
+
+    /* ── Testimony Card ─────────────────────────── */
+    .testimony {
+      margin: 26px 0; padding: 22px 24px;
+      border-radius: 18px;
+      border: 1px solid rgba(159,122,234,0.22);
+      background: rgba(159,122,234,0.05);
+      position: relative;
+    }
+    body:not(.dark-mode) .testimony { background: rgba(159,122,234,0.04); }
+    .testimony-label {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--accent-secondary);
+      margin-bottom: 12px; opacity: 0.8;
+    }
+
+    /* ── 3-Column Pillars ───────────────────────── */
+    .pillars {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px; margin: 22px 0;
+    }
+    .pillar {
+      padding: 18px 18px; border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.04);
+      text-align: center;
+    }
+    body:not(.dark-mode) .pillar { border-color: rgba(15,23,42,0.12); background: rgba(15,23,42,0.03); }
+    .pillar-icon { font-size: 1.8rem; margin-bottom: 10px; }
+    .pillar-title { font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; }
+    .pillar-desc  { font-size: 0.88rem; opacity: 0.75; line-height: 1.6; }
+
+    /* ── Verse Highlight ────────────────────────── */
+    .verse-highlight {
+      margin: 24px 0; padding: 20px 24px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(26,54,93,0.1) 0%, rgba(45,55,72,0.08) 100%);
+      border: 1px solid rgba(255,255,255,0.13);
+      text-align: center;
+    }
+    body:not(.dark-mode) .verse-highlight {
+      background: linear-gradient(135deg, rgba(26,54,93,0.06) 0%, rgba(45,55,72,0.05) 100%);
+      border-color: rgba(15,23,42,0.12);
+    }
+    .verse-highlight p { font-family: "Playfair Display", serif; font-size: 1.12rem; font-style: italic; margin: 0 0 10px; line-height: 1.7; }
+    .verse-highlight .cite { opacity: 0.65; font-size: 0.88rem; }
+
+    /* ── List ───────────────────────────────────── */
+    .list { margin: 10px 0 14px 20px; }
+    .list li { margin: 10px 0; line-height: 1.75; }
+
+    /* ── Closing CTA ────────────────────────────── */
+    .closing-cta {
+      margin: 32px 0 4px; padding: 28px 28px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(66,153,225,0.1) 0%, rgba(159,122,234,0.1) 100%);
+      border: 1px solid rgba(255,255,255,0.14); text-align: center;
+    }
+    body:not(.dark-mode) .closing-cta {
+      background: linear-gradient(135deg, rgba(66,153,225,0.07) 0%, rgba(159,122,234,0.07) 100%);
+      border-color: rgba(15,23,42,0.12);
+    }
+    .closing-cta p { margin: 0 0 4px; }
+    .closing-cta .big { font-family: "Playfair Display", serif; font-size: 1.2rem; font-style: italic; line-height: 1.55; }
+
+    /* ── Post Nav ───────────────────────────────── */
+    .post-nav {
+      display: flex; gap: 10px; flex-wrap: wrap; margin-top: 32px;
+    }
+    .post-nav a {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 18px; border-radius: 999px; text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.05);
+      font-size: 0.92rem; font-weight: 500;
+      transition: all 0.2s ease;
+    }
+    body:not(.dark-mode) .post-nav a { border-color: rgba(15,23,42,0.14); background: rgba(15,23,42,0.03); }
+    .post-nav a:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.08); }
+
+    .share-wa-post {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 18px; border-radius: 999px; text-decoration: none;
+      background: rgba(37,211,102,0.12); border: 1px solid rgba(37,211,102,0.25);
+      color: inherit; font-size: 0.92rem; font-weight: 500;
+      transition: all 0.2s ease;
+    }
+    .share-wa-post:hover { transform: translateY(-2px); background: rgba(37,211,102,0.18); }
+
+    .muted { opacity: .82; }
+    p { line-height: 1.82; margin-bottom: 1rem; }
+
+    /* ── Dark mode toggle duplicate fix ─────────── */
+    .post-wrap .dark-mode-toggle { display: none; }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <h1><a href="../index.html">Yehezkiel's Insight</a></h1>
+          <p class="tagline">Walking with Faith, Living with Purpose</p>
+        </div>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="../index.html" class="nav-link">Home</a></li>
+            <li><a href="../about.html" class="nav-link">About</a></li>
+          </ul>
+        </nav>
+        <button id="darkModeToggle" class="dark-mode-toggle" type="button" aria-label="Toggle dark mode">
+          <span class="dm-icon">🌙</span><span class="dm-label">Dark Mode</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post -->
+  <main class="post-shell">
+    <div class="container">
+      <article class="post-wrap">
+
+        <!-- ── HEADER ── -->
+        <header class="post-header">
+          <p class="post-kicker">🏛️ Wisdom &amp; Growth</p>
+          <h1 class="post-title-big">The Wisdom Blueprint:<br>Building a Life That Withstands the Storms</h1>
+          <div class="post-meta-row muted">
+            <time datetime="2025-10-14">14 Oktober 2025</time>
+            <span class="meta-sep">·</span>
+            <span class="meta-tag">Growth</span>
+            <span class="meta-sep">·</span>
+            <span>📖 10 min read</span>
+          </div>
+        </header>
+
+        <!-- ── COVER QUOTE ── -->
+        <div class="post-cover">
+          <p style="font-family:'Playfair Display',serif; font-size:1.08rem; font-style:italic; line-height:1.72; margin:0 0 12px;">
+            "Permulaan hikmat adalah takut akan TUHAN, dan mengenal Yang Mahakudus adalah pengertian."
+          </p>
+          <span class="cite muted">— Amsal 9:10</span>
+        </div>
+
+        <hr class="hrline" />
+
+        <!-- ── INTRO ── -->
+        <div class="lead">
+          <p>Saya mau mulai dengan pertanyaan yang mungkin terdengar sederhana, tapi kalau kamu duduk benar-benar sejenak dan memikirkannya, jawabannya bisa mengubah perspektif kamu sepenuhnya:</p>
+          <p><strong>Kapan terakhir kali kamu membuat keputusan yang benar-benar bijak — bukan sekadar keputusan yang terasa benar?</strong></p>
+          <p>Kita hidup di dunia yang menawarkan informasi tanpa batas. Scroll dua menit di media sosial, dan kamu sudah dapat puluhan "tips sukses", "cara cepat bahagia", dan "habit of highly effective people." Semua kelihatan meyakinkan. Semua kelihatan solid.</p>
+          <p>Tapi kadang — meski kita sudah banyak tahu, banyak baca, banyak dengar — kita masih merasa hidup kita seperti rumah yang dibangun tanpa pondasi yang kuat. Di hari cerah, semuanya kelihatan baik. Tapi begitu badai datang... baru kita sadar ada sesuatu yang keliru sejak awal.</p>
+          <p>Ini bukan soal kemampuan atau kecerdasan. Ini soal hikmat. Dan hikmat adalah hal yang berbeda dari keduanya.</p>
+        </div>
+
+        <hr class="hrline" />
+
+        <!-- ── SECTION 1 ── -->
+        <h2 class="h2"><span class="h2-icon">🌪️</span> Kenapa Hikmat Itu Urgent Banget Sekarang</h2>
+
+        <p>Kita hidup di dunia yang <em>busy, corrupt, dan penuh distraksi</em>. Bukan lebay — itu kenyataan.</p>
+        <p>Coba hitung berapa banyak keputusan yang kamu buat setiap hari. Mulai dari yang kecil (mau sarapan apa?) sampai yang besar (apakah ini orang yang tepat untuk aku? apakah ini pekerjaan yang harus aku ambil?). Menurut sebuah studi dari Cornell University, rata-rata manusia membuat lebih dari 200 keputusan sehari — dan banyak di antaranya tanpa kita sadari betul.</p>
+        <p>Dan di tengah ratusan keputusan itu, ada begitu banyak suara yang bersaing memperebutkan atensi kita: algoritma media sosial, tekanan dari teman, ekspektasi keluarga, opini orang-orang yang bahkan tidak mengenal kita.</p>
+
+        <div class="note accent">
+          <p>Masalahnya bukan kurangnya informasi. Masalahnya adalah kita tidak punya <strong>filter yang benar</strong> untuk memilah informasi tersebut.</p>
+        </div>
+
+        <p>Dan filter itu — kemampuan untuk membedakan bukan hanya benar vs salah, tapi <em>baik vs lebih baik</em>, dan <em>lebih baik vs terbaik</em> — itulah yang disebut hikmat.</p>
+
+        <p>Saya pernah ada di titik di mana saya merasa kehidupan saya berjalan cepat tapi ke arah yang salah. Semua kelihatan produktif dari luar: jam kerja panjang, circle yang luas, konten yang terus diproduksi. Tapi ada suara kecil yang terus berbisik, <em>"Ini semuanya untuk apa?"</em></p>
+        <p>Dan suara itu bukan tanda lemah. Itu tanda bahwa ada sesuatu yang hilang — hikmat tentang arah, tentang prioritas, tentang siapa yang seharusnya mengatur pusat hidup saya.</p>
+
+        <div class="blockquote">
+          <p>"Kita bisa tahu banyak hal, tapi tetap salah langkah. Kita bisa punya akses ke segala informasi, tapi kehilangan arah dalam mengambil keputusan."</p>
+        </div>
+
+        <hr class="hrline" />
+
+        <!-- ── SECTION 2 ── -->
+        <h2 class="h2"><span class="h2-icon">🏠</span> Dua Rumah, Satu Badai</h2>
+
+        <p>Yesus pernah menceritakan perumpamaan yang terdengar sangat simpel — tapi semakin kamu renungkan, semakin dalam maknanya.</p>
+        <p>Ada dua orang yang masing-masing membangun sebuah rumah. Yang pertama membangun di atas batu. Yang kedua membangun di atas pasir. Yesus berkata bahwa keduanya mendengar firman-Nya, tapi hanya satu yang <em>melakukannya</em>.</p>
+
+        <div class="blockquote">
+          <p>"Setiap orang yang mendengar perkataan-Ku dan melakukannya, ia sama dengan orang bijaksana, yang mendirikan rumahnya di atas batu… Dan setiap orang yang mendengar perkataan-Ku, tetapi tidak melakukannya, ia sama dengan orang bodoh, yang mendirikan rumahnya di atas pasir."</p>
+          <span class="cite">— Matius 7:24–26</span>
+        </div>
+
+        <p>Yang menarik: <strong>kedua rumah itu kelihatan sama di hari cerah</strong>.</p>
+        <p>Dari luar, tidak ada yang bisa langsung tahu mana yang dibangun di atas batu dan mana yang di atas pasir. Keduanya punya atap, punya dinding, punya jendela. Keduanya bisa ditinggali. Keduanya terlihat "berhasil" dari jarak jauh.</p>
+
+        <div class="illus">
+          <div class="illus-label">Ilustrasi</div>
+          <p style="margin:0; line-height:1.8;">Bayangkan dua teman lama yang sama-sama aktif di gereja, sama-sama kelihatan rohani di media sosial, sama-sama punya circle yang solid. Tapi satu membangun hidupnya di atas fondasi yang dalam — ketaatan, kerendahan hati, dan takut akan Tuhan yang sejati. Yang lain membangun di atas performa dan citra yang terlihat baik di permukaan. Di hari-hari normal, keduanya kelihatan identik. Tapi begitu datang masa ujian — kehilangan pekerjaan, hubungan yang retak, krisis iman, sakit yang berkepanjangan — baru kelihatan bedanya. Yang satu tetap berdiri. Yang lain mulai retak dari dalam.</p>
+        </div>
+
+        <p>Hikmat itu seperti payung — sering terasa "lebay" sampai hujan benar-benar turun. Dan ketika badai itu akhirnya datang (dan pasti akan datang), kamu akan bersyukur karena sudah membangunnya lebih awal.</p>
+
+        <hr class="hrline" />
+
+        <!-- ── SECTION 3 ── -->
+        <h2 class="h2"><span class="h2-icon">🕯️</span> Hikmat dan Seni Mengantisipasi</h2>
+
+        <p>Ada kisah lain yang Yesus ceritakan — tentang sepuluh gadis yang menunggu mempelai laki-laki datang (Matius 25:1–13). Lima di antaranya disebut bijaksana, lima lainnya bodoh. Dan perbedaan mereka terletak pada satu hal kecil yang sangat signifikan:</p>
+        <p>Lima gadis bodoh hanya membawa pelita mereka. Lima gadis bijaksana membawa <em>pelita plus minyak cadangan</em>.</p>
+        <p>Semua kelihatan sama — sampai mempelai datang terlambat dan minyak mulai habis.</p>
+
+        <div class="note">
+          <p><strong>Hikmat selalu menyiapkan ruang untuk keterlambatan, ketidakpastian, dan perubahan arah hidup yang tidak kamu rencanakan.</strong></p>
+        </div>
+
+        <p>Ini bukan soal jadi orang yang pesimis atau terlalu berhati-hati sampai tidak bisa melangkah. Ini soal kesadaran bahwa hidup tidak selalu berjalan sesuai timeline yang kita buat. Dan orang bijak tidak hanya punya rencana A — mereka juga menyiapkan ruang untuk kemungkinan lain.</p>
+
+        <p>Di dunia sekarang, kita ditempa untuk serba cepat. Hasil instan, feedback instan, validasi instan. Algoritma dibuat sedemikian rupa supaya kita merasa <em>tertinggal</em> kalau tidak bergerak cepat. Dan dalam kecepatan itu, kita sering melewatkan satu hal penting:</p>
+
+        <div class="blockquote">
+          <p>"Kadang, cara Tuhan mengajarkan hikmat adalah dengan membuat kita <em>menunggu</em>."</p>
+        </div>
+
+        <p>Orang bijaksana tidak anti repot. Mereka hanya punya perspektif jangka panjang yang memungkinkan mereka untuk berinvestasi hari ini — dalam karakter, dalam relasi, dalam disiplin spiritual — meski hasilnya tidak langsung terlihat besok.</p>
+
+        <hr class="hrline" />
+
+        <!-- ── SECTION 4 ── -->
+        <h2 class="h2"><span class="h2-icon">👥</span> Siapa yang Kamu Izinkan Berjalan di Sebelahmu</h2>
+
+        <p>Ini mungkin bagian yang paling practical tapi juga paling sering diabaikan.</p>
+        <p>Kita semua tahu bahwa pergaulan mempengaruhi karakter. Itu bukan hal baru. Tapi tahu secara teori dan sungguh-sungguh menerapkannya dalam hidup adalah dua hal yang sangat berbeda.</p>
+
+        <div class="verse-highlight">
+          <p>"Janganlah kamu sesat: Pergaulan yang buruk merusakkan kebiasaan yang baik."</p>
+          <span class="cite">— 1 Korintus 15:33</span>
+        </div>
+
+        <p>Ketika Paulus menulis kalimat itu, dia memulainya dengan peringatan: <em>"Janganlah kamu sesat."</em> Artinya, ini adalah sesuatu yang sangat mudah untuk tertipu. Kita sangat mudah meremehkan dampak dari siapa yang kita habiskan waktu bersamanya.</p>
+
+        <p>Ada kalimat klasik yang makin lama makin saya percayai kebenarannya: <em>"Show me your friends, and I'll show you your future."</em></p>
+        <p>Kita sering sibuk mencari <em>investor finansial</em> untuk mimpi-mimpi kita, tapi lupa mencari <em>investor karakter</em> — orang-orang yang mau menginvestasikan waktu, kejujuran, dan kepedulian mereka untuk membantu kita menjadi lebih baik.</p>
+
+        <!-- PILLARS -->
+        <div class="pillars">
+          <div class="pillar">
+            <div class="pillar-icon">🔥</div>
+            <div class="pillar-title">Energi yang Mengangkat</div>
+            <div class="pillar-desc">Beberapa hubungan mendorong kita ke arah terang dan bertumbuh setiap hari.</div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">⚖️</div>
+            <div class="pillar-title">Kejujuran yang Peduli</div>
+            <div class="pillar-desc">Teman sejati cukup peduli untuk mengatakan kebenaran, bahkan yang menyakitkan.</div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">🌱</div>
+            <div class="pillar-title">Pertumbuhan yang Nyata</div>
+            <div class="pillar-desc">Bukan sekadar hubungan yang nyaman, tapi hubungan yang menumbuhkan buah.</div>
+          </div>
+        </div>
+
+        <p>Sama seperti pisau tumpul yang tidak bisa diasah dengan benda lunak, karakter kita tidak bisa ditajamkan hanya dengan hubungan-hubungan yang selalu menyenangkan dan tidak pernah menantang kita.</p>
+
+        <div class="blockquote">
+          <p>"Besi menajamkan besi, orang menajamkan sesamanya."</p>
+          <span class="cite">— Amsal 27:17</span>
+        </div>
+
+        <p>Dan ya — proses mengasah itu ada gesekannya. Ada percikan. Ada panasnya. Tapi itu bukan tanda hubungan yang salah. Itu tanda bahwa sesuatu sedang dibentuk menjadi lebih tajam dan lebih berguna.</p>
+
+        <hr class="hrline" />
+
+        <!-- ── TESTIMONY 1 ── -->
+        <div class="testimony">
+          <div class="testimony-label">✦ Kesaksian</div>
+          <p>Beberapa waktu lalu, saya ngobrol panjang dengan seorang teman sebut saja dia Ryan. Dia seorang profesional muda yang sangat cerdas, ambisius, dan sepertinya punya segalanya di tempat yang benar. Tapi ada satu hal yang dia akui dengan susah payah:</p>
+          <p><em>"Gue sadar bahwa selama bertahun-tahun, gue cuma mengelilingi diri gue dengan orang-orang yang agree sama semua yang gue bilang. Bukan karena mereka setuju beneran, tapi karena itu yang gue mau. Dan akhirnya gue membuat keputusan besar dalam hidup gue tanpa ada satupun yang cukup peduli untuk bilang, 'hei, elo yakin ini benar?'"</em></p>
+          <p>Salah satu keputusan itu menyebabkan kerugian besar — finansial dan relasional — yang butuh bertahun-tahun untuk diperbaiki.</p>
+          <p>Yang paling menyedihkan bukan kerugian itu sendiri. Yang paling menyedihkan adalah kenyataan bahwa ada orang-orang di sekitarnya yang sebenarnya melihat warning signs itu — tapi tidak cukup aman untuk berbicara. Dan Ryan tidak menciptakan ruang yang aman untuk dikoreksi.</p>
+          <p>Sekarang, dia bilang, salah satu hal pertama yang dia lakukan dalam setiap keputusan besar adalah mencari seseorang yang dia percaya akan <em>tidak</em> langsung setuju dengannya.</p>
+        </div>
+
+        <hr class="hrline" />
+
+        <!-- ── SECTION 5 ── -->
+        <h2 class="h2"><span class="h2-icon">🎁</span> Karunia yang Tidak Populer: Teguran</h2>
+
+        <p>Ini mungkin bagian yang paling tidak kita mau dengar, tapi paling kita butuhkan.</p>
+        <p>Di dunia yang terus-menerus berteriak tentang <em>self-love</em>, <em>setting boundaries</em>, dan <em>protect your energy</em> — ada bahaya subtle yang sering kita lewatkan: kita jadi semakin tidak mau dikoreksi.</p>
+        <p>Kita ingin didengar. Kita ingin divalidasi. Kita ingin dimengerti. Tapi kita tidak lagi terbuka untuk diperbaiki.</p>
+
+        <div class="illus">
+          <div class="illus-label">Kontras Dua Raja</div>
+          <p style="margin:0 0 12px; line-height:1.8;"><strong>Daud</strong> — ketika nabi Natan datang kepadanya dan menceritakan perumpamaan tentang seorang kaya yang mencuri domba orang miskin, Daud marah besar dan berkata orang itu layak mati. Dan Natan berkata: <em>"Engkaulah orang itu."</em></p>
+          <p style="margin:0; line-height:1.8;">Daud bisa saja bereaksi defensif. Dia raja — Natan tidak ada apa-apanya secara kekuasaan. Tapi Daud memilih untuk hancur di hadapan kebenaran itu. Dia bertobat. Dan karena itulah, meski dia jatuh dalam dosa yang sangat besar, dia tetap disebut "manusia yang berkenan di hati Allah."</p>
+          <br/>
+          <p style="margin:0; line-height:1.8;"><strong>Herodes</strong> — ketika Yohanes Pembaptis menegurnya karena menikahi istri saudaranya, Herodes memenjarakan Yohanes. Dan akhirnya, membunuhnya. Satu hati terbuka. Satu hati tertutup. Satu bertumbuh dalam hikmat. Satu hancur dalam kesombongannya sendiri.</p>
+        </div>
+
+        <p>Hikmat tidak tumbuh di dalam hati yang selalu ingin dibenarkan. Hikmat tumbuh di dalam hati yang berani untuk disentuh di tempat yang tidak nyaman.</p>
+
+        <div class="blockquote">
+          <p>"Lebih baik teguran yang nyata-nyata daripada kasih yang tersembunyi."</p>
+          <span class="cite">— Amsal 27:5</span>
+        </div>
+
+        <p>Dan secara praktis, ini berarti: kalau kamu selalu ingin menjadi orang yang paling pintar di dalam ruangan — mungkin kamu sedang berada di ruangan yang salah.</p>
+        <div class="blockquote">
+          <p>"If you are the smartest person in the room, you are in the wrong room."</p>
+          <span class="cite">— A.R. Bernard</span>
+        </div>
+
+        <hr class="hrline" />
+
+        <!-- ── TESTIMONY 2 ── -->
+        <div class="testimony">
+          <div class="testimony-label">✦ Kesaksian</div>
+          <p>Saya masih ingat masa di mana saya sangat tidak mau mendengar feedback negatif tentang sesuatu yang sudah saya kerjakan dengan susah payah. Ada sebuah proyek yang saya siapkan berbulan-bulan — dan ketika seorang mentor memberikan kritik yang cukup tajam tentang bagian fundamentalnya, reaksi pertama saya adalah defensif.</p>
+          <p><em>Dia tidak ngerti visinya. Dia terlalu kritis. Dia tidak melihat betapa kerasnya aku sudah bekerja untuk ini.</em></p>
+          <p>Tapi kemudian, dalam perjalanan pulang, saya duduk dengan ketidaknyamanan itu. Dan saya mulai menyadari bahwa hampir semua yang dia katakan itu benar. Saya hanya terlalu dekat dengan pekerjaan saya sendiri untuk bisa melihatnya secara objektif.</p>
+          <p>Saya kembali, meminta lebih banyak feedback, dan mengerjakan ulang beberapa bagian penting. Hasilnya jauh lebih baik dari versi yang awalnya saya pikir sudah sempurna.</p>
+          <p>Itu adalah salah satu pelajaran terpenting yang saya pelajari tentang hikmat: ego yang terluka hari ini jauh lebih murah harganya daripada keputusan yang salah yang harus kita tanggung bertahun-tahun ke depan.</p>
+        </div>
+
+        <hr class="hrline" />
+
+        <!-- ── SECTION 6 ── -->
+        <h2 class="h2"><span class="h2-icon">🤝</span> Ketika Iman Bertemu Persahabatan</h2>
+
+        <p>Ada kisah yang selalu membuat saya berhenti dan berpikir ulang tentang arti teman sejati.</p>
+        <p>Markus 2 mencatat seorang lumpuh yang dibawa oleh empat orang temannya kepada Yesus. Rumah itu penuh sesak — tidak ada jalan masuk. Dan apa yang dilakukan keempat orang itu? Mereka naik ke atap, membongkarnya, dan menurunkan orang lumpuh itu dari atas.</p>
+        <p>Ini bukan tindakan yang mudah. Ini memalukan. Ini merusak properti orang. Ini pasti membuat orang-orang di bawah menoleh dan bergumam. Ini adalah tindakan yang butuh kepedulian yang jauh melampaui rasa nyaman.</p>
+        <p>Dan kemudian tulis Alkitab dengan detail yang sangat penting:</p>
+
+        <div class="blockquote">
+          <p>"Ketika Yesus melihat <em>iman mereka</em>..."</p>
+          <span class="cite">— Markus 2:5</span>
+        </div>
+
+        <p>Bukan iman si lumpuh saja. <strong>Iman mereka</strong> — iman dari keempat teman yang menolak menerima bahwa orang yang mereka kasihi harus tetap dalam kondisi seperti itu.</p>
+        <p>Orang lumpuh itu disembuhkan bukan hanya karena imannya sendiri — tapi karena dia dikelilingi oleh orang-orang yang cukup peduli untuk mencari jalan ketika jalan biasa tidak ada.</p>
+
+        <div class="note">
+          <p>Kita semua butuh teman-teman yang tidak akan rela melihat kita tetap terjebak. Yang berani membuka atap untuk memastikan kita bertemu Yesus.</p>
+        </div>
+
+        <p>Dan sebaliknya — kita juga dipanggil untuk menjadi orang seperti itu bagi orang lain. Bukan hanya teman yang hadir di momen menyenangkan. Tapi teman yang <em>mengangkat</em> — secara harfiah dan rohani — di momen paling berat sekalipun.</p>
+
+        <hr class="hrline" />
+
+        <!-- ── SECTION 7 ── -->
+        <h2 class="h2"><span class="h2-icon">🤫</span> Kekuatan Tersembunyi dari Kerendahan Hati</h2>
+
+        <p>Di dunia yang memuja opini keras dan confidence yang tidak tergoyahkan, ada satu kualitas yang semakin langka: kemampuan untuk <em>mendengar dengan sungguh</em>.</p>
+        <p>Bukan mendengar untuk merespons. Bukan mendengar sambil menyusun argumen balasan di kepala. Tapi mendengar dengan niat untuk benar-benar mengerti.</p>
+
+        <div class="note accent">
+          <p><strong>Setiap kali kita berbicara, kita mengeluarkan apa yang sudah kita tahu.<br>Setiap kali kita mendengar, kita membuka ruang bagi apa yang belum kita tahu.</strong><br>Dan di ruang itulah hikmat bertumbuh.</p>
+        </div>
+
+        <p>Seorang teman pernah mengatakan sesuatu yang terus saya ingat: <em>"Semakin saya belajar, semakin saya sadar betapa sedikit yang benar-benar saya ketahui."</em> Ini bukan cliche. Ini adalah tanda bahwa seseorang benar-benar sedang bertumbuh dalam hikmat.</p>
+        <p>Hikmat tidak berteriak. Ia berbisik di hati yang tenang. Dan kita tidak akan menemukannya di dalam kebisingan perdebatan tanpa ujung, melainkan di dalam kerendahan hati yang berani menerima koreksi.</p>
+
+        <div class="blockquote">
+          <p>"Orang yang mengarahkan telinga kepada teguran yang membawa kehidupan akan tinggal di tengah-tengah orang bijak."</p>
+          <span class="cite">— Amsal 15:31</span>
+        </div>
+
+        <hr class="hrline" />
+
+        <!-- ── SECTION 8 ── -->
+        <h2 class="h2"><span class="h2-icon">✨</span> Bermegah Bukan Karena Hikmatmu — Tapi Karena Mengenal Dia</h2>
+
+        <p>Dan ini — ini adalah intinya yang paling dalam.</p>
+        <p>Seluruh percakapan tentang hikmat ini tidak ada artinya kalau kita akhirnya memakai hikmat itu sebagai mahkota di kepala kita sendiri. Kalau hikmat hanya menjadi alat untuk merasa lebih baik dari orang lain, lebih cerdas, lebih rohani — maka kita telah melewatkan poin paling fundamentalnya.</p>
+
+        <div class="verse-highlight">
+          <p>"Janganlah orang bijaksana bermegah karena kebijaksanaannya... tetapi siapa yang mau bermegah, baiklah bermegah karena yang berikut: bahwa ia memahami dan mengenal Aku..."</p>
+          <span class="cite muted">— Yeremia 9:23–24</span>
+        </div>
+
+        <p>Hikmat sejati bukan tentang menjadi paling tahu. Hikmat sejati adalah tentang menjadi paling <em>tunduk</em>.</p>
+        <p>Dan paradoksnya: semakin kita benar-benar mengenal Tuhan, semakin kita sadar betapa banyak hal yang belum kita mengerti. Bukan dalam cara yang merendahkan atau membuat tidak percaya diri — tapi dalam cara yang membuat kita terus bergantung, terus belajar, terus mau dibentuk.</p>
+
+        <p>Itu yang membedakan hikmat sejati dengan kepintaran biasa. Kepintaran bisa membuat seseorang merasa cukup dengan dirinya sendiri. Hikmat selalu membawa seseorang kembali ke Tuhan.</p>
+
+        <hr class="hrline" />
+
+        <!-- ── TESTIMONY 3 / PENUTUP ── -->
+        <div class="testimony">
+          <div class="testimony-label">✦ Refleksi Pribadi</div>
+          <p>Ada satu masa dalam hidup saya di mana saya merasa sudah "cukup bijak." Saya aktif membaca firman, saya mendengarkan podcast rohani yang bagus-bagus, saya bisa berbicara dengan cukup fasih tentang teologi dan prinsip-prinsip kehidupan.</p>
+          <p>Tapi Tuhan punya cara yang unik untuk menguji fondasi yang kita pikir sudah solid.</p>
+          <p>Di tengah satu periode yang sangat sulit — ketika banyak hal yang saya andalkan mulai goyah satu per satu — saya menemukan satu kebenaran yang menyakitkan: banyak "hikmat" yang saya kumpulkan hanya hidup di kepala saya, bukan di dalam cara saya benar-benar hidup sehari-hari.</p>
+          <p>Saya tahu prinsip tentang komunitas — tapi saya tidak benar-benar membiarkan diri saya dikenal oleh siapapun. Saya tahu bahwa kerendahan hati penting — tapi saya masih menghindar dari orang-orang yang mungkin menegur saya. Saya tahu bahwa takut akan Tuhan adalah permulaan hikmat — tapi dalam banyak keputusan, saya masih menaruh diri saya di pusat, bukan Dia.</p>
+          <p>Dan justru di titik itulah — ketika saya akhirnya berhenti berpura-pura dan membiarkan Tuhan masuk ke dalam bagian-bagian yang selama ini saya tutupi — proses pembentukan yang sesungguhnya dimulai.</p>
+          <p>Hikmat bukan sesuatu yang kita capai di satu titik lalu selesai. Hikmat adalah perjalanan seumur hidup yang dimulai setiap pagi dengan satu keputusan: <em>menaruh Dia di pusat, bukan kita.</em></p>
+        </div>
+
+        <hr class="hrline" />
+
+        <!-- ── CLOSING ── -->
+        <h2 class="h2"><span class="h2-icon">🌿</span> Membangun Bersama Orang yang Bijak</h2>
+
+        <p>Hikmat tidak tumbuh di ruang yang nyaman. Ia tumbuh di tanah kerendahan hati, disiram oleh teguran yang berani, dan dipupuk oleh pergaulan yang benar.</p>
+        <p>Kalau kamu saat ini sedang menilai ulang siapa yang ada di dalam lingkaran hidupmu — itu adalah langkah yang sangat baik. Bukan untuk menjadi eksklusif atau arogan dalam memilih teman. Tapi untuk sadar bahwa hidup kita terlalu berharga dan panggilan kita terlalu penting untuk dijalani bersama orang-orang yang tidak mendorong kita ke arah yang benar.</p>
+
+        <div class="blockquote">
+          <p>"Siapa bergaul dengan orang bijak menjadi bijak, tetapi siapa berteman dengan orang bebal menjadi malang."</p>
+          <span class="cite">— Amsal 13:20</span>
+        </div>
+
+        <p>Dan pertanyaan yang mungkin paling penting untuk kita jawab dengan jujur hari ini:</p>
+        <ul class="list">
+          <li>Apakah <em>circle</em> kita saat ini membuat kita lebih tajam, lebih kudus, lebih berbuah?</li>
+          <li>Apakah ada ruang dalam hidup kita untuk dikoreksi — oleh orang lain dan oleh Tuhan?</li>
+          <li>Apakah hikmat yang kita kejar adalah hikmat yang membawa kita semakin mengenal Dia, atau semakin mengenal diri kita sendiri?</li>
+        </ul>
+
+        <p>Tidak ada jawaban yang perlu kamu umumkan ke siapapun. Tapi jujurlah pada dirimu sendiri. Dan kalau ada sesuatu yang perlu diubah — mulailah dari satu langkah kecil hari ini.</p>
+
+        <!-- CLOSING CTA -->
+        <div class="closing-cta">
+          <p class="big">"Let's walk with the wise.<br>Bukan supaya kita terlihat hebat,<br>tapi supaya Tuhan makin terlihat dalam cara kita hidup."</p>
+          <br/>
+          <p class="muted" style="font-size:0.9rem;">Hikmat dimulai dari sini — dari keputusan kecil hari ini, di tengah hiruk-pikuk kehidupan yang tidak akan berhenti. Satu langkah. Satu hari. Bersama Dia.</p>
+        </div>
+
+        <hr class="hrline" />
+
+        <div class="verse-highlight">
+          <p>"Permulaan hikmat adalah takut akan TUHAN, dan mengenal Yang Mahakudus adalah pengertian."</p>
+          <span class="cite">— Amsal 9:10</span>
+        </div>
+
+        <!-- POST NAV -->
+        <nav class="post-nav" aria-label="Post navigation">
+          <a href="../index.html">← Back to Home</a>
+          <a href="https://wa.me/?text=Baca%20ini%20yuk%3A%20The%20Wisdom%20Blueprint%20-%20https%3A%2F%2Fyehezkielinsight.com%2Fposts%2Fthe-wisdom-blueprint.html" class="share-wa-post" target="_blank" rel="noopener noreferrer">
+            🟢 Share ke WhatsApp
+          </a>
+        </nav>
+
+      </article>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3 class="footer-title">Stay Connected</h3>
+          <p>Follow perkembangan terbaru lewat Instagram, atau kirim pesan langsung.</p>
+          <div class="footer-connect-actions">
+            <a href="https://www.instagram.com/yhzrio?igsh=dnE0amZlZWlhOXYy&utm_source=qr" class="footer-social-btn" target="_blank" rel="noopener noreferrer">
+              📸 Instagram
+            </a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Yehezkiel's Insight. Walking with Faith, Living with Purpose.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
