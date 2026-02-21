@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Renewed from Within: A New Life That Begins Inside — Yehezkiel's Insight</title>
-  <meta name="description" content="Perubahan sejati bukan dari luar ke dalam — tapi dari dalam ke luar. Dan filosofi populer yang bilang kamu sudah cukup apa adanya? Mari kita periksa bersama." />
+  <meta name="description"
+    content="Perubahan sejati bukan dari luar ke dalam — tapi dari dalam ke luar. Dan filosofi populer yang bilang kamu sudah cukup apa adanya? Mari kita periksa bersama." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
+    rel="stylesheet" />
 
   <link rel="stylesheet" href="../assets/css/main.css" />
   <link rel="stylesheet" href="../assets/css/enhancements.css" />
@@ -19,58 +23,78 @@
        Accent theme: teal-emerald (#10b981) + purple (#a855f7)
        Fully dark/light mode aware, consistent with site DNA
        ========================================================= */
-    .post-page { --post-max: 1120px; --content-max: 720px; }
-    .post-page .container { max-width: var(--post-max); }
+    .post-page {
+      --post-max: 1120px;
+      --content-max: 720px;
+    }
+
+    .post-page .container {
+      max-width: var(--post-max);
+    }
 
     /* ── Reading Progress ─────────────────────────────── */
     .read-progress {
       position: fixed;
-      top: 0; left: 0;
-      height: 3px; width: 0%;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 0%;
       background: linear-gradient(90deg, #10b981, #a855f7, #10b981);
       background-size: 200% 100%;
       animation: shimmer 2.5s linear infinite;
       z-index: 9999;
       transition: width 0.1s linear;
     }
+
     @keyframes shimmer {
-      0%   { background-position: 0% 0%; }
-      100% { background-position: 200% 0%; }
+      0% {
+        background-position: 0% 0%;
+      }
+
+      100% {
+        background-position: 200% 0%;
+      }
     }
 
     /* ── HERO ─────────────────────────────────────────── */
-    .post-hero { padding: 32px 0 8px; }
+    .post-hero {
+      padding: 32px 0 8px;
+    }
 
     .post-hero-card {
       position: relative;
       overflow: hidden;
       border-radius: 24px;
       padding: 36px 32px 28px;
-      border: 1px solid rgba(255,255,255,0.13);
+      border: 1px solid rgba(255, 255, 255, 0.13);
       background:
-        radial-gradient(900px 360px at 12% 8%,  rgba(16,185,129,0.28) 0%, transparent 55%),
-        radial-gradient(700px 320px at 88% 14%, rgba(168,85,247,0.26) 0%, transparent 55%),
-        radial-gradient(500px 260px at 50% 94%, rgba(59,130,246,0.12) 0%, transparent 60%),
-        linear-gradient(160deg, rgba(255,255,255,0.07) 0%, rgba(255,255,255,0.02) 100%);
-      box-shadow: 0 24px 64px rgba(0,0,0,0.22), inset 0 1px 0 rgba(255,255,255,0.08);
+        radial-gradient(900px 360px at 12% 8%, rgba(16, 185, 129, 0.28) 0%, transparent 55%),
+        radial-gradient(700px 320px at 88% 14%, rgba(168, 85, 247, 0.26) 0%, transparent 55%),
+        radial-gradient(500px 260px at 50% 94%, rgba(59, 130, 246, 0.12) 0%, transparent 60%),
+        linear-gradient(160deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.02) 100%);
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.08);
       backdrop-filter: blur(12px);
     }
+
     body:not(.dark-mode) .post-hero-card {
-      border-color: rgba(15,23,42,0.10);
+      border-color: rgba(15, 23, 42, 0.10);
       background:
-        radial-gradient(900px 360px at 12% 8%,  rgba(16,185,129,0.11) 0%, transparent 55%),
-        radial-gradient(700px 320px at 88% 14%, rgba(168,85,247,0.11) 0%, transparent 55%),
-        radial-gradient(500px 260px at 50% 94%, rgba(59,130,246,0.07) 0%, transparent 60%),
-        linear-gradient(160deg, rgba(255,255,255,0.93) 0%, rgba(247,250,252,0.88) 100%);
-      box-shadow: 0 24px 64px rgba(15,23,42,0.09), inset 0 1px 0 rgba(255,255,255,0.97);
+        radial-gradient(900px 360px at 12% 8%, rgba(16, 185, 129, 0.11) 0%, transparent 55%),
+        radial-gradient(700px 320px at 88% 14%, rgba(168, 85, 247, 0.11) 0%, transparent 55%),
+        radial-gradient(500px 260px at 50% 94%, rgba(59, 130, 246, 0.07) 0%, transparent 60%),
+        linear-gradient(160deg, rgba(255, 255, 255, 0.93) 0%, rgba(247, 250, 252, 0.88) 100%);
+      box-shadow: 0 24px 64px rgba(15, 23, 42, 0.09), inset 0 1px 0 rgba(255, 255, 255, 0.97);
     }
+
     .post-hero-card::after {
       content: '';
       position: absolute;
-      top: -70px; right: -60px;
-      width: 230px; height: 230px;
+      top: -70px;
+      right: -60px;
+      width: 230px;
+      height: 230px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(16,185,129,0.16) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.16) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -80,18 +104,25 @@
       gap: 8px;
       padding: 7px 14px;
       border-radius: 999px;
-      border: 1px solid rgba(16,185,129,0.35);
-      background: rgba(16,185,129,0.10);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      background: rgba(16, 185, 129, 0.10);
       font-size: 0.82rem;
       font-weight: 600;
       letter-spacing: 0.04em;
       color: #059669;
       margin-bottom: 18px;
     }
-    .dark-mode .post-kicker { color: #34d399; border-color: rgba(52,211,153,0.30); background: rgba(16,185,129,0.12); }
+
+    .dark-mode .post-kicker {
+      color: #34d399;
+      border-color: rgba(52, 211, 153, 0.30);
+      background: rgba(16, 185, 129, 0.12);
+    }
+
     .post-kicker::before {
       content: '';
-      width: 6px; height: 6px;
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
       background: #10b981;
       flex-shrink: 0;
@@ -106,7 +137,10 @@
       margin: 0 0 8px;
       color: #f1f5f9;
     }
-    body:not(.dark-mode) .post-title { color: #1e293b; }
+
+    body:not(.dark-mode) .post-title {
+      color: #1e293b;
+    }
 
     .post-title-sub {
       font-family: 'Playfair Display', serif;
@@ -117,7 +151,10 @@
       margin: 0 0 18px;
       display: block;
     }
-    body:not(.dark-mode) .post-title-sub { color: #059669; }
+
+    body:not(.dark-mode) .post-title-sub {
+      color: #059669;
+    }
 
     .post-subtitle {
       max-width: 66ch;
@@ -126,7 +163,10 @@
       font-size: 1.03rem;
       color: #cbd5e1;
     }
-    body:not(.dark-mode) .post-subtitle { color: #475569; }
+
+    body:not(.dark-mode) .post-subtitle {
+      color: #475569;
+    }
 
     .post-meta-bar {
       display: flex;
@@ -134,9 +174,12 @@
       gap: 8px;
       align-items: center;
       padding-top: 20px;
-      border-top: 1px solid rgba(255,255,255,0.10);
+      border-top: 1px solid rgba(255, 255, 255, 0.10);
     }
-    body:not(.dark-mode) .post-meta-bar { border-top-color: rgba(15,23,42,0.10); }
+
+    body:not(.dark-mode) .post-meta-bar {
+      border-top-color: rgba(15, 23, 42, 0.10);
+    }
 
     .pill {
       display: inline-flex;
@@ -144,18 +187,29 @@
       align-items: center;
       padding: 7px 14px;
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.14);
-      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: rgba(255, 255, 255, 0.06);
       font-size: 0.85rem;
       font-weight: 500;
       text-decoration: none;
       transition: all 0.2s ease;
     }
-    body:not(.dark-mode) .pill { border-color: rgba(15,23,42,0.12); background: rgba(15,23,42,0.04); }
-    .pill:hover { transform: translateY(-2px); background: rgba(16,185,129,0.12); border-color: rgba(16,185,129,0.30); }
+
+    body:not(.dark-mode) .pill {
+      border-color: rgba(15, 23, 42, 0.12);
+      background: rgba(15, 23, 42, 0.04);
+    }
+
+    .pill:hover {
+      transform: translateY(-2px);
+      background: rgba(16, 185, 129, 0.12);
+      border-color: rgba(16, 185, 129, 0.30);
+    }
 
     /* ── LAYOUT ───────────────────────────────────────── */
-    .post-shell { padding: 20px 0 70px; }
+    .post-shell {
+      padding: 20px 0 70px;
+    }
 
     .post-grid {
       display: grid;
@@ -163,35 +217,55 @@
       gap: 18px;
       margin-top: 18px;
     }
+
     @media (min-width: 980px) {
-      .post-grid { grid-template-columns: minmax(0, 1fr) 260px; align-items: start; gap: 26px; }
+      .post-grid {
+        grid-template-columns: minmax(0, 1fr) 260px;
+        align-items: start;
+        gap: 26px;
+      }
     }
 
     .post-card {
       border-radius: 20px;
-      border: 1px solid rgba(255,255,255,0.11);
-      background: rgba(255,255,255,0.035);
+      border: 1px solid rgba(255, 255, 255, 0.11);
+      background: rgba(255, 255, 255, 0.035);
       overflow: hidden;
       backdrop-filter: blur(4px);
     }
+
     body:not(.dark-mode) .post-card {
-      border-color: rgba(15,23,42,0.09);
-      background: rgba(255,255,255,0.72);
-      box-shadow: 0 4px 28px rgba(15,23,42,0.06);
+      border-color: rgba(15, 23, 42, 0.09);
+      background: rgba(255, 255, 255, 0.72);
+      box-shadow: 0 4px 28px rgba(15, 23, 42, 0.06);
     }
 
-    .post-card.main-card { position: relative; }
+    .post-card.main-card {
+      position: relative;
+    }
+
     .post-card.main-card::before {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0; height: 3px;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
       background: linear-gradient(90deg, #10b981, #a855f7, #3b82f6, #10b981);
       background-size: 300% 100%;
       animation: gslide 7s ease infinite;
     }
+
     @keyframes gslide {
-      0%, 100% { background-position: 0% 0%; }
-      50%       { background-position: 100% 0%; }
+
+      0%,
+      100% {
+        background-position: 0% 0%;
+      }
+
+      50% {
+        background-position: 100% 0%;
+      }
     }
 
     .post-content {
@@ -199,7 +273,12 @@
       margin: 0 auto;
       padding: 36px 24px 40px;
     }
-    @media (min-width: 680px) { .post-content { padding: 40px 40px 48px; } }
+
+    @media (min-width: 680px) {
+      .post-content {
+        padding: 40px 40px 48px;
+      }
+    }
 
     /* ── TYPOGRAPHY ───────────────────────────────────── */
     .post-content p {
@@ -208,19 +287,34 @@
       margin: 0 0 1.25em;
       color: var(--text-color);
     }
-    .dark-mode .post-content p { color: #cbd5e1; }
-    .post-content strong { color: var(--text-color); }
-    .dark-mode .post-content strong { color: #f1f5f9; }
+
+    .dark-mode .post-content p {
+      color: #cbd5e1;
+    }
+
+    .post-content strong {
+      color: var(--text-color);
+    }
+
+    .dark-mode .post-content strong {
+      color: #f1f5f9;
+    }
 
     .lead-text {
       font-size: 1.09rem;
       line-height: 1.92;
       padding-bottom: 26px;
       margin-bottom: 10px;
-      border-bottom: 1px solid rgba(255,255,255,0.10);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.10);
     }
-    body:not(.dark-mode) .lead-text { border-bottom-color: rgba(15,23,42,0.10); }
-    .dark-mode .lead-text p { color: #e2e8f0; }
+
+    body:not(.dark-mode) .lead-text {
+      border-bottom-color: rgba(15, 23, 42, 0.10);
+    }
+
+    .dark-mode .lead-text p {
+      color: #e2e8f0;
+    }
 
     .post-h2 {
       font-family: 'Playfair Display', serif;
@@ -231,7 +325,10 @@
       letter-spacing: -0.2px;
       color: var(--text-color);
     }
-    .dark-mode .post-h2 { color: #f1f5f9; }
+
+    .dark-mode .post-h2 {
+      color: #f1f5f9;
+    }
 
     .post-label {
       display: inline-block;
@@ -243,24 +340,33 @@
       margin: 36px 0 8px;
       padding: 5px 10px;
       border-radius: 6px;
-      background: rgba(16,185,129,0.09);
-      border: 1px solid rgba(16,185,129,0.22);
+      background: rgba(16, 185, 129, 0.09);
+      border: 1px solid rgba(16, 185, 129, 0.22);
     }
-    .dark-mode .post-label { color: #34d399; }
+
+    .dark-mode .post-label {
+      color: #34d399;
+    }
 
     .post-label.purple {
       color: #a855f7;
-      background: rgba(168,85,247,0.09);
-      border-color: rgba(168,85,247,0.22);
+      background: rgba(168, 85, 247, 0.09);
+      border-color: rgba(168, 85, 247, 0.22);
     }
-    body:not(.dark-mode) .post-label.purple { color: #7c3aed; }
+
+    body:not(.dark-mode) .post-label.purple {
+      color: #7c3aed;
+    }
 
     .post-label.red {
       color: #ef4444;
-      background: rgba(239,68,68,0.08);
-      border-color: rgba(239,68,68,0.20);
+      background: rgba(239, 68, 68, 0.08);
+      border-color: rgba(239, 68, 68, 0.20);
     }
-    .dark-mode .post-label.red { color: #f87171; }
+
+    .dark-mode .post-label.red {
+      color: #f87171;
+    }
 
     /* ── SECTION DIVIDER ──────────────────────────────── */
     .section-divider {
@@ -269,36 +375,70 @@
       gap: 12px;
       margin: 34px 0;
     }
+
     .section-divider::before,
     .section-divider::after {
       content: '';
-      flex: 1; height: 1px;
-      background: rgba(255,255,255,0.10);
+      flex: 1;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.10);
     }
+
     body:not(.dark-mode) .section-divider::before,
-    body:not(.dark-mode) .section-divider::after { background: rgba(15,23,42,0.10); }
-    .sdots { display: flex; gap: 5px; align-items: center; }
-    .sdots span { width: 5px; height: 5px; border-radius: 50%; background: linear-gradient(135deg, #10b981, #a855f7); }
-    .sdots span:nth-child(2) { opacity: 0.5; width: 4px; height: 4px; }
-    .sdots span:nth-child(3) { opacity: 0.25; width: 3px; height: 3px; }
+    body:not(.dark-mode) .section-divider::after {
+      background: rgba(15, 23, 42, 0.10);
+    }
+
+    .sdots {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+    }
+
+    .sdots span {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #10b981, #a855f7);
+    }
+
+    .sdots span:nth-child(2) {
+      opacity: 0.5;
+      width: 4px;
+      height: 4px;
+    }
+
+    .sdots span:nth-child(3) {
+      opacity: 0.25;
+      width: 3px;
+      height: 3px;
+    }
 
     /* ── VERSE BOX ────────────────────────────────────── */
     .verse-box {
       margin: 26px 0;
       padding: 22px 26px;
       border-radius: 16px;
-      border: 1px solid rgba(16,185,129,0.28);
-      background: rgba(16,185,129,0.06);
+      border: 1px solid rgba(16, 185, 129, 0.28);
+      background: rgba(16, 185, 129, 0.06);
       position: relative;
       overflow: hidden;
     }
-    body:not(.dark-mode) .verse-box { background: rgba(16,185,129,0.05); }
+
+    body:not(.dark-mode) .verse-box {
+      background: rgba(16, 185, 129, 0.05);
+    }
+
     .verse-box::before {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0; height: 2px;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
       background: linear-gradient(90deg, #10b981, #a855f7);
     }
+
     .verse-box p {
       font-family: 'Playfair Display', serif;
       font-style: italic;
@@ -306,6 +446,7 @@
       line-height: 1.75 !important;
       margin-bottom: 10px !important;
     }
+
     .verse-ref {
       font-family: 'Inter', sans-serif !important;
       font-size: 0.78rem !important;
@@ -316,7 +457,10 @@
       color: #059669 !important;
       margin-bottom: 0 !important;
     }
-    .dark-mode .verse-ref { color: #34d399 !important; }
+
+    .dark-mode .verse-ref {
+      color: #34d399 !important;
+    }
 
     /* ── QUOTE ────────────────────────────────────────── */
     .quote {
@@ -324,24 +468,46 @@
       border-left: 3px solid #a855f7;
       padding: 18px 18px 18px 24px;
       margin: 26px 0;
-      background: rgba(168,85,247,0.06);
+      background: rgba(168, 85, 247, 0.06);
       border-radius: 0 14px 14px 0;
       overflow: hidden;
     }
-    body:not(.dark-mode) .quote { background: rgba(168,85,247,0.05); }
+
+    body:not(.dark-mode) .quote {
+      background: rgba(168, 85, 247, 0.05);
+    }
+
     .quote::before {
       content: '\201C';
       position: absolute;
-      top: -10px; left: 12px;
+      top: -10px;
+      left: 12px;
       font-family: 'Playfair Display', serif;
       font-size: 3.8rem;
-      color: rgba(168,85,247,0.18);
+      color: rgba(168, 85, 247, 0.18);
       line-height: 1;
       pointer-events: none;
     }
-    .quote p { margin: 0 0 8px !important; font-style: italic; line-height: 1.82; font-size: 1.0rem !important; }
-    .quote p:last-child { margin-bottom: 0 !important; }
-    .quote cite { display: block; margin-top: 10px; font-size: 0.82rem; opacity: 0.68; font-style: normal; font-weight: 500; }
+
+    .quote p {
+      margin: 0 0 8px !important;
+      font-style: italic;
+      line-height: 1.82;
+      font-size: 1.0rem !important;
+    }
+
+    .quote p:last-child {
+      margin-bottom: 0 !important;
+    }
+
+    .quote cite {
+      display: block;
+      margin-top: 10px;
+      font-size: 0.82rem;
+      opacity: 0.68;
+      font-style: normal;
+      font-weight: 500;
+    }
 
     /* ── CONCEPT CARD (dark inverted) ─────────────────── */
     .concept-card {
@@ -349,18 +515,26 @@
       padding: 26px 28px;
       border-radius: 16px;
       background: linear-gradient(135deg, #0a1628 0%, #0f1e0f 100%);
-      border: 1px solid rgba(16,185,129,0.22);
+      border: 1px solid rgba(16, 185, 129, 0.22);
       color: #e2e8f0;
       position: relative;
       overflow: hidden;
     }
-    body:not(.dark-mode) .concept-card { background: linear-gradient(135deg, #052e16 0%, #1e1b4b 100%); }
+
+    body:not(.dark-mode) .concept-card {
+      background: linear-gradient(135deg, #052e16 0%, #1e1b4b 100%);
+    }
+
     .concept-card::before {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0; height: 2px;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
       background: linear-gradient(90deg, #10b981, #a855f7, #3b82f6);
     }
+
     .concept-card-label {
       font-size: 0.7rem;
       font-weight: 700;
@@ -369,8 +543,9 @@
       color: #34d399;
       margin-bottom: 12px;
     }
+
     .concept-card p {
-      color: rgba(226,232,240,0.88) !important;
+      color: rgba(226, 232, 240, 0.88) !important;
       font-size: 1.05rem !important;
       line-height: 1.82 !important;
       margin-bottom: 0 !important;
@@ -382,24 +557,41 @@
       margin: 26px 0;
       padding: 20px 22px;
       border-radius: 14px;
-      border: 1px solid rgba(59,130,246,0.22);
-      background: rgba(59,130,246,0.06);
+      border: 1px solid rgba(59, 130, 246, 0.22);
+      background: rgba(59, 130, 246, 0.06);
       border-left: 3px solid #3b82f6;
     }
-    .personal-note p { margin-bottom: 8px !important; font-size: 0.98rem !important; line-height: 1.88 !important; }
-    .personal-note p:last-child { margin-bottom: 0 !important; }
+
+    .personal-note p {
+      margin-bottom: 8px !important;
+      font-size: 0.98rem !important;
+      line-height: 1.88 !important;
+    }
+
+    .personal-note p:last-child {
+      margin-bottom: 0 !important;
+    }
 
     /* ── TESTIMONY (teal) ─────────────────────────────── */
     .testimony {
       margin: 26px 0;
       padding: 20px 22px;
       border-radius: 14px;
-      border: 1px solid rgba(16,185,129,0.22);
-      background: rgba(16,185,129,0.05);
+      border: 1px solid rgba(16, 185, 129, 0.22);
+      background: rgba(16, 185, 129, 0.05);
       border-left: 3px solid #10b981;
     }
-    .testimony p { margin-bottom: 8px !important; font-size: 0.98rem !important; line-height: 1.88 !important; }
-    .testimony p:last-child { margin-bottom: 0 !important; }
+
+    .testimony p {
+      margin-bottom: 8px !important;
+      font-size: 0.98rem !important;
+      line-height: 1.88 !important;
+    }
+
+    .testimony p:last-child {
+      margin-bottom: 0 !important;
+    }
+
     .testimony-label {
       font-size: 0.7rem;
       font-weight: 700;
@@ -409,17 +601,25 @@
       margin-bottom: 10px;
       display: block;
     }
-    .dark-mode .testimony-label { color: #34d399; }
+
+    .dark-mode .testimony-label {
+      color: #34d399;
+    }
 
     /* ── ILLUSTRATION ─────────────────────────────────── */
     .illustration {
       margin: 26px 0;
       padding: 22px 24px;
       border-radius: 16px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.10);
     }
-    body:not(.dark-mode) .illustration { background: rgba(15,23,42,0.03); border-color: rgba(15,23,42,0.09); }
+
+    body:not(.dark-mode) .illustration {
+      background: rgba(15, 23, 42, 0.03);
+      border-color: rgba(15, 23, 42, 0.09);
+    }
+
     .illus-label {
       font-size: 0.7rem;
       font-weight: 700;
@@ -431,10 +631,28 @@
       align-items: center;
       gap: 8px;
     }
-    body:not(.dark-mode) .illus-label { color: #059669; }
-    .illus-label::before { content: ''; display: inline-block; width: 14px; height: 1px; background: currentColor; }
-    .illustration p { margin-bottom: 8px !important; font-size: 0.99rem !important; line-height: 1.88 !important; }
-    .illustration p:last-child { margin-bottom: 0 !important; }
+
+    body:not(.dark-mode) .illus-label {
+      color: #059669;
+    }
+
+    .illus-label::before {
+      content: '';
+      display: inline-block;
+      width: 14px;
+      height: 1px;
+      background: currentColor;
+    }
+
+    .illustration p {
+      margin-bottom: 8px !important;
+      font-size: 0.99rem !important;
+      line-height: 1.88 !important;
+    }
+
+    .illustration p:last-child {
+      margin-bottom: 0 !important;
+    }
 
     /* ── PHILOSOPHY CHALLENGE BOX ─────────────────────── */
     /* Special box for contrasting popular worldview vs Scripture */
@@ -442,25 +660,34 @@
       margin: 30px 0;
       border-radius: 18px;
       overflow: hidden;
-      border: 1px solid rgba(239,68,68,0.22);
+      border: 1px solid rgba(239, 68, 68, 0.22);
     }
+
     .philo-header {
       padding: 14px 22px;
-      background: rgba(239,68,68,0.10);
-      border-bottom: 1px solid rgba(239,68,68,0.18);
+      background: rgba(239, 68, 68, 0.10);
+      border-bottom: 1px solid rgba(239, 68, 68, 0.18);
       display: flex;
       align-items: center;
       gap: 10px;
     }
-    .dark-mode .philo-header { background: rgba(239,68,68,0.12); }
+
+    .dark-mode .philo-header {
+      background: rgba(239, 68, 68, 0.12);
+    }
+
     .philo-icon {
-      width: 28px; height: 28px;
+      width: 28px;
+      height: 28px;
       border-radius: 50%;
-      background: rgba(239,68,68,0.18);
-      display: flex; align-items: center; justify-content: center;
+      background: rgba(239, 68, 68, 0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-size: 0.9rem;
       flex-shrink: 0;
     }
+
     .philo-title {
       font-size: 0.72rem;
       font-weight: 700;
@@ -468,11 +695,16 @@
       text-transform: uppercase;
       color: #ef4444;
     }
-    .dark-mode .philo-title { color: #f87171; }
+
+    .dark-mode .philo-title {
+      color: #f87171;
+    }
+
     .philo-claim {
       padding: 16px 22px 18px;
-      background: rgba(239,68,68,0.05);
+      background: rgba(239, 68, 68, 0.05);
     }
+
     .philo-claim p {
       font-family: 'Playfair Display', serif;
       font-style: italic;
@@ -480,11 +712,13 @@
       line-height: 1.72 !important;
       margin-bottom: 0 !important;
     }
+
     .philo-response {
       padding: 18px 22px 20px;
-      border-top: 1px solid rgba(16,185,129,0.18);
-      background: rgba(16,185,129,0.05);
+      border-top: 1px solid rgba(16, 185, 129, 0.18);
+      background: rgba(16, 185, 129, 0.05);
     }
+
     .philo-response-label {
       font-size: 0.68rem;
       font-weight: 700;
@@ -496,10 +730,24 @@
       align-items: center;
       gap: 6px;
     }
-    .dark-mode .philo-response-label { color: #34d399; }
-    .philo-response-label::before { content: '✦'; }
-    .philo-response p { margin-bottom: 8px !important; font-size: 0.97rem !important; line-height: 1.85 !important; }
-    .philo-response p:last-child { margin-bottom: 0 !important; }
+
+    .dark-mode .philo-response-label {
+      color: #34d399;
+    }
+
+    .philo-response-label::before {
+      content: '✦';
+    }
+
+    .philo-response p {
+      margin-bottom: 8px !important;
+      font-size: 0.97rem !important;
+      line-height: 1.85 !important;
+    }
+
+    .philo-response p:last-child {
+      margin-bottom: 0 !important;
+    }
 
     /* ── BULLETS ──────────────────────────────────────── */
     .bullets {
@@ -507,22 +755,30 @@
       padding: 0;
       margin: 16px 0 22px;
     }
+
     .bullets li {
       position: relative;
       padding: 11px 14px 11px 38px;
       margin-bottom: 8px;
       border-radius: 10px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.07);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.07);
       line-height: 1.78;
       font-size: 0.98rem;
     }
-    body:not(.dark-mode) .bullets li { background: rgba(15,23,42,0.03); border-color: rgba(15,23,42,0.08); }
+
+    body:not(.dark-mode) .bullets li {
+      background: rgba(15, 23, 42, 0.03);
+      border-color: rgba(15, 23, 42, 0.08);
+    }
+
     .bullets li::before {
       content: '';
       position: absolute;
-      left: 14px; top: 19px;
-      width: 7px; height: 7px;
+      left: 14px;
+      top: 19px;
+      width: 7px;
+      height: 7px;
       border-radius: 50%;
       background: linear-gradient(135deg, #10b981, #a855f7);
     }
@@ -533,17 +789,22 @@
       padding: 30px 32px;
       border-radius: 18px;
       text-align: center;
-      border: 1px solid rgba(16,185,129,0.22);
-      background: rgba(16,185,129,0.05);
+      border: 1px solid rgba(16, 185, 129, 0.22);
+      background: rgba(16, 185, 129, 0.05);
       position: relative;
       overflow: hidden;
     }
+
     .closing-note::before {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0; height: 2px;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
       background: linear-gradient(90deg, #10b981, #a855f7, #3b82f6);
     }
+
     .closing-note p {
       font-family: 'Playfair Display', serif;
       font-style: italic;
@@ -551,7 +812,11 @@
       line-height: 1.85 !important;
       margin-bottom: 12px !important;
     }
-    .closing-note p:last-child { margin-bottom: 0 !important; }
+
+    .closing-note p:last-child {
+      margin-bottom: 0 !important;
+    }
+
     .closing-signature {
       font-family: 'Inter', sans-serif !important;
       font-style: normal !important;
@@ -565,13 +830,23 @@
       margin-top: 30px;
       padding: 16px 18px;
       border-radius: 14px;
-      border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.05);
     }
-    body:not(.dark-mode) .footer-note { border-color: rgba(15,23,42,0.10); background: rgba(15,23,42,0.03); }
+
+    body:not(.dark-mode) .footer-note {
+      border-color: rgba(15, 23, 42, 0.10);
+      background: rgba(15, 23, 42, 0.03);
+    }
 
     /* ── POST NAV ─────────────────────────────────────── */
-    .post-nav { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 26px; }
+    .post-nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 26px;
+    }
+
     .post-nav a {
       display: inline-flex;
       align-items: center;
@@ -579,14 +854,23 @@
       padding: 10px 16px;
       border-radius: 999px;
       text-decoration: none;
-      border: 1px solid rgba(255,255,255,0.14);
-      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: rgba(255, 255, 255, 0.05);
       font-size: 0.88rem;
       font-weight: 500;
       transition: all 0.2s ease;
     }
-    body:not(.dark-mode) .post-nav a { border-color: rgba(15,23,42,0.12); background: rgba(15,23,42,0.04); }
-    .post-nav a:hover { transform: translateY(-2px); background: rgba(16,185,129,0.10); border-color: rgba(16,185,129,0.30); }
+
+    body:not(.dark-mode) .post-nav a {
+      border-color: rgba(15, 23, 42, 0.12);
+      background: rgba(15, 23, 42, 0.04);
+    }
+
+    .post-nav a:hover {
+      transform: translateY(-2px);
+      background: rgba(16, 185, 129, 0.10);
+      border-color: rgba(16, 185, 129, 0.30);
+    }
 
     /* ── TOC ──────────────────────────────────────────── */
     .post-card.toc {
@@ -595,8 +879,18 @@
       box-shadow: none !important;
       backdrop-filter: none !important;
     }
-    .toc { padding: 24px 8px 20px; }
-    @media (min-width: 980px) { .toc { position: sticky; top: 92px; } }
+
+    .toc {
+      padding: 24px 8px 20px;
+    }
+
+    @media (min-width: 980px) {
+      .toc {
+        position: sticky;
+        top: 92px;
+      }
+    }
+
     .toc-title {
       font-family: 'Playfair Display', serif;
       font-size: 0.95rem;
@@ -606,9 +900,13 @@
       color: var(--text-color);
       margin: 0 0 18px;
       padding-bottom: 10px;
-      border-bottom: 1px solid rgba(255,255,255,0.10);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.10);
     }
-    body:not(.dark-mode) .toc-title { border-bottom-color: rgba(15,23,42,0.10); }
+
+    body:not(.dark-mode) .toc-title {
+      border-bottom-color: rgba(15, 23, 42, 0.10);
+    }
+
     .toc a {
       display: block;
       padding: 9px 0 9px 16px;
@@ -620,18 +918,47 @@
       transition: all 0.18s ease;
       line-height: 1.4;
     }
-    .toc a:hover { border-left-color: var(--accent-color); padding-left: 20px; opacity: 0.85; }
-    .toc a.active { border-left-color: #10b981; color: #10b981; font-weight: 500; }
-    body:not(.dark-mode) .toc a.active { color: #059669; border-left-color: #059669; }
 
-    .anchor { scroll-margin-top: 100px; }
+    .toc a:hover {
+      border-left-color: var(--accent-color);
+      padding-left: 20px;
+      opacity: 0.85;
+    }
+
+    .toc a.active {
+      border-left-color: #10b981;
+      color: #10b981;
+      font-weight: 500;
+    }
+
+    body:not(.dark-mode) .toc a.active {
+      color: #059669;
+      border-left-color: #059669;
+    }
+
+    .anchor {
+      scroll-margin-top: 100px;
+    }
 
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(18px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
-    .post-hero { animation: fadeUp 0.55s ease both; }
-    .post-grid { animation: fadeUp 0.55s ease 0.12s both; }
+
+    .post-hero {
+      animation: fadeUp 0.55s ease both;
+    }
+
+    .post-grid {
+      animation: fadeUp 0.55s ease 0.12s both;
+    }
   </style>
 </head>
 
@@ -650,10 +977,11 @@
           <ul class="nav-list">
             <li><a href="../index.html" class="nav-link">Home</a></li>
             <li><a href="../about.html" class="nav-link">About</a></li>
-            
+
           </ul>
         </nav>
-                <button id="darkModeToggle" class="dark-mode-toggle" type="button" aria-label="Toggle dark mode"><span class="dm-icon">🌙</span><span class="dm-label">Dark Mode</span></button>
+        <button id="darkModeToggle" class="dark-mode-toggle" type="button" aria-label="Toggle dark mode"><span
+            class="dm-icon">🌙</span><span class="dm-label">Dark Mode</span></button>
       </div>
     </div>
   </header>
@@ -666,7 +994,9 @@
         <h1 class="post-title">Renewed from Within</h1>
         <span class="post-title-sub">A New Life That Begins Inside</span>
         <p class="post-subtitle">
-          Kita hidup di zaman yang percaya bahwa perubahan dimulai dari luar — ganti lingkungan, ganti habits, ganti mindset. Tapi ada satu pertanyaan yang perlu kita jawab jujur: kenapa setelah semua itu, masih ada ruang kosong yang tersisa?
+          Kita hidup di zaman yang percaya bahwa perubahan dimulai dari luar — ganti lingkungan, ganti habits, ganti
+          mindset. Tapi ada satu pertanyaan yang perlu kita jawab jujur: kenapa setelah semua itu, masih ada ruang
+          kosong yang tersisa?
         </p>
         <div class="post-meta-bar">
           <span class="pill">📅 28 Juli 2025</span>
@@ -688,20 +1018,33 @@
 
             <!-- LEAD -->
             <div class="lead-text" id="intro">
-              <p>Kadang kita suka mikir, <em>"Andai saja lingkungan saya berubah, pasti hidup saya juga lebih gampang."</em> Akhirnya, kita sibuk ngerapihin hal-hal di luar — ganti gaya, upgrade skill, rajin journaling, ikut retreats, bahkan konsisten upload sisi terbaik hidup di media sosial. Honestly, itu semua nggak salah. Tapi kadang, setelah semua upaya itu selesai, kita masih nemuin satu ruang kosong yang nggak bisa diisi dari luar.</p>
-              <p>Saya pernah juga, lho, ngejar yang namanya "perubahan" dengan cara memperbaiki penampilan, menjaga image, bahkan pura-pura happy di depan orang. <em>Deep down</em>, hati tetap penuh ragu, takut gagal, dan insecure. Sampai akhirnya saya mulai ngerti: <strong>Tuhan nggak cuma pengen perubahan luar — He wants to heal and renew our hearts first.</strong></p>
+              <p>Kadang kita suka mikir, <em>"Andai saja lingkungan saya berubah, pasti hidup saya juga lebih
+                  gampang."</em> Akhirnya, kita sibuk ngerapihin hal-hal di luar — ganti gaya, upgrade skill, rajin
+                journaling, ikut retreats, bahkan konsisten upload sisi terbaik hidup di media sosial. Honestly, itu
+                semua nggak salah. Tapi kadang, setelah semua upaya itu selesai, kita masih nemuin satu ruang kosong
+                yang nggak bisa diisi dari luar.</p>
+              <p>Saya pernah juga, lho, ngejar yang namanya "perubahan" dengan cara memperbaiki penampilan, menjaga
+                image, bahkan pura-pura happy di depan orang. <em>Deep down</em>, hati tetap penuh ragu, takut gagal,
+                dan insecure. Sampai akhirnya saya mulai ngerti: <strong>Tuhan nggak cuma pengen perubahan luar — He
+                  wants to heal and renew our hearts first.</strong></p>
             </div>
 
-            <div class="section-divider"><div class="sdots"><span></span><span></span><span></span></div></div>
+            <div class="section-divider">
+              <div class="sdots"><span></span><span></span><span></span></div>
+            </div>
 
             <!-- SECTION 1: PHILOSOPHY CHALLENGE -->
             <div id="filosofi" class="anchor"></div>
             <div class="post-label red">Perlu Kita Periksa Bersama</div>
             <h2 class="post-h2">"Kamu Sudah Cukup Apa Adanya" — Filosofi yang Terdengar Indah, Tapi...</h2>
 
-            <p>Salah satu kalimat yang paling banyak beredar di generasi kita adalah: <em>"You are enough."</em> Dipasang di mug kopi, ditulis di caption Instagram, bahkan jadi tagline podcast-podcast motivasi. Dan jujur — kalimat itu terasa <em>validating</em>. Terasa seperti pelukan. Terasa seperti jawaban dari semua rasa tidak cukup yang selama ini kita rasakan.</p>
+            <p>Salah satu kalimat yang paling banyak beredar di generasi kita adalah: <em>"You are enough."</em>
+              Dipasang di mug kopi, ditulis di caption Instagram, bahkan jadi tagline podcast-podcast motivasi. Dan
+              jujur — kalimat itu terasa <em>validating</em>. Terasa seperti pelukan. Terasa seperti jawaban dari semua
+              rasa tidak cukup yang selama ini kita rasakan.</p>
 
-            <p>Tapi saya mau mengajak kita berpikir lebih dalam sebentar. Karena ada perbedaan besar antara <em>diterima apa adanya</em> dan <em>dibiarkan tetap seperti apa adanya.</em></p>
+            <p>Tapi saya mau mengajak kita berpikir lebih dalam sebentar. Karena ada perbedaan besar antara <em>diterima
+                apa adanya</em> dan <em>dibiarkan tetap seperti apa adanya.</em></p>
 
             <div class="philo-box">
               <div class="philo-header">
@@ -709,19 +1052,29 @@
                 <div class="philo-title">Filosofi Populer yang Perlu Kita Periksa</div>
               </div>
               <div class="philo-claim">
-                <p>"You are enough just as you are. Stop trying to change yourself. Embrace who you are completely, because you don't need to be fixed."</p>
+                <p>"You are enough just as you are. Stop trying to change yourself. Embrace who you are completely,
+                  because you don't need to be fixed."</p>
               </div>
               <div class="philo-response">
                 <div class="philo-response-label">Perspektif Alkitab</div>
-                <p>Alkitab tidak pernah berkata kita sudah cukup apa adanya. Justru sebaliknya — Roma 3:23 dengan jujur menyatakan kita semua <em>fall short</em> dari standar Tuhan. Bukan untuk merendahkan, tapi untuk menyadarkan bahwa ada sesuatu yang perlu dipulihkan.</p>
-                <p>Yang Alkitab tegaskan adalah: kamu <strong>dicintai</strong> apa adanya, tapi kamu <strong>tidak dirancang untuk tetap</strong> seperti apa adanya. Ada bedanya diterima dengan kasih dan dibiarkan tidak bertumbuh. Seorang dokter yang mencintai pasiennya tidak akan bilang "kamu sudah cukup, nggak perlu diobati" — dia justru bekerja keras untuk memulihkan.</p>
-                <p>Kasih Tuhan bukan kasih yang membiarkan kita nyaman dalam kondisi yang menghancurkan kita. Kasih-Nya justru cukup kuat untuk mengubah kita dari dalam.</p>
+                <p>Alkitab tidak pernah berkata kita sudah cukup apa adanya. Justru sebaliknya — Roma 3:23 dengan jujur
+                  menyatakan kita semua <em>fall short</em> dari standar Tuhan. Bukan untuk merendahkan, tapi untuk
+                  menyadarkan bahwa ada sesuatu yang perlu dipulihkan.</p>
+                <p>Yang Alkitab tegaskan adalah: kamu <strong>dicintai</strong> apa adanya, tapi kamu <strong>tidak
+                    dirancang untuk tetap</strong> seperti apa adanya. Ada bedanya diterima dengan kasih dan dibiarkan
+                  tidak bertumbuh. Seorang dokter yang mencintai pasiennya tidak akan bilang "kamu sudah cukup, nggak
+                  perlu diobati" — dia justru bekerja keras untuk memulihkan.</p>
+                <p>Kasih Tuhan bukan kasih yang membiarkan kita nyaman dalam kondisi yang menghancurkan kita. Kasih-Nya
+                  justru cukup kuat untuk mengubah kita dari dalam.</p>
               </div>
             </div>
 
-            <p>Saya nggak mau bilang kalimat "you are enough" itu jahat — nggak, sama sekali. Tapi ketika itu dijadikan alasan untuk berhenti bertumbuh, untuk menolak pertanggungjawaban, atau untuk menghindari proses pemulihan yang memang perlu dijalani — di situlah ia menjadi berbahaya.</p>
+            <p>Saya nggak mau bilang kalimat "you are enough" itu jahat — nggak, sama sekali. Tapi ketika itu dijadikan
+              alasan untuk berhenti bertumbuh, untuk menolak pertanggungjawaban, atau untuk menghindari proses pemulihan
+              yang memang perlu dijalani — di situlah ia menjadi berbahaya.</p>
 
-            <p>Karena filosofi self-acceptance yang berhenti di "terima dirimu" tanpa "bertumbuhlah menjadi lebih baik" sebenarnya sedang merampas potensi seseorang atas nama kenyamanan.</p>
+            <p>Karena filosofi self-acceptance yang berhenti di "terima dirimu" tanpa "bertumbuhlah menjadi lebih baik"
+              sebenarnya sedang merampas potensi seseorang atas nama kenyamanan.</p>
 
             <div class="philo-box">
               <div class="philo-header">
@@ -733,47 +1086,74 @@
               </div>
               <div class="philo-response">
                 <div class="philo-response-label">Perspektif Alkitab</div>
-                <p>Amsal 4:23 justru menyebut hati sebagai sesuatu yang perlu <em>dijaga dengan segala kewaspadaan</em> — bukan sesuatu yang langsung dipercaya begitu saja. Dan Yeremia 17:9 bahkan berkata hati itu "lebih licik dari segala sesuatu."</p>
-                <p>Ini bukan berarti perasaan kita tidak valid. Perasaan itu nyata dan perlu diakui. Tapi menjadikan perasaan sebagai kompas utama hidup tanpa ada filter kebenaran Tuhan adalah seperti berlayar hanya dengan mengikuti angin — bergerak, tapi tidak tahu ke mana tujuannya.</p>
-                <p>Tuhan tidak mendesain kita untuk dipimpin oleh hati yang terluka, reaktif, atau belum dipulihkan. Dia mendesain kita untuk dipimpin oleh hati yang sudah dibarui — yang dipandu oleh firman-Nya, bukan sekadar impuls emosi kita.</p>
+                <p>Amsal 4:23 justru menyebut hati sebagai sesuatu yang perlu <em>dijaga dengan segala kewaspadaan</em>
+                  — bukan sesuatu yang langsung dipercaya begitu saja. Dan Yeremia 17:9 bahkan berkata hati itu "lebih
+                  licik dari segala sesuatu."</p>
+                <p>Ini bukan berarti perasaan kita tidak valid. Perasaan itu nyata dan perlu diakui. Tapi menjadikan
+                  perasaan sebagai kompas utama hidup tanpa ada filter kebenaran Tuhan adalah seperti berlayar hanya
+                  dengan mengikuti angin — bergerak, tapi tidak tahu ke mana tujuannya.</p>
+                <p>Tuhan tidak mendesain kita untuk dipimpin oleh hati yang terluka, reaktif, atau belum dipulihkan. Dia
+                  mendesain kita untuk dipimpin oleh hati yang sudah dibarui — yang dipandu oleh firman-Nya, bukan
+                  sekadar impuls emosi kita.</p>
               </div>
             </div>
 
-            <div class="section-divider"><div class="sdots"><span></span><span></span><span></span></div></div>
+            <div class="section-divider">
+              <div class="sdots"><span></span><span></span><span></span></div>
+            </div>
 
             <!-- SECTION 2 -->
             <div id="turning" class="anchor"></div>
             <div class="post-label">Turning Point</div>
             <h2 class="post-h2">Perempuan Samaria — dan Pertemuan yang Mengubah Segalanya dari Dalam</h2>
 
-            <p>Waktu saya baca ulang kisah perempuan Samaria di Yohanes 4, saya benar-benar berhenti di satu detail: perempuan ini datang ke sumur di tengah hari — jam dua belas siang, waktu paling terik. Bukan pagi, seperti perempuan-perempuan lain yang biasanya mengambil air bersama-sama. Dia datang sendiri, di tengah terik, karena dia sedang menghindari orang.</p>
+            <p>Waktu saya baca ulang kisah perempuan Samaria di Yohanes 4, saya benar-benar berhenti di satu detail:
+              perempuan ini datang ke sumur di tengah hari — jam dua belas siang, waktu paling terik. Bukan pagi,
+              seperti perempuan-perempuan lain yang biasanya mengambil air bersama-sama. Dia datang sendiri, di tengah
+              terik, karena dia sedang menghindari orang.</p>
 
-            <p>Kita nggak tahu persis apa yang dia rasakan. Tapi kita bisa menebak: ada malu yang dalam. Lima kali menikah, dan yang sekarang bukan suaminya. Di budaya waktu itu, itu bukan sekadar gosip — itu stigma yang menghancurkan.</p>
+            <p>Kita nggak tahu persis apa yang dia rasakan. Tapi kita bisa menebak: ada malu yang dalam. Lima kali
+              menikah, dan yang sekarang bukan suaminya. Di budaya waktu itu, itu bukan sekadar gosip — itu stigma yang
+              menghancurkan.</p>
 
             <div class="illustration">
               <div class="illus-label">Bayangkan ini</div>
-              <p>Kamu hidup di kota kecil. Semua orang tahu nama kamu, tahu masa lalumu, tahu kegagalanmu. Dan setiap kali kamu berjalan melewati kerumunan, kamu bisa merasakan tatapan itu. Jadi kamu belajar menghindari — pilih waktu-waktu di mana tidak ada orang. Pilih rute yang sepi. Jadilah tidak terlihat sebisa mungkin.</p>
-              <p>Itulah yang dilakukan perempuan ini. Bukan karena dia tidak haus — tapi karena harga yang harus dibayar untuk terlihat terasa terlalu besar.</p>
+              <p>Kamu hidup di kota kecil. Semua orang tahu nama kamu, tahu masa lalumu, tahu kegagalanmu. Dan setiap
+                kali kamu berjalan melewati kerumunan, kamu bisa merasakan tatapan itu. Jadi kamu belajar menghindari —
+                pilih waktu-waktu di mana tidak ada orang. Pilih rute yang sepi. Jadilah tidak terlihat sebisa mungkin.
+              </p>
+              <p>Itulah yang dilakukan perempuan ini. Bukan karena dia tidak haus — tapi karena harga yang harus dibayar
+                untuk terlihat terasa terlalu besar.</p>
             </div>
 
-            <p>Lalu Yesus duduk di sana. Dan Dia tidak mulai dengan daftar kesalahannya. Dia tidak mulai dengan ceramah. Dia memulai dengan pertanyaan sederhana: <em>"Berilah Aku minum."</em></p>
+            <p>Lalu Yesus duduk di sana. Dan Dia tidak mulai dengan daftar kesalahannya. Dia tidak mulai dengan ceramah.
+              Dia memulai dengan pertanyaan sederhana: <em>"Berilah Aku minum."</em></p>
 
-            <p>Satu percakapan itu — yang dimulai dengan kerendahan, yang jujur tentang masa lalunya, yang menawarkan sesuatu yang berbeda dari semua yang pernah dia coba — mengubah hidupnya. Bukan dari luar. Dari dalam. Dan buktinya? Perempuan yang tadinya menghindari orang, tiba-tiba berlari ke kota, memanggil semua orang, dan bersaksi.</p>
+            <p>Satu percakapan itu — yang dimulai dengan kerendahan, yang jujur tentang masa lalunya, yang menawarkan
+              sesuatu yang berbeda dari semua yang pernah dia coba — mengubah hidupnya. Bukan dari luar. Dari dalam. Dan
+              buktinya? Perempuan yang tadinya menghindari orang, tiba-tiba berlari ke kota, memanggil semua orang, dan
+              bersaksi.</p>
 
             <div class="testimony">
               <span class="testimony-label">Refleksi</span>
-              <p>Kadang saya mikir, wow — Tuhan benar-benar nggak pernah anggap masa lalu kita sebagai <em>final chapter</em>. Yang dunia lihat sebagai aib, Tuhan lihat sebagai cerita yang belum selesai. Yang manusia jadikan alasan untuk menjauhi, Tuhan jadikan titik awal percakapan yang paling mengubahkan.</p>
+              <p>Kadang saya mikir, wow — Tuhan benar-benar nggak pernah anggap masa lalu kita sebagai <em>final
+                  chapter</em>. Yang dunia lihat sebagai aib, Tuhan lihat sebagai cerita yang belum selesai. Yang
+                manusia jadikan alasan untuk menjauhi, Tuhan jadikan titik awal percakapan yang paling mengubahkan.</p>
               <p>Di tangan Tuhan, <em>broken story</em> bisa banget jadi <em>testimony</em> yang paling powerful.</p>
             </div>
 
-            <div class="section-divider"><div class="sdots"><span></span><span></span><span></span></div></div>
+            <div class="section-divider">
+              <div class="sdots"><span></span><span></span><span></span></div>
+            </div>
 
             <!-- SECTION 3 -->
             <div id="hati" class="anchor"></div>
             <div class="post-label">Inti Segalanya</div>
             <h2 class="post-h2">Perubahan Sejati Selalu Berawal dari Hati</h2>
 
-            <p>Banyak orang pengen dunia di sekitarnya berubah dulu, baru mereka ikut berubah. "Kalau bosnya lebih baik, saya pasti lebih produktif." "Kalau pasangannya lebih pengertian, saya pasti lebih sabar." "Kalau kondisinya lebih mendukung, saya pasti lebih oke."</p>
+            <p>Banyak orang pengen dunia di sekitarnya berubah dulu, baru mereka ikut berubah. "Kalau bosnya lebih baik,
+              saya pasti lebih produktif." "Kalau pasangannya lebih pengertian, saya pasti lebih sabar." "Kalau
+              kondisinya lebih mendukung, saya pasti lebih oke."</p>
 
             <p>Tapi firman Tuhan simple banget soal ini:</p>
 
@@ -782,52 +1162,77 @@
               <p class="verse-ref">Amsal 4:23</p>
             </div>
 
-            <p>Bukan "jagalah lingkunganmu." Bukan "jagalah kondisimu." Hatimu — karena dari situlah segalanya berasal. Cara kita ngomong, cara kita bersikap, cara kita ngambil keputusan di bawah tekanan — itu semua adalah output dari apa yang disimpan di dalam hati.</p>
+            <p>Bukan "jagalah lingkunganmu." Bukan "jagalah kondisimu." Hatimu — karena dari situlah segalanya berasal.
+              Cara kita ngomong, cara kita bersikap, cara kita ngambil keputusan di bawah tekanan — itu semua adalah
+              output dari apa yang disimpan di dalam hati.</p>
 
             <div class="personal-note">
-              <p>Saya sering sadar, banyak reaksi spontan saya yang ujung-ujungnya bisa ditelusuri ke satu hal: kondisi hati. Di masa-masa di mana hati saya penuh syukur, saya jauh lebih sabar, lebih murah hati, lebih mudah memilih yang benar. Tapi di masa-masa hati saya crowded sama luka yang belum selesai, sama rasa insecure, sama kepahitan yang saya pura-pura sudah lupakan — yang keluar adalah versi diri saya yang paling tidak saya sukai.</p>
+              <p>Saya sering sadar, banyak reaksi spontan saya yang ujung-ujungnya bisa ditelusuri ke satu hal: kondisi
+                hati. Di masa-masa di mana hati saya penuh syukur, saya jauh lebih sabar, lebih murah hati, lebih mudah
+                memilih yang benar. Tapi di masa-masa hati saya crowded sama luka yang belum selesai, sama rasa
+                insecure, sama kepahitan yang saya pura-pura sudah lupakan — yang keluar adalah versi diri saya yang
+                paling tidak saya sukai.</p>
               <p>Dan menariknya, kondisi eksternal waktu itu seringkali sama. Bedanya cuma satu: kondisi hati.</p>
             </div>
 
-            <p>Hubungan yang sehat datang dari hati yang sehat — bukan sekadar kata-kata manis dan komunikasi yang terlatih. Damai yang sejati nggak datang dari situasi luar yang akhirnya sempurna — tapi dari dalam, dari hati yang sudah diberesin sama Tuhan. Karena situasi luar akan terus berubah. Hati yang dipulihkan adalah fondasi yang bisa berdiri di tengah perubahan apapun.</p>
+            <p>Hubungan yang sehat datang dari hati yang sehat — bukan sekadar kata-kata manis dan komunikasi yang
+              terlatih. Damai yang sejati nggak datang dari situasi luar yang akhirnya sempurna — tapi dari dalam, dari
+              hati yang sudah diberesin sama Tuhan. Karena situasi luar akan terus berubah. Hati yang dipulihkan adalah
+              fondasi yang bisa berdiri di tengah perubahan apapun.</p>
 
-            <div class="section-divider"><div class="sdots"><span></span><span></span><span></span></div></div>
+            <div class="section-divider">
+              <div class="sdots"><span></span><span></span><span></span></div>
+            </div>
 
             <!-- SECTION 4 -->
             <div id="identitas" class="anchor"></div>
             <div class="post-label purple">Identitas</div>
             <h2 class="post-h2">Hidup Baru — New Identity, New Start (Tapi Bukan Instan)</h2>
 
-            <p>Jadi ciptaan baru itu bukan berarti langsung jadi orang lain yang serba sempurna. Bukan kayak update software yang tiba-tiba semua bug-nya hilang dan fitur barunya muncul seketika. Lebih ke ini: menerima identitas baru yang Tuhan berikan, dan mulai hidup dari sana.</p>
+            <p>Jadi ciptaan baru itu bukan berarti langsung jadi orang lain yang serba sempurna. Bukan kayak update
+              software yang tiba-tiba semua bug-nya hilang dan fitur barunya muncul seketika. Lebih ke ini: menerima
+              identitas baru yang Tuhan berikan, dan mulai hidup dari sana.</p>
 
             <div class="verse-box">
-              <p>"Jadi siapa yang ada di dalam Kristus, ia adalah ciptaan baru: yang lama sudah berlalu, sesungguhnya yang baru sudah datang."</p>
+              <p>"Jadi siapa yang ada di dalam Kristus, ia adalah ciptaan baru: yang lama sudah berlalu, sesungguhnya
+                yang baru sudah datang."</p>
               <p class="verse-ref">2 Korintus 5:17</p>
             </div>
 
-            <p>Kata "sudah datang" dalam bahasa aslinya punya nuansa aktif — bukan sesuatu yang menunggu, tapi sesuatu yang sudah hadir dan terus bergerak. Identitas barumu sudah ada. Pertanyaannya adalah: apakah kamu mau hidup dari identitas itu, atau terus hidup dari narasi lama yang dunia tempel di hidupmu?</p>
+            <p>Kata "sudah datang" dalam bahasa aslinya punya nuansa aktif — bukan sesuatu yang menunggu, tapi sesuatu
+              yang sudah hadir dan terus bergerak. Identitas barumu sudah ada. Pertanyaannya adalah: apakah kamu mau
+              hidup dari identitas itu, atau terus hidup dari narasi lama yang dunia tempel di hidupmu?</p>
 
             <ul class="bullets">
               <li>Tuhan selalu kasih second chance — bahkan ketiga, keempat, dan seterusnya.</li>
               <li>Nggak ada dosa, kesalahan, atau kegagalan yang bisa membatalkan rancangan-Nya buat hidupmu.</li>
               <li>Kamu bukan lagi yang lama — kamu nggak harus terus terjebak di label yang masa lalu berikan.</li>
-              <li>Identitasmu sekarang: anak Tuhan — bukan berdasarkan performa, tapi berdasarkan kasih yang sudah lebih dulu diberikan.</li>
+              <li>Identitasmu sekarang: anak Tuhan — bukan berdasarkan performa, tapi berdasarkan kasih yang sudah lebih
+                dulu diberikan.</li>
             </ul>
 
             <div class="illustration">
               <div class="illus-label">Ilustrasi</div>
-              <p>Bayangkan seseorang yang lahir dalam kemiskinan, lalu diadopsi oleh keluarga kerajaan. Secara hukum, statusnya sudah berubah — dia adalah anak raja. Tapi kalau dia terus hidup dengan mentalitas "aku anak jalanan yang tidak berharga," dia tidak akan pernah menikmati warisan yang sudah menjadi miliknya.</p>
-              <p>Kita sering persis seperti itu. Status kita sudah berubah. Tuhan sudah menetapkan kita sebagai anak-Nya. Tapi kita masih sering hidup dari narasi lama — narasi penolakan, narasi tidak cukup baik, narasi "aku tidak layak." Pembaruan dari dalam dimulai ketika kita mulai percaya pada identitas yang sudah diberikan, bukan hanya yang terasa familiar.</p>
+              <p>Bayangkan seseorang yang lahir dalam kemiskinan, lalu diadopsi oleh keluarga kerajaan. Secara hukum,
+                statusnya sudah berubah — dia adalah anak raja. Tapi kalau dia terus hidup dengan mentalitas "aku anak
+                jalanan yang tidak berharga," dia tidak akan pernah menikmati warisan yang sudah menjadi miliknya.</p>
+              <p>Kita sering persis seperti itu. Status kita sudah berubah. Tuhan sudah menetapkan kita sebagai
+                anak-Nya. Tapi kita masih sering hidup dari narasi lama — narasi penolakan, narasi tidak cukup baik,
+                narasi "aku tidak layak." Pembaruan dari dalam dimulai ketika kita mulai percaya pada identitas yang
+                sudah diberikan, bukan hanya yang terasa familiar.</p>
             </div>
 
-            <div class="section-divider"><div class="sdots"><span></span><span></span><span></span></div></div>
+            <div class="section-divider">
+              <div class="sdots"><span></span><span></span><span></span></div>
+            </div>
 
             <!-- SECTION 5 -->
             <div id="proses" class="anchor"></div>
             <div class="post-label">Realita Transformasi</div>
             <h2 class="post-h2">Transformasi = Proses, Bukan Instan — dan Ada Filosofi yang Salah Memahami Ini</h2>
 
-            <p>Satu hal yang saya pelajari: <strong>Tuhan suka proses.</strong> Nggak selalu cepat, nggak selalu mulus, tapi selalu <em>worth it</em>.</p>
+            <p>Satu hal yang saya pelajari: <strong>Tuhan suka proses.</strong> Nggak selalu cepat, nggak selalu mulus,
+              tapi selalu <em>worth it</em>.</p>
 
             <p>Dan ini bertabrakan langsung dengan filosofi lain yang sangat populer sekarang:</p>
 
@@ -837,65 +1242,110 @@
                 <div class="philo-title">Filosofi Populer: Manifestasi & Law of Attraction</div>
               </div>
               <div class="philo-claim">
-                <p>"Visualisasikan hidupmu yang kamu inginkan dengan cukup kuat, percayai alam semesta, dan semesta akan merespons. Kamu adalah pencipta realitasmu sendiri."</p>
+                <p>"Visualisasikan hidupmu yang kamu inginkan dengan cukup kuat, percayai alam semesta, dan semesta akan
+                  merespons. Kamu adalah pencipta realitasmu sendiri."</p>
               </div>
               <div class="philo-response">
                 <div class="philo-response-label">Perspektif Alkitab</div>
-                <p>Ada elemen kebenaran parsial di sini — pikiran memang mempengaruhi tindakan, dan tindakan mempengaruhi hasil. Amsal 23:7 berkata, "Seperti yang dipikirkannya dalam hatinya, demikianlah ia." Tapi ada perbedaan fundamental: Alkitab tidak menempatkan manusia sebagai pusat yang mengendalikan semesta — itu adalah atribut Tuhan, bukan manusia.</p>
-                <p>Law of Attraction pada dasarnya adalah spiritualitas yang memusatkan segalanya pada diri sendiri — aku yang manifesting, aku yang menciptakan realitas, aku yang menentukan hasilnya. Tapi Alkitab berulang kali mengingatkan bahwa kita adalah makhluk yang terbatas, yang bergantung pada Tuhan yang melampaui pemahaman kita.</p>
-                <p>Lebih dari itu: konsep ini sering kali menyalahkan korban. "Kalau kamu sakit, mungkin kamu tidak cukup kuat memvisualisasikan kesembuhan." "Kalau hidupmu sulit, mungkin energimu negatif." Alkitab justru menawarkan sesuatu yang jauh lebih solid: Tuhan yang hadir dalam penderitaan, yang bekerja bahkan di tengah situasi yang di luar kendali kita, dan yang rancangan-Nya melampaui apa yang bisa kita "manifestasikan."</p>
+                <p>Ada elemen kebenaran parsial di sini — pikiran memang mempengaruhi tindakan, dan tindakan
+                  mempengaruhi hasil. Amsal 23:7 berkata, "Seperti yang dipikirkannya dalam hatinya, demikianlah ia."
+                  Tapi ada perbedaan fundamental: Alkitab tidak menempatkan manusia sebagai pusat yang mengendalikan
+                  semesta — itu adalah atribut Tuhan, bukan manusia.</p>
+                <p>Law of Attraction pada dasarnya adalah spiritualitas yang memusatkan segalanya pada diri sendiri —
+                  aku yang manifesting, aku yang menciptakan realitas, aku yang menentukan hasilnya. Tapi Alkitab
+                  berulang kali mengingatkan bahwa kita adalah makhluk yang terbatas, yang bergantung pada Tuhan yang
+                  melampaui pemahaman kita.</p>
+                <p>Lebih dari itu: konsep ini sering kali menyalahkan korban. "Kalau kamu sakit, mungkin kamu tidak
+                  cukup kuat memvisualisasikan kesembuhan." "Kalau hidupmu sulit, mungkin energimu negatif." Alkitab
+                  justru menawarkan sesuatu yang jauh lebih solid: Tuhan yang hadir dalam penderitaan, yang bekerja
+                  bahkan di tengah situasi yang di luar kendali kita, dan yang rancangan-Nya melampaui apa yang bisa
+                  kita "manifestasikan."</p>
               </div>
             </div>
 
-            <p>Proses pembaruan dari dalam yang Alkitab bicarakan sangat berbeda. Ini bukan soal kita yang cukup keras berpikir positif sampai situasi berubah. Ini soal Tuhan yang bekerja di dalam kita — menggeser, membentuk, dan membarui — sementara kita mengambil bagian dengan membuka diri, taat, dan jujur di hadapan-Nya.</p>
+            <p>Proses pembaruan dari dalam yang Alkitab bicarakan sangat berbeda. Ini bukan soal kita yang cukup keras
+              berpikir positif sampai situasi berubah. Ini soal Tuhan yang bekerja di dalam kita — menggeser, membentuk,
+              dan membarui — sementara kita mengambil bagian dengan membuka diri, taat, dan jujur di hadapan-Nya.</p>
 
             <div class="testimony">
               <span class="testimony-label">Jujur Dari Pengalaman</span>
-              <p>Setiap luka, setiap air mata — kalau dibawa ke Tuhan, pasti ada artinya. Bukan artinya semua langsung jadi baik. Tapi ada makna yang pelan-pelan terbentuk, ada karakter yang dibangun dari tekanan yang tidak bisa dibangun dengan cara lain.</p>
-              <p>Banyak banget momen saya ngerasa stuck, capek, dan ngerasa nggak maju-maju. Tapi setiap kali saya balik lagi ke Tuhan — jujur, nggak pura-pura — Dia tetap ada. Bukan dengan menghilangkan prosesnya, tapi dengan hadir di tengahnya.</p>
+              <p>Setiap luka, setiap air mata — kalau dibawa ke Tuhan, pasti ada artinya. Bukan artinya semua langsung
+                jadi baik. Tapi ada makna yang pelan-pelan terbentuk, ada karakter yang dibangun dari tekanan yang tidak
+                bisa dibangun dengan cara lain.</p>
+              <p>Banyak banget momen saya ngerasa stuck, capek, dan ngerasa nggak maju-maju. Tapi setiap kali saya balik
+                lagi ke Tuhan — jujur, nggak pura-pura — Dia tetap ada. Bukan dengan menghilangkan prosesnya, tapi
+                dengan hadir di tengahnya.</p>
             </div>
 
-            <div class="section-divider"><div class="sdots"><span></span><span></span><span></span></div></div>
+            <div class="section-divider">
+              <div class="sdots"><span></span><span></span><span></span></div>
+            </div>
 
             <!-- SECTION 6 -->
             <div id="lepas" class="anchor"></div>
             <div class="post-label">Langkah Nyata</div>
             <h2 class="post-h2">Let Go the Old, Wear the New — Kenapa Ini Lebih Susah dari Kedengarannya</h2>
 
-            <p>Efesus 4 bilang: buang manusia lama, dan pakai manusia baru yang Tuhan sudah sediakan. Saya suka banget ilustrasi "baju lama dan baju baru" ini — tapi saya mau jujur: letting go itu nggak sesederhana yang kedengarannya.</p>
+            <p>Efesus 4 bilang: buang manusia lama, dan pakai manusia baru yang Tuhan sudah sediakan. Saya suka banget
+              ilustrasi "baju lama dan baju baru" ini — tapi saya mau jujur: letting go itu nggak sesederhana yang
+              kedengarannya.</p>
 
             <div class="illustration">
               <div class="illus-label">Ilustrasi</div>
-              <p>Baju lama yang kita pakai sudah nyaman — meskipun sudah lusuh, sudah nggak pas ukurannya, mungkin sudah ada yang sobek. Kita tahu bentuknya, kita tahu baunya, kita tahu bagaimana rasanya di badan. Baju baru itu asing. Perlu waktu untuk terbiasa. Dan ada momen di mana kita merindukan yang lama, bahkan saat yang baru jelas-jelas lebih baik.</p>
-              <p>Jangan tumpuk baju baru di atas baju lama — nggak nyaman, dan nggak akan jadi diri baru yang sebenarnya. Harus ada proses menanggalkan yang lama dulu. Dan proses itu bisa terasa kehilangan — meskipun yang dilepas sebenarnya adalah sesuatu yang menghambat.</p>
+              <p>Baju lama yang kita pakai sudah nyaman — meskipun sudah lusuh, sudah nggak pas ukurannya, mungkin sudah
+                ada yang sobek. Kita tahu bentuknya, kita tahu baunya, kita tahu bagaimana rasanya di badan. Baju baru
+                itu asing. Perlu waktu untuk terbiasa. Dan ada momen di mana kita merindukan yang lama, bahkan saat yang
+                baru jelas-jelas lebih baik.</p>
+              <p>Jangan tumpuk baju baru di atas baju lama — nggak nyaman, dan nggak akan jadi diri baru yang
+                sebenarnya. Harus ada proses menanggalkan yang lama dulu. Dan proses itu bisa terasa kehilangan —
+                meskipun yang dilepas sebenarnya adalah sesuatu yang menghambat.</p>
             </div>
 
             <p>Apa saja yang perlu dilepas? Untuk setiap orang berbeda, tapi beberapa yang paling umum:</p>
 
             <ul class="bullets">
-              <li><strong>Kepahitan yang disimpan rapi.</strong> Kita pikir memaafkan berarti menyetujui yang salah. Padahal, memaafkan lebih untuk membebaskan diri kita sendiri dari beban yang bukan milik kita untuk dibawa terus.</li>
-              <li><strong>Identitas yang dibangun dari kegagalan.</strong> "Saya memang orangnya begini." "Saya nggak pernah bisa berubah." Label yang kita percaya jauh lebih berkuasa dari yang kita sadari.</li>
-              <li><strong>Kontrol yang kita pegang terlalu erat.</strong> Keinginan untuk mengontrol semuanya seringkali adalah respons dari rasa takut — takut kalau kita lepaskan, segalanya akan hancur. Tapi selama kita memegang kendali itu, kita tidak memberi ruang bagi Tuhan untuk bekerja.</li>
-              <li><strong>Definisi diri yang bergantung pada pengakuan manusia.</strong> Saat pujian orang menjadi sumber identitas kita, kita akan hidup dalam ketakutan terus-menerus — karena pengakuan manusia selalu bisa dicabut kapan saja.</li>
+              <li><strong>Kepahitan yang disimpan rapi.</strong> Kita pikir memaafkan berarti menyetujui yang salah.
+                Padahal, memaafkan lebih untuk membebaskan diri kita sendiri dari beban yang bukan milik kita untuk
+                dibawa terus.</li>
+              <li><strong>Identitas yang dibangun dari kegagalan.</strong> "Saya memang orangnya begini." "Saya nggak
+                pernah bisa berubah." Label yang kita percaya jauh lebih berkuasa dari yang kita sadari.</li>
+              <li><strong>Kontrol yang kita pegang terlalu erat.</strong> Keinginan untuk mengontrol semuanya seringkali
+                adalah respons dari rasa takut — takut kalau kita lepaskan, segalanya akan hancur. Tapi selama kita
+                memegang kendali itu, kita tidak memberi ruang bagi Tuhan untuk bekerja.</li>
+              <li><strong>Definisi diri yang bergantung pada pengakuan manusia.</strong> Saat pujian orang menjadi
+                sumber identitas kita, kita akan hidup dalam ketakutan terus-menerus — karena pengakuan manusia selalu
+                bisa dicabut kapan saja.</li>
             </ul>
 
-            <div class="section-divider"><div class="sdots"><span></span><span></span><span></span></div></div>
+            <div class="section-divider">
+              <div class="sdots"><span></span><span></span><span></span></div>
+            </div>
 
             <!-- SECTION 7 -->
             <div id="panduan" class="anchor"></div>
             <div class="post-label">Sumber Kekuatan</div>
             <h2 class="post-h2">Firman & Roh Kudus — Dua Panduan yang Nggak Pernah Offline</h2>
 
-            <p>Saya nggak pernah jalanin proses perubahan ini sendirian. Dan itu bukan sekadar kalimat rohani yang terdengar bagus — itu benar secara praktis.</p>
+            <p>Saya nggak pernah jalanin proses perubahan ini sendirian. Dan itu bukan sekadar kalimat rohani yang
+              terdengar bagus — itu benar secara praktis.</p>
 
-            <p>Firman Tuhan itu kayak GPS buat hidup baru: petunjuk pas lagi bingung, penghibur pas lagi down, penegur pas mulai "nyimpang." Bedanya sama GPS biasa: Firman tahu nggak cuma kondisi jalan di depan, tapi juga kondisi hati yang sedang mengemudi. Dan Roh Kudus selalu jadi teman yang paling sabar — nggak pernah bosen dengerin masalah yang sama muncul berkali-kali.</p>
+            <p>Firman Tuhan itu kayak GPS buat hidup baru: petunjuk pas lagi bingung, penghibur pas lagi down, penegur
+              pas mulai "nyimpang." Bedanya sama GPS biasa: Firman tahu nggak cuma kondisi jalan di depan, tapi juga
+              kondisi hati yang sedang mengemudi. Dan Roh Kudus selalu jadi teman yang paling sabar — nggak pernah bosen
+              dengerin masalah yang sama muncul berkali-kali.</p>
 
             <div class="personal-note">
-              <p>Saya belajar bahwa sharing sama Tuhan nggak harus selalu formal, nggak harus selalu pakai kata-kata yang indah. Kadang di kamar, lagi capek banget, saya cuma bilang: <em>"God, I'm tired. Aku nggak tahu harus ngapain, tapi aku tahu Engkau ngerti."</em></p>
-              <p>Dan ajaibnya, selalu ada damai yang hadir setelah saya berserah. Bukan berarti masalahnya langsung hilang. Tapi ada kekuatan yang baru untuk menghadapinya — dan itu nyata, bukan sekadar sugesti atau efek placebo dari ritual spiritualitas.</p>
+              <p>Saya belajar bahwa sharing sama Tuhan nggak harus selalu formal, nggak harus selalu pakai kata-kata
+                yang indah. Kadang di kamar, lagi capek banget, saya cuma bilang: <em>"God, I'm tired. Aku nggak tahu
+                  harus ngapain, tapi aku tahu Engkau ngerti."</em></p>
+              <p>Dan ajaibnya, selalu ada damai yang hadir setelah saya berserah. Bukan berarti masalahnya langsung
+                hilang. Tapi ada kekuatan yang baru untuk menghadapinya — dan itu nyata, bukan sekadar sugesti atau efek
+                placebo dari ritual spiritualitas.</p>
             </div>
 
-            <div class="section-divider"><div class="sdots"><span></span><span></span><span></span></div></div>
+            <div class="section-divider">
+              <div class="sdots"><span></span><span></span><span></span></div>
+            </div>
 
             <!-- SECTION 8 -->
             <div id="setiaphari" class="anchor"></div>
@@ -910,45 +1360,70 @@
                 <div class="philo-title">Filosofi "Good Vibes Only" & Toxic Positivity</div>
               </div>
               <div class="philo-claim">
-                <p>"Selalu berpikir positif. Jauhkan energi negatif. Kalau kamu sedih atau marah, ubah perspektifmu — pilih bahagia. Kebahagiaan adalah pilihan."</p>
+                <p>"Selalu berpikir positif. Jauhkan energi negatif. Kalau kamu sedih atau marah, ubah perspektifmu —
+                  pilih bahagia. Kebahagiaan adalah pilihan."</p>
               </div>
               <div class="philo-response">
                 <div class="philo-response-label">Perspektif Alkitab</div>
-                <p>Alkitab nggak pernah minta kita untuk pura-pura semua baik-baik saja. Mazmur dipenuhi dengan ratapan, kemarahan, dan kejujuran yang mentah di hadapan Tuhan. Yesus sendiri menangis (Yoh. 11:35). Paulus menulis tentang "tribulations" bukan sebagai sesuatu yang perlu dihindari, tapi sesuatu yang menghasilkan karakter.</p>
-                <p>Perbedaan mendasarnya: Alkitab mengundang kita untuk <em>jujur</em> dengan apa yang kita rasakan, lalu membawanya kepada Tuhan — bukan menekan atau menyangkalnya dengan label "vibes negatif." Emosi yang ditekan tidak hilang, ia hanya tersimpan — dan seringkali muncul dengan cara yang lebih merusak di waktu yang tidak kita duga.</p>
-                <p>Sukacita yang Alkitab tawarkan bukan tentang menghindari kesedihan. Sukacita itu bisa berdampingan dengan air mata — karena dasarnya bukan kondisi kita, tapi karakter Tuhan yang tidak berubah.</p>
+                <p>Alkitab nggak pernah minta kita untuk pura-pura semua baik-baik saja. Mazmur dipenuhi dengan ratapan,
+                  kemarahan, dan kejujuran yang mentah di hadapan Tuhan. Yesus sendiri menangis (Yoh. 11:35). Paulus
+                  menulis tentang "tribulations" bukan sebagai sesuatu yang perlu dihindari, tapi sesuatu yang
+                  menghasilkan karakter.</p>
+                <p>Perbedaan mendasarnya: Alkitab mengundang kita untuk <em>jujur</em> dengan apa yang kita rasakan,
+                  lalu membawanya kepada Tuhan — bukan menekan atau menyangkalnya dengan label "vibes negatif." Emosi
+                  yang ditekan tidak hilang, ia hanya tersimpan — dan seringkali muncul dengan cara yang lebih merusak
+                  di waktu yang tidak kita duga.</p>
+                <p>Sukacita yang Alkitab tawarkan bukan tentang menghindari kesedihan. Sukacita itu bisa berdampingan
+                  dengan air mata — karena dasarnya bukan kondisi kita, tapi karakter Tuhan yang tidak berubah.</p>
               </div>
             </div>
 
-            <p>Hidup baru bukan soal momen bertobat yang dramatis, lalu semuanya langsung perfect. Ini soal perjalanan step by step, little by little. Setiap pagi, ada pilihan baru — mau stuck di kemarin, atau melangkah lagi bareng Tuhan hari ini.</p>
+            <p>Hidup baru bukan soal momen bertobat yang dramatis, lalu semuanya langsung perfect. Ini soal perjalanan
+              step by step, little by little. Setiap pagi, ada pilihan baru — mau stuck di kemarin, atau melangkah lagi
+              bareng Tuhan hari ini.</p>
 
-            <p><em>You don't have to be perfect to start</em> — mulai aja dulu, dengan jujur dan dengan mau dibentuk. Tuhan yang bakal bimbing terus. Yang penting: terus mau membuka hati, terus mau belajar, dan nggak malu untuk minta tolong kepada-Nya.</p>
+            <p><em>You don't have to be perfect to start</em> — mulai aja dulu, dengan jujur dan dengan mau dibentuk.
+              Tuhan yang bakal bimbing terus. Yang penting: terus mau membuka hati, terus mau belajar, dan nggak malu
+              untuk minta tolong kepada-Nya.</p>
 
-            <div class="section-divider"><div class="sdots"><span></span><span></span><span></span></div></div>
+            <div class="section-divider">
+              <div class="sdots"><span></span><span></span><span></span></div>
+            </div>
 
             <!-- CLOSING -->
             <div id="closing" class="anchor"></div>
             <div class="post-label">Penutup</div>
             <h2 class="post-h2">You Are Precious — Tapi Bukan Karena Kamu Sudah Sempurna</h2>
 
-            <p>Kadang kita suka compare proses kita sama orang lain — dan itu biasanya nggak berakhir baik. Proses orang lain kelihatannya lebih cepat, lebih dramatis, lebih "blessed." Sementara kita masih bergulat dengan hal yang sama, lagi dan lagi.</p>
+            <p>Kadang kita suka compare proses kita sama orang lain — dan itu biasanya nggak berakhir baik. Proses orang
+              lain kelihatannya lebih cepat, lebih dramatis, lebih "blessed." Sementara kita masih bergulat dengan hal
+              yang sama, lagi dan lagi.</p>
 
             <ul class="bullets">
-              <li>Jangan minder kalau progress kamu pelan. Tuhan lihat hati yang mau berubah, bukan performa luar yang kelihatannya wow.</li>
-              <li>Setiap langkah kecil menuju perubahan itu berharga banget di mata Tuhan — bahkan langkah yang kamu pikir terlalu kecil untuk dihitung.</li>
-              <li>Kamu berharga bukan karena pencapaianmu atau karena kamu sudah berhasil berubah — tapi karena kamu dikasihi tanpa syarat, tepat seperti yang ada sekarang, sambil menuju ke siapa yang Tuhan rancangkan.</li>
+              <li>Jangan minder kalau progress kamu pelan. Tuhan lihat hati yang mau berubah, bukan performa luar yang
+                kelihatannya wow.</li>
+              <li>Setiap langkah kecil menuju perubahan itu berharga banget di mata Tuhan — bahkan langkah yang kamu
+                pikir terlalu kecil untuk dihitung.</li>
+              <li>Kamu berharga bukan karena pencapaianmu atau karena kamu sudah berhasil berubah — tapi karena kamu
+                dikasihi tanpa syarat, tepat seperti yang ada sekarang, sambil menuju ke siapa yang Tuhan rancangkan.
+              </li>
             </ul>
 
-            <p>Saya pun masih belajar, masih jatuh-bangun, masih ada momen di mana saya mengecewakan diri sendiri. Tapi saya yakin satu hal: selama saya mau buka hati, Tuhan pasti pelan-pelan membarui — hati, pikiran, dan cara saya menjalani hidup.</p>
+            <p>Saya pun masih belajar, masih jatuh-bangun, masih ada momen di mana saya mengecewakan diri sendiri. Tapi
+              saya yakin satu hal: selama saya mau buka hati, Tuhan pasti pelan-pelan membarui — hati, pikiran, dan cara
+              saya menjalani hidup.</p>
 
             <div class="closing-note">
-              <p>Hidup yang diberkati, hidup yang berubah — semuanya mulai dari dalam, lalu bakal kelihatan ke luar. Bukan karena kita cukup baik, tapi karena Tuhan cukup baik untuk bekerja bahkan di dalam kita yang tidak sempurna.</p>
+              <p>Hidup yang diberkati, hidup yang berubah — semuanya mulai dari dalam, lalu bakal kelihatan ke luar.
+                Bukan karena kita cukup baik, tapi karena Tuhan cukup baik untuk bekerja bahkan di dalam kita yang tidak
+                sempurna.</p>
               <p><em>Let God work from within, and you'll be surprised how far He can bring you.</em></p>
               <p class="closing-signature">— Warm Regards, YHZ</p>
             </div>
 
             <div class="footer-note">
-              <p>✦ &nbsp;Ditulis untuk kamu yang capek pura-pura baik-baik saja, dan untuk kamu yang rindu perubahan yang benar-benar nyata — bukan hanya di permukaan.</p>
+              <p>✦ &nbsp;Ditulis untuk kamu yang capek pura-pura baik-baik saja, dan untuk kamu yang rindu perubahan
+                yang benar-benar nyata — bukan hanya di permukaan.</p>
             </div>
 
             <nav class="post-nav" aria-label="Post navigation">
@@ -956,7 +1431,7 @@
               <a href="heavens-standard-excellence.html">Next Post →</a>
               <a href="../index.html">↩ Back to Home</a>
             </nav>
-                <button id="darkModeToggle" class="dark-mode-toggle" type="button" aria-label="Toggle dark mode"><span class="dm-icon">🌙</span><span class="dm-label">Dark Mode</span></button>
+
 
           </div>
         </article>
@@ -985,12 +1460,13 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-section">
-                    <h3 class="footer-title">Stay Connected</h3>
-                    <p>Follow perkembangan terbaru lewat Instagram.</p>
-                    <div class="footer-connect-actions">
-                        <a href="https://www.instagram.com/yhzrio?igsh=dnE0amZlZWlhOXYy&utm_source=qr" class="footer-social-btn" target="_blank" rel="noopener noreferrer">📸 Instagram</a>
-                    </div>
-                </div>
+          <h3 class="footer-title">Stay Connected</h3>
+          <p>Follow perkembangan terbaru lewat Instagram.</p>
+          <div class="footer-connect-actions">
+            <a href="https://www.instagram.com/yhzrio?igsh=dnE0amZlZWlhOXYy&utm_source=qr" class="footer-social-btn"
+              target="_blank" rel="noopener noreferrer">📸 Instagram</a>
+          </div>
+        </div>
         <div class="footer-section">
           <h3 class="footer-title">Quick Links</h3>
           <ul class="footer-links">
@@ -1015,7 +1491,7 @@
     }, { passive: true });
 
     const tocLinks = document.querySelectorAll('.toc a[href^="#"]');
-    const anchors  = [...document.querySelectorAll('.anchor')];
+    const anchors = [...document.querySelectorAll('.anchor')];
     function updateTOC() {
       const scrollY = window.scrollY + 130;
       let current = '';
@@ -1026,4 +1502,5 @@
     updateTOC();
   </script>
 </body>
+
 </html>

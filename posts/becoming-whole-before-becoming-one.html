@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Becoming Whole Before Becoming One — Yehezkiel's Insight</title>
-  <meta name="description" content="Refleksi tentang single vs alone, keutuhan, dan bagaimana Tuhan membentuk kita sebelum masuk ke hubungan yang sehat." />
+  <meta name="description"
+    content="Refleksi tentang single vs alone, keutuhan, dan bagaimana Tuhan membentuk kita sebelum masuk ke hubungan yang sehat." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
+    rel="stylesheet" />
 
   <link rel="stylesheet" href="../assets/css/main.css" />
   <link rel="stylesheet" href="../assets/css/enhancements.css" />
@@ -17,13 +21,20 @@
     /* =========================================================
        POST PAGE — Enhanced design, faithful to site's DNA
        ========================================================= */
-    .post-page { --post-max: 1120px; --content-max: 720px; }
-    .post-page .container { max-width: var(--post-max); }
+    .post-page {
+      --post-max: 1120px;
+      --content-max: 720px;
+    }
+
+    .post-page .container {
+      max-width: var(--post-max);
+    }
 
     /* ── Reading Progress Bar ─────────────────────────── */
     .read-progress {
       position: fixed;
-      top: 0; left: 0;
+      top: 0;
+      left: 0;
       height: 3px;
       width: 0%;
       background: linear-gradient(90deg, #a855f7, #3b82f6, #a855f7);
@@ -32,46 +43,57 @@
       z-index: 9999;
       transition: width 0.1s linear;
     }
+
     @keyframes shimmer {
-      0% { background-position: 0% 0%; }
-      100% { background-position: 200% 0%; }
+      0% {
+        background-position: 0% 0%;
+      }
+
+      100% {
+        background-position: 200% 0%;
+      }
     }
 
     /* ── HERO ─────────────────────────────────────────── */
-    .post-hero { padding: 32px 0 8px; }
+    .post-hero {
+      padding: 32px 0 8px;
+    }
 
     .post-hero-card {
       position: relative;
       overflow: hidden;
       border-radius: 24px;
       padding: 36px 32px 28px;
-      border: 1px solid rgba(255,255,255,0.13);
+      border: 1px solid rgba(255, 255, 255, 0.13);
       background:
-        radial-gradient(900px 380px at 15% 10%, rgba(168,85,247,0.30) 0%, transparent 55%),
-        radial-gradient(700px 350px at 90% 15%, rgba(59,130,246,0.24) 0%, transparent 55%),
-        radial-gradient(500px 300px at 50% 90%, rgba(236,72,153,0.12) 0%, transparent 60%),
-        linear-gradient(160deg, rgba(255,255,255,0.07) 0%, rgba(255,255,255,0.02) 100%);
-      box-shadow: 0 24px 64px rgba(0,0,0,0.22), inset 0 1px 0 rgba(255,255,255,0.08);
+        radial-gradient(900px 380px at 15% 10%, rgba(168, 85, 247, 0.30) 0%, transparent 55%),
+        radial-gradient(700px 350px at 90% 15%, rgba(59, 130, 246, 0.24) 0%, transparent 55%),
+        radial-gradient(500px 300px at 50% 90%, rgba(236, 72, 153, 0.12) 0%, transparent 60%),
+        linear-gradient(160deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.02) 100%);
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.08);
       backdrop-filter: blur(12px);
     }
+
     body:not(.dark-mode) .post-hero-card {
-      border-color: rgba(15,23,42,0.10);
+      border-color: rgba(15, 23, 42, 0.10);
       background:
-        radial-gradient(900px 380px at 15% 10%, rgba(168,85,247,0.13) 0%, transparent 55%),
-        radial-gradient(700px 350px at 90% 15%, rgba(59,130,246,0.11) 0%, transparent 55%),
-        radial-gradient(500px 300px at 50% 90%, rgba(236,72,153,0.06) 0%, transparent 60%),
-        linear-gradient(160deg, rgba(255,255,255,0.9) 0%, rgba(247,250,252,0.8) 100%);
-      box-shadow: 0 24px 64px rgba(15,23,42,0.10), inset 0 1px 0 rgba(255,255,255,0.9);
+        radial-gradient(900px 380px at 15% 10%, rgba(168, 85, 247, 0.13) 0%, transparent 55%),
+        radial-gradient(700px 350px at 90% 15%, rgba(59, 130, 246, 0.11) 0%, transparent 55%),
+        radial-gradient(500px 300px at 50% 90%, rgba(236, 72, 153, 0.06) 0%, transparent 60%),
+        linear-gradient(160deg, rgba(255, 255, 255, 0.9) 0%, rgba(247, 250, 252, 0.8) 100%);
+      box-shadow: 0 24px 64px rgba(15, 23, 42, 0.10), inset 0 1px 0 rgba(255, 255, 255, 0.9);
     }
 
     /* Decorative corner glow */
     .post-hero-card::after {
       content: '';
       position: absolute;
-      top: -60px; right: -60px;
-      width: 220px; height: 220px;
+      top: -60px;
+      right: -60px;
+      width: 220px;
+      height: 220px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(168,85,247,0.18) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(168, 85, 247, 0.18) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -81,22 +103,25 @@
       gap: 8px;
       padding: 7px 14px;
       border-radius: 999px;
-      border: 1px solid rgba(168,85,247,0.30);
-      background: rgba(168,85,247,0.10);
+      border: 1px solid rgba(168, 85, 247, 0.30);
+      background: rgba(168, 85, 247, 0.10);
       font-size: 0.82rem;
       font-weight: 600;
       letter-spacing: 0.04em;
       color: #c084fc;
       margin-bottom: 18px;
     }
+
     body:not(.dark-mode) .post-kicker {
       color: #7c3aed;
-      border-color: rgba(124,58,237,0.25);
-      background: rgba(124,58,237,0.07);
+      border-color: rgba(124, 58, 237, 0.25);
+      background: rgba(124, 58, 237, 0.07);
     }
+
     .post-kicker::before {
       content: '';
-      width: 6px; height: 6px;
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
       background: #a855f7;
       flex-shrink: 0;
@@ -113,9 +138,11 @@
       /* Ensure title is always visible — both light and dark mode */
       color: #f1f5f9;
     }
+
     body:not(.dark-mode) .post-title {
       color: #1e293b;
     }
+
     .post-title em {
       font-style: italic;
       /* Safe gradient text — fallback color ensures visibility in all modes */
@@ -125,10 +152,14 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
+
     /* Fallback: if gradient text not supported or fails, show solid color */
     @supports not (-webkit-background-clip: text) {
-      .post-title em { color: #c084fc; }
+      .post-title em {
+        color: #c084fc;
+      }
     }
+
     body:not(.dark-mode) .post-title em {
       color: #7c3aed;
       background: linear-gradient(135deg, #7c3aed, #2563eb);
@@ -145,6 +176,7 @@
       font-size: 1.05rem;
       color: #cbd5e1;
     }
+
     body:not(.dark-mode) .post-subtitle {
       color: #475569;
       opacity: 1;
@@ -156,9 +188,12 @@
       gap: 8px;
       align-items: center;
       padding-top: 20px;
-      border-top: 1px solid rgba(255,255,255,0.10);
+      border-top: 1px solid rgba(255, 255, 255, 0.10);
     }
-    body:not(.dark-mode) .post-meta-bar { border-top-color: rgba(15,23,42,0.10); }
+
+    body:not(.dark-mode) .post-meta-bar {
+      border-top-color: rgba(15, 23, 42, 0.10);
+    }
 
     .pill {
       display: inline-flex;
@@ -166,26 +201,30 @@
       align-items: center;
       padding: 7px 14px;
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.14);
-      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: rgba(255, 255, 255, 0.06);
       font-size: 0.85rem;
       font-weight: 500;
       text-decoration: none;
       transition: all 0.2s ease;
       backdrop-filter: blur(6px);
     }
+
     body:not(.dark-mode) .pill {
-      border-color: rgba(15,23,42,0.12);
-      background: rgba(15,23,42,0.04);
+      border-color: rgba(15, 23, 42, 0.12);
+      background: rgba(15, 23, 42, 0.04);
     }
+
     .pill:hover {
       transform: translateY(-2px);
-      background: rgba(168,85,247,0.12);
-      border-color: rgba(168,85,247,0.30);
+      background: rgba(168, 85, 247, 0.12);
+      border-color: rgba(168, 85, 247, 0.30);
     }
 
     /* ── MAIN SHELL & GRID ────────────────────────────── */
-    .post-shell { padding: 20px 0 64px; }
+    .post-shell {
+      padding: 20px 0 64px;
+    }
 
     .post-grid {
       display: grid;
@@ -193,6 +232,7 @@
       gap: 18px;
       margin-top: 16px;
     }
+
     @media (min-width: 980px) {
       .post-grid {
         grid-template-columns: minmax(0, 1fr) 270px;
@@ -204,33 +244,45 @@
     /* Main article card */
     .post-card {
       border-radius: 20px;
-      border: 1px solid rgba(255,255,255,0.11);
-      background: rgba(255,255,255,0.035);
+      border: 1px solid rgba(255, 255, 255, 0.11);
+      background: rgba(255, 255, 255, 0.035);
       overflow: hidden;
       backdrop-filter: blur(4px);
     }
+
     body:not(.dark-mode) .post-card {
-      border-color: rgba(15,23,42,0.09);
-      background: rgba(255,255,255,0.70);
-      box-shadow: 0 4px 24px rgba(15,23,42,0.06);
+      border-color: rgba(15, 23, 42, 0.09);
+      background: rgba(255, 255, 255, 0.70);
+      box-shadow: 0 4px 24px rgba(15, 23, 42, 0.06);
     }
 
     /* Colorful top border on main card */
     .post-card.main-card {
       position: relative;
     }
+
     .post-card.main-card::before {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       height: 3px;
       background: linear-gradient(90deg, #a855f7, #3b82f6, #ec4899, #a855f7);
       background-size: 300% 100%;
       animation: gradientSlide 6s ease infinite;
     }
+
     @keyframes gradientSlide {
-      0%, 100% { background-position: 0% 0%; }
-      50% { background-position: 100% 0%; }
+
+      0%,
+      100% {
+        background-position: 0% 0%;
+      }
+
+      50% {
+        background-position: 100% 0%;
+      }
     }
 
     .post-content {
@@ -238,8 +290,11 @@
       margin: 0 auto;
       padding: 32px 24px 36px;
     }
+
     @media (min-width: 680px) {
-      .post-content { padding: 36px 36px 40px; }
+      .post-content {
+        padding: 36px 36px 40px;
+      }
     }
 
     /* ── TYPOGRAPHY ───────────────────────────────────── */
@@ -249,20 +304,27 @@
       margin: 0 0 1.2em;
       color: var(--text-color);
     }
+
     /* Dark mode: slightly softer white for long-form reading comfort */
-    .dark-mode .post-content p { color: #cbd5e1; }
+    .dark-mode .post-content p {
+      color: #cbd5e1;
+    }
 
     .post-content .lead {
       font-size: 1.08rem;
       line-height: 1.92;
       padding-bottom: 24px;
       margin-bottom: 8px;
-      border-bottom: 1px solid rgba(255,255,255,0.10);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.10);
     }
+
     body:not(.dark-mode) .post-content .lead {
-      border-bottom-color: rgba(15,23,42,0.10);
+      border-bottom-color: rgba(15, 23, 42, 0.10);
     }
-    .dark-mode .post-content .lead p { color: #e2e8f0; }
+
+    .dark-mode .post-content .lead p {
+      color: #e2e8f0;
+    }
 
     /* Section headings */
     .post-h2 {
@@ -274,7 +336,10 @@
       letter-spacing: -0.2px;
       color: var(--text-color);
     }
-    .dark-mode .post-h2 { color: #f1f5f9; }
+
+    .dark-mode .post-h2 {
+      color: #f1f5f9;
+    }
 
     .post-label {
       display: inline-block;
@@ -286,23 +351,27 @@
       margin: 32px 0 10px;
       padding: 5px 10px;
       border-radius: 6px;
-      background: rgba(168,85,247,0.10);
-      border: 1px solid rgba(168,85,247,0.20);
+      background: rgba(168, 85, 247, 0.10);
+      border: 1px solid rgba(168, 85, 247, 0.20);
     }
+
     body:not(.dark-mode) .post-label {
       color: #7c3aed;
-      background: rgba(124,58,237,0.07);
-      border-color: rgba(124,58,237,0.18);
+      background: rgba(124, 58, 237, 0.07);
+      border-color: rgba(124, 58, 237, 0.18);
     }
 
     /* Horizontal rules */
     .rule {
       height: 1px;
-      background: rgba(255,255,255,0.10);
+      background: rgba(255, 255, 255, 0.10);
       margin: 28px 0;
       border: none;
     }
-    body:not(.dark-mode) .rule { background: rgba(15,23,42,0.10); }
+
+    body:not(.dark-mode) .rule {
+      background: rgba(15, 23, 42, 0.10);
+    }
 
     /* Section divider — pill style */
     .section-divider {
@@ -311,29 +380,44 @@
       gap: 12px;
       margin: 30px 0;
     }
+
     .section-divider::before,
     .section-divider::after {
       content: '';
       flex: 1;
       height: 1px;
-      background: rgba(255,255,255,0.10);
+      background: rgba(255, 255, 255, 0.10);
     }
+
     body:not(.dark-mode) .section-divider::before,
     body:not(.dark-mode) .section-divider::after {
-      background: rgba(15,23,42,0.10);
+      background: rgba(15, 23, 42, 0.10);
     }
+
     .section-divider-inner {
       display: flex;
       gap: 6px;
       align-items: center;
     }
+
     .section-divider-inner span {
-      width: 6px; height: 6px;
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
       background: linear-gradient(135deg, #a855f7, #3b82f6);
     }
-    .section-divider-inner span:nth-child(2) { opacity: 0.5; width: 4px; height: 4px; }
-    .section-divider-inner span:nth-child(3) { opacity: 0.25; width: 3px; height: 3px; }
+
+    .section-divider-inner span:nth-child(2) {
+      opacity: 0.5;
+      width: 4px;
+      height: 4px;
+    }
+
+    .section-divider-inner span:nth-child(3) {
+      opacity: 0.25;
+      width: 3px;
+      height: 3px;
+    }
 
     /* ── QUOTE / CALLOUT ──────────────────────────────── */
     .quote {
@@ -341,28 +425,38 @@
       border-left: 3px solid #a855f7;
       padding: 18px 18px 18px 22px;
       margin: 24px 0;
-      background: rgba(168,85,247,0.06);
+      background: rgba(168, 85, 247, 0.06);
       border-radius: 0 14px 14px 0;
       overflow: hidden;
     }
-    body:not(.dark-mode) .quote { background: rgba(168,85,247,0.05); }
+
+    body:not(.dark-mode) .quote {
+      background: rgba(168, 85, 247, 0.05);
+    }
+
     .quote::before {
       content: '\201C';
       position: absolute;
-      top: -8px; left: 12px;
+      top: -8px;
+      left: 12px;
       font-family: 'Playfair Display', serif;
       font-size: 3.6rem;
-      color: rgba(168,85,247,0.20);
+      color: rgba(168, 85, 247, 0.20);
       line-height: 1;
       pointer-events: none;
     }
+
     .quote p {
       margin: 0 0 8px !important;
       font-style: italic;
       line-height: 1.8;
       font-size: 1.0rem !important;
     }
-    .quote p:last-child { margin-bottom: 0 !important; }
+
+    .quote p:last-child {
+      margin-bottom: 0 !important;
+    }
+
     .quote cite {
       display: block;
       margin-top: 10px;
@@ -377,19 +471,26 @@
       margin: 24px 0;
       padding: 22px 24px;
       border-radius: 16px;
-      border: 1px solid rgba(59,130,246,0.25);
-      background: rgba(59,130,246,0.07);
+      border: 1px solid rgba(59, 130, 246, 0.25);
+      background: rgba(59, 130, 246, 0.07);
       position: relative;
       overflow: hidden;
     }
-    body:not(.dark-mode) .verse-box { background: rgba(59,130,246,0.05); }
+
+    body:not(.dark-mode) .verse-box {
+      background: rgba(59, 130, 246, 0.05);
+    }
+
     .verse-box::before {
       content: '';
       position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 2px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
       background: linear-gradient(90deg, #3b82f6, #a855f7);
     }
+
     .verse-box p {
       font-family: 'Playfair Display', serif;
       font-style: italic;
@@ -397,6 +498,7 @@
       line-height: 1.75 !important;
       margin-bottom: 10px !important;
     }
+
     .verse-ref {
       font-family: 'Inter', sans-serif !important;
       font-size: 0.78rem !important;
@@ -407,7 +509,10 @@
       color: #60a5fa;
       margin-bottom: 0 !important;
     }
-    body:not(.dark-mode) .verse-ref { color: #2563eb; }
+
+    body:not(.dark-mode) .verse-ref {
+      color: #2563eb;
+    }
 
     /* ── CONCEPT CARD (dark invert) ───────────────────── */
     .concept-card {
@@ -415,20 +520,26 @@
       padding: 24px 26px;
       border-radius: 16px;
       background: linear-gradient(135deg, #0f0f1a 0%, #1a1030 100%);
-      border: 1px solid rgba(168,85,247,0.25);
+      border: 1px solid rgba(168, 85, 247, 0.25);
       color: #e2e8f0;
       position: relative;
       overflow: hidden;
     }
+
     body:not(.dark-mode) .concept-card {
       background: linear-gradient(135deg, #1e1b4b 0%, #1e293b 100%);
     }
+
     .concept-card::before {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0; height: 2px;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
       background: linear-gradient(90deg, #a855f7, #3b82f6, #ec4899);
     }
+
     .concept-card-label {
       font-size: 0.7rem;
       font-weight: 700;
@@ -437,8 +548,9 @@
       color: #c084fc;
       margin-bottom: 12px;
     }
+
     .concept-card p {
-      color: rgba(226,232,240,0.90) !important;
+      color: rgba(226, 232, 240, 0.90) !important;
       font-size: 1.05rem !important;
       line-height: 1.8 !important;
       margin-bottom: 0 !important;
@@ -450,10 +562,11 @@
       margin: 24px 0;
       padding: 18px 20px;
       border-radius: 14px;
-      border: 1px solid rgba(236,72,153,0.22);
-      background: rgba(236,72,153,0.06);
+      border: 1px solid rgba(236, 72, 153, 0.22);
+      background: rgba(236, 72, 153, 0.06);
       border-left: 3px solid #ec4899;
     }
+
     .personal-note p {
       margin-bottom: 0 !important;
       font-size: 0.98rem !important;
@@ -466,48 +579,61 @@
       padding: 0;
       margin: 16px 0 20px;
     }
+
     .bullets li {
       position: relative;
       padding: 10px 12px 10px 36px;
       margin-bottom: 8px;
       border-radius: 10px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.07);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.07);
       line-height: 1.75;
       font-size: 0.98rem;
     }
+
     body:not(.dark-mode) .bullets li {
-      background: rgba(15,23,42,0.03);
-      border-color: rgba(15,23,42,0.08);
+      background: rgba(15, 23, 42, 0.03);
+      border-color: rgba(15, 23, 42, 0.08);
     }
+
     .bullets li::before {
       content: '';
       position: absolute;
-      left: 14px; top: 18px;
-      width: 7px; height: 7px;
+      left: 14px;
+      top: 18px;
+      width: 7px;
+      height: 7px;
       border-radius: 50%;
       background: linear-gradient(135deg, #a855f7, #3b82f6);
     }
 
     /* ── MYTH CARDS ───────────────────────────────────── */
-    .myth-grid { margin: 20px 0; display: flex; flex-direction: column; gap: 12px; }
+    .myth-grid {
+      margin: 20px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
 
     .myth-item {
       padding: 16px 18px;
       border-radius: 14px;
-      border: 1px solid rgba(255,255,255,0.10);
-      background: rgba(255,255,255,0.035);
+      border: 1px solid rgba(255, 255, 255, 0.10);
+      background: rgba(255, 255, 255, 0.035);
       transition: all 0.2s ease;
     }
+
     body:not(.dark-mode) .myth-item {
-      border-color: rgba(15,23,42,0.09);
-      background: rgba(15,23,42,0.025);
+      border-color: rgba(15, 23, 42, 0.09);
+      background: rgba(15, 23, 42, 0.025);
     }
+
     .myth-item:hover {
       transform: translateX(4px);
-      border-color: rgba(168,85,247,0.25);
-      background: rgba(168,85,247,0.05);
+      border-color: rgba(168, 85, 247, 0.25);
+      background: rgba(168, 85, 247, 0.05);
     }
+
     .myth-label {
       font-size: 0.7rem;
       font-weight: 700;
@@ -516,13 +642,18 @@
       color: #f472b6;
       margin-bottom: 5px;
     }
-    body:not(.dark-mode) .myth-label { color: #db2777; }
+
+    body:not(.dark-mode) .myth-label {
+      color: #db2777;
+    }
+
     .myth-text {
       font-style: italic;
       font-size: 0.97rem;
       margin-bottom: 8px;
       opacity: 0.90;
     }
+
     .myth-answer {
       font-size: 0.875rem;
       line-height: 1.7;
@@ -535,17 +666,22 @@
       padding: 28px 30px;
       border-radius: 18px;
       text-align: center;
-      border: 1px solid rgba(168,85,247,0.22);
-      background: rgba(168,85,247,0.06);
+      border: 1px solid rgba(168, 85, 247, 0.22);
+      background: rgba(168, 85, 247, 0.06);
       position: relative;
       overflow: hidden;
     }
+
     .closing-note::before {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0; height: 2px;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
       background: linear-gradient(90deg, #ec4899, #a855f7, #3b82f6);
     }
+
     .closing-note p {
       font-family: 'Playfair Display', serif;
       font-style: italic;
@@ -559,12 +695,13 @@
       margin-top: 28px;
       padding: 16px 18px;
       border-radius: 14px;
-      border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.05);
     }
+
     body:not(.dark-mode) .footer-note {
-      border-color: rgba(15,23,42,0.10);
-      background: rgba(15,23,42,0.03);
+      border-color: rgba(15, 23, 42, 0.10);
+      background: rgba(15, 23, 42, 0.03);
     }
 
     /* ── POST NAV ─────────────────────────────────────── */
@@ -574,6 +711,7 @@
       flex-wrap: wrap;
       margin-top: 24px;
     }
+
     .post-nav a {
       display: inline-flex;
       align-items: center;
@@ -581,20 +719,22 @@
       padding: 10px 16px;
       border-radius: 999px;
       text-decoration: none;
-      border: 1px solid rgba(255,255,255,0.14);
-      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: rgba(255, 255, 255, 0.05);
       font-size: 0.88rem;
       font-weight: 500;
       transition: all 0.2s ease;
     }
+
     body:not(.dark-mode) .post-nav a {
-      border-color: rgba(15,23,42,0.12);
-      background: rgba(15,23,42,0.04);
+      border-color: rgba(15, 23, 42, 0.12);
+      background: rgba(15, 23, 42, 0.04);
     }
+
     .post-nav a:hover {
       transform: translateY(-2px);
-      background: rgba(168,85,247,0.10);
-      border-color: rgba(168,85,247,0.30);
+      background: rgba(168, 85, 247, 0.10);
+      border-color: rgba(168, 85, 247, 0.30);
     }
 
     /* ── TOC SIDEBAR ──────────────────────────────────── */
@@ -609,8 +749,12 @@
     .toc {
       padding: 24px 8px 20px;
     }
+
     @media (min-width: 980px) {
-      .toc { position: sticky; top: 92px; }
+      .toc {
+        position: sticky;
+        top: 92px;
+      }
     }
 
     /* "ON THIS PAGE" heading — Playfair serif, bold, dark */
@@ -624,14 +768,17 @@
       opacity: 1;
       margin: 0 0 18px;
       padding-bottom: 10px;
-      border-bottom: 1px solid rgba(255,255,255,0.10);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.10);
     }
+
     body:not(.dark-mode) .toc-title {
-      border-bottom-color: rgba(15,23,42,0.10);
+      border-bottom-color: rgba(15, 23, 42, 0.10);
     }
 
     /* Section labels hidden — keep it clean */
-    .toc-section-label { display: none; }
+    .toc-section-label {
+      display: none;
+    }
 
     /* TOC links — simple, blue, indented */
     .toc a {
@@ -649,12 +796,14 @@
       line-height: 1.4;
       margin-bottom: 0;
     }
+
     .toc a:hover {
       background: none;
       border-left-color: var(--accent-color);
       padding-left: 20px;
       opacity: 0.85;
     }
+
     .toc a.active {
       background: none;
       border-left-color: #a855f7;
@@ -662,21 +811,37 @@
       font-weight: 500;
       opacity: 1;
     }
+
     body:not(.dark-mode) .toc a.active {
       color: #7c3aed;
       border-left-color: #7c3aed;
     }
 
     /* ── ANCHOR OFFSET ────────────────────────────────── */
-    .anchor { scroll-margin-top: 100px; }
+    .anchor {
+      scroll-margin-top: 100px;
+    }
 
     /* ── FADE IN ──────────────────────────────────────── */
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(16px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
-    .post-hero { animation: fadeUp 0.55s ease both; }
-    .post-grid { animation: fadeUp 0.55s ease 0.12s both; }
+
+    .post-hero {
+      animation: fadeUp 0.55s ease both;
+    }
+
+    .post-grid {
+      animation: fadeUp 0.55s ease 0.12s both;
+    }
   </style>
 </head>
 
@@ -696,10 +861,11 @@
           <ul class="nav-list">
             <li><a href="../index.html" class="nav-link">Home</a></li>
             <li><a href="../about.html" class="nav-link">About</a></li>
-            
+
           </ul>
         </nav>
-                <button id="darkModeToggle" class="dark-mode-toggle" type="button" aria-label="Toggle dark mode"><span class="dm-icon">🌙</span><span class="dm-label">Dark Mode</span></button>
+        <button id="darkModeToggle" class="dark-mode-toggle" type="button" aria-label="Toggle dark mode"><span
+            class="dm-icon">🌙</span><span class="dm-label">Dark Mode</span></button>
       </div>
     </div>
   </header>
@@ -711,7 +877,8 @@
         <div class="post-kicker">Faith &nbsp;·&nbsp; Identity &nbsp;·&nbsp; Singleness</div>
         <h1 class="post-title">Becoming <em>Whole</em><br>Before Becoming One</h1>
         <p class="post-subtitle">
-          Refleksi tentang perbedaan "single" vs "alone", keutuhan diri, pemulihan, dan bagaimana Tuhan membentuk kita sebelum masuk ke hubungan yang benar-benar sehat.
+          Refleksi tentang perbedaan "single" vs "alone", keutuhan diri, pemulihan, dan bagaimana Tuhan membentuk kita
+          sebelum masuk ke hubungan yang benar-benar sehat.
         </p>
         <div class="post-meta-bar">
           <span class="pill">⏱ Bacaan panjang</span>
@@ -733,46 +900,84 @@
 
             <!-- LEAD -->
             <div class="lead" id="intro">
-              <p>Pernah nggak sih kamu lagi kumpul bareng keluarga atau temen, lalu tiba-tiba muncul pertanyaan keramat: <em>"Kapan nikah? Kok betah banget sendiri?"</em> Di dunia yang seringkali mengukur kebahagiaan dari status relationship, kadang kita jadi merasa ada yang salah dengan diri kita kalau kita masih melangkah sendirian. Kita didikte oleh standar dunia bahwa memiliki pasangan adalah garis finish dari kebahagiaan. Tapi hari ini, saya mau ajak kita membongkar paradigma itu — dari kacamata Tuhan.</p>
-              <p>Dan sebelum kita mulai, saya mau jujur dulu: tulisan ini lahir bukan dari teori semata. Ini lahir dari perjalanan. Dari malam-malam yang panjang scroll medsos dan ngeliat orang-orang posting foto wedding, sangjit, foto couple dan ngerasa ada yang "kurang" dalam hidup saya.</p>
+              <p>Pernah nggak sih kamu lagi kumpul bareng keluarga atau temen, lalu tiba-tiba muncul pertanyaan keramat:
+                <em>"Kapan nikah? Kok betah banget sendiri?"</em> Di dunia yang seringkali mengukur kebahagiaan dari
+                status relationship, kadang kita jadi merasa ada yang salah dengan diri kita kalau kita masih melangkah
+                sendirian. Kita didikte oleh standar dunia bahwa memiliki pasangan adalah garis finish dari kebahagiaan.
+                Tapi hari ini, saya mau ajak kita membongkar paradigma itu — dari kacamata Tuhan.
+              </p>
+              <p>Dan sebelum kita mulai, saya mau jujur dulu: tulisan ini lahir bukan dari teori semata. Ini lahir dari
+                perjalanan. Dari malam-malam yang panjang scroll medsos dan ngeliat orang-orang posting foto wedding,
+                sangjit, foto couple dan ngerasa ada yang "kurang" dalam hidup saya.</p>
             </div>
 
-            <div class="section-divider"><div class="section-divider-inner"><span></span><span></span><span></span></div></div>
+            <div class="section-divider">
+              <div class="section-divider-inner"><span></span><span></span><span></span></div>
+            </div>
 
             <!-- CERITA -->
             <div id="cerita" class="anchor"></div>
-            <p>Saya masih ingat banget, lebaran tahun lalu, umur saya 24 tahun. Baru lima menit duduk di rumah bude, tante-tante sudah bergerak seperti tim investigasi terlatih. <em>"Rio, udah ada yang spesial belum? Jangan milih-milih terus nanti keburu tua."</em> Dan saya cuma senyum-senyum canggung, pura-pura sibuk nambah opor ayam supaya nggak perlu jawab.</p>
-            <p>Tapi di dalam hati, ada pertanyaan yang perlu dijawab. Bukan untuk mereka — tapi untuk saya sendiri. Apakah saya benar-benar baik-baik saja? Apakah ada yang kurang dalam diri saya karena saya masih sendiri?</p>
-            <p>Dan ketika saya membawa pertanyaan itu ke hadapan Tuhan, jawabannya justru membalik seluruh cara pandang saya. Ternyata bukan masalah saya sendiri atau tidak. Yang jadi masalah sesungguhnya adalah: <strong>apakah saya sudah utuh?</strong> Apakah saya benar-benar butuh pasangan, atau saya hanya takut kesepian? Dua hal yang kelihatannya sama, tapi sebetulnya sangat berbeda.</p>
+            <p>Saya masih ingat banget, lebaran tahun lalu, umur saya 24 tahun. Baru lima menit duduk di rumah bude,
+              tante-tante sudah bergerak seperti tim investigasi terlatih. <em>"Rio, udah ada yang spesial belum? Jangan
+                milih-milih terus nanti keburu tua."</em> Dan saya cuma senyum-senyum canggung, pura-pura sibuk nambah
+              opor ayam supaya nggak perlu jawab.</p>
+            <p>Tapi di dalam hati, ada pertanyaan yang perlu dijawab. Bukan untuk mereka — tapi untuk saya sendiri.
+              Apakah saya benar-benar baik-baik saja? Apakah ada yang kurang dalam diri saya karena saya masih sendiri?
+            </p>
+            <p>Dan ketika saya membawa pertanyaan itu ke hadapan Tuhan, jawabannya justru membalik seluruh cara pandang
+              saya. Ternyata bukan masalah saya sendiri atau tidak. Yang jadi masalah sesungguhnya adalah:
+              <strong>apakah saya sudah utuh?</strong> Apakah saya benar-benar butuh pasangan, atau saya hanya takut
+              kesepian? Dua hal yang kelihatannya sama, tapi sebetulnya sangat berbeda.
+            </p>
 
-            <div class="section-divider"><div class="section-divider-inner"><span></span><span></span><span></span></div></div>
+            <div class="section-divider">
+              <div class="section-divider-inner"><span></span><span></span><span></span></div>
+            </div>
 
             <!-- KALIMAT KUNCI -->
             <div id="kalimat" class="anchor"></div>
             <div class="concept-card">
               <div class="concept-card-label">Prinsip Kunci</div>
-              <p>"Baik atau buruknya suatu hubungan — pertemanan, pacaran, atau bahkan pernikahan — tergantung dari siapa saja yang terlibat dari hubungan itu."</p>
+              <p>"Baik atau buruknya suatu hubungan — pertemanan, pacaran, atau bahkan pernikahan — tergantung dari
+                siapa saja yang terlibat dari hubungan itu."</p>
             </div>
 
-            <div class="section-divider"><div class="section-divider-inner"><span></span><span></span><span></span></div></div>
+            <div class="section-divider">
+              <div class="section-divider-inner"><span></span><span></span><span></span></div>
+            </div>
 
             <!-- OMELET -->
             <div id="omelet" class="anchor"></div>
             <div class="post-label">Ilustrasi</div>
             <h2 class="post-h2">Omelet Telur Busuk</h2>
 
-            <p>Relationship kita dengan orang lain tentu terkait erat dengan pribadi orang itu sesungguhnya. Kita ini kurang lebih cerminan dari orang-orang yang paling sering bersama kita.</p>
-            <p>Contoh nyata: Omelet. Dia akan menjadi makanan yang enak kalau terbuat dari telur-telur yang segar. Tapi saya pernah bikin omelet dari 4 telur dan ternyata waktu saya pecahin telur ke-4, telur itu sudah busuk dan tercampur dengan 3 yang lain. <em>The 4th egg has made the whole thing go bad.</em> Dan kabar buruknya: omelet itu nggak bisa kembali jadi telur lagi.</p>
-            <p>Seringkali, masalah utama kita adalah kita terlalu <em>lapar</em> akan cinta, sampai-sampai mengabaikan bau busuk dari telur yang mau kita campurkan ke dalam hidup kita. Kita tahu karakternya bermasalah, kita tahu dia tidak membawa kita makin deket sama Tuhan — tapi karena takut kesepian, kita tetap memecahkan 'telur' itu ke dalam wajan kehidupan kita.</p>
+            <p>Relationship kita dengan orang lain tentu terkait erat dengan pribadi orang itu sesungguhnya. Kita ini
+              kurang lebih cerminan dari orang-orang yang paling sering bersama kita.</p>
+            <p>Contoh nyata: Omelet. Dia akan menjadi makanan yang enak kalau terbuat dari telur-telur yang segar. Tapi
+              saya pernah bikin omelet dari 4 telur dan ternyata waktu saya pecahin telur ke-4, telur itu sudah busuk
+              dan tercampur dengan 3 yang lain. <em>The 4th egg has made the whole thing go bad.</em> Dan kabar
+              buruknya: omelet itu nggak bisa kembali jadi telur lagi.</p>
+            <p>Seringkali, masalah utama kita adalah kita terlalu <em>lapar</em> akan cinta, sampai-sampai mengabaikan
+              bau busuk dari telur yang mau kita campurkan ke dalam hidup kita. Kita tahu karakternya bermasalah, kita
+              tahu dia tidak membawa kita makin deket sama Tuhan — tapi karena takut kesepian, kita tetap memecahkan
+              'telur' itu ke dalam wajan kehidupan kita.</p>
 
             <div class="quote">
-              <p>"Saya pernah ada di titik itu. Mempertahankan hubungan yang sudah jelas-jelas toxic, hanya karena takut sendirian. Hasilnya? Dua tahun produktivitas habis, banyak kesempatan karir terlewatkan, kepercayaan diri terkikis — dan saya keluar dari hubungan itu sebagai orang yang lebih hancur dari sebelumnya. Omelet sudah terlanjur busuk."</p>
+              <p>"Saya pernah ada di titik itu. Mempertahankan hubungan yang sudah jelas-jelas toxic, hanya karena takut
+                sendirian. Hasilnya? Dua tahun produktivitas habis, banyak kesempatan karir terlewatkan, kepercayaan
+                diri terkikis — dan saya keluar dari hubungan itu sebagai orang yang lebih hancur dari sebelumnya.
+                Omelet sudah terlanjur busuk."</p>
               <cite>— seorang teman yang pernah berbagi cerita</cite>
             </div>
 
-            <p>Tapi ini yang lebih bikin kita perlu jujur pada diri sendiri: kita sering fokus mencari 'telur yang baik' untuk pasangan, tapi lupa mengecek diri sendiri. Apakah saya adalah telur yang segar? Luka masa lalu yang belum diselesaikan, ketakutan yang tidak pernah dihadapi, identitas yang tidak pernah ditemukan — itu semua bisa jadi 'bau busuk' yang tidak kita sadari.</p>
+            <p>Tapi ini yang lebih bikin kita perlu jujur pada diri sendiri: kita sering fokus mencari 'telur yang baik'
+              untuk pasangan, tapi lupa mengecek diri sendiri. Apakah saya adalah telur yang segar? Luka masa lalu yang
+              belum diselesaikan, ketakutan yang tidak pernah dihadapi, identitas yang tidak pernah ditemukan — itu
+              semua bisa jadi 'bau busuk' yang tidak kita sadari.</p>
 
-            <div class="section-divider"><div class="section-divider-inner"><span></span><span></span><span></span></div></div>
+            <div class="section-divider">
+              <div class="section-divider-inner"><span></span><span></span><span></span></div>
+            </div>
 
             <!-- KEJADIAN 2:18 -->
             <div id="kejadian" class="anchor"></div>
@@ -780,17 +985,23 @@
             <h2 class="post-h2">Kejadian 2:18 — Titik Awal Segalanya</h2>
 
             <div class="verse-box">
-              <p>"TUHAN Allah berfirman: 'Tidak baik, kalau manusia itu seorang diri saja. Aku akan menjadikan penolong baginya, yang sepadan dengan dia.'"</p>
+              <p>"TUHAN Allah berfirman: 'Tidak baik, kalau manusia itu seorang diri saja. Aku akan menjadikan penolong
+                baginya, yang sepadan dengan dia.'"</p>
               <p class="verse-ref">Kejadian 2:18</p>
             </div>
 
-            <p>Kata kuncinya: <strong>alone</strong>, bukan <em>single</em>. Manusia yang alone artinya sendiri, terisolasi, tidak ada teman. Tuhan tidak bilang: "It's not good to be single." Yang Dia bilang: "It's not good to be alone."</p>
+            <p>Kata kuncinya: <strong>alone</strong>, bukan <em>single</em>. Manusia yang alone artinya sendiri,
+              terisolasi, tidak ada teman. Tuhan tidak bilang: "It's not good to be single." Yang Dia bilang: "It's not
+              good to be alone."</p>
 
             <p>Mengapa tidak baik jika manusia seorang diri?</p>
             <ul class="bullets">
-              <li><strong>Karena kasih.</strong> Sifat dasar kasih adalah memberi. God is Love — Tuhan menciptakan manusia agar kasih-Nya bisa dicurahkan dan dialirkan.</li>
-              <li><strong>Untuk keturunan.</strong> Manusia perlu berpasangan dengan lawan jenis untuk menghasilkan keturunan.</li>
-              <li><strong>Untuk karakter.</strong> Talenta bisa dikembangkan sendirian — tapi untuk mengembangkan karakter, diperlukan gesekan dengan orang lain.</li>
+              <li><strong>Karena kasih.</strong> Sifat dasar kasih adalah memberi. God is Love — Tuhan menciptakan
+                manusia agar kasih-Nya bisa dicurahkan dan dialirkan.</li>
+              <li><strong>Untuk keturunan.</strong> Manusia perlu berpasangan dengan lawan jenis untuk menghasilkan
+                keturunan.</li>
+              <li><strong>Untuk karakter.</strong> Talenta bisa dikembangkan sendirian — tapi untuk mengembangkan
+                karakter, diperlukan gesekan dengan orang lain.</li>
             </ul>
 
             <div class="verse-box">
@@ -798,51 +1009,80 @@
               <p class="verse-ref">Amsal 27:17</p>
             </div>
 
-            <p>Ada orang-orang yang saat sendirian kelihatannya sangat rohani, sangat sabar, sangat baik. Tapi begitu masuk ke dalam hubungan, semua 'karakter' itu mulai retak. Bukan karena pasangannya yang salah — tapi karena gesekan relationship mengungkap apa yang selama ini tersembunyi.</p>
+            <p>Ada orang-orang yang saat sendirian kelihatannya sangat rohani, sangat sabar, sangat baik. Tapi begitu
+              masuk ke dalam hubungan, semua 'karakter' itu mulai retak. Bukan karena pasangannya yang salah — tapi
+              karena gesekan relationship mengungkap apa yang selama ini tersembunyi.</p>
 
-            <div class="section-divider"><div class="section-divider-inner"><span></span><span></span><span></span></div></div>
+            <div class="section-divider">
+              <div class="section-divider-inner"><span></span><span></span><span></span></div>
+            </div>
 
             <!-- SINGLE -->
             <div id="alone" class="anchor"></div>
             <div class="post-label">Konsep Kunci</div>
             <h2 class="post-h2">SINGLE = Utuh, Whole, Complete</h2>
 
-            <p><strong>SINGLE</strong> artinya: tunggal, whole, utuh, complete, unique, undivided. Tuhan tidak bilang "It's not good to be single" — tapi "It's not good to be alone." <strong>It's good to be SINGLE!</strong></p>
+            <p><strong>SINGLE</strong> artinya: tunggal, whole, utuh, complete, unique, undivided. Tuhan tidak bilang
+              "It's not good to be single" — tapi "It's not good to be alone." <strong>It's good to be SINGLE!</strong>
+            </p>
 
-            <p>Adam adalah pribadi yang Single — artinya complete, utuh, sempurna. Tidak pernah dikatakan Adam sibuk mencari pasangan untuk mengisi kekosongan. Yang tercatat: Adam mengusahakan dan memelihara Taman Eden, sendirian. Adam tidak meratapi nasib — <strong>dia sibuk dengan purpose hidupnya.</strong></p>
+            <p>Adam adalah pribadi yang Single — artinya complete, utuh, sempurna. Tidak pernah dikatakan Adam sibuk
+              mencari pasangan untuk mengisi kekosongan. Yang tercatat: Adam mengusahakan dan memelihara Taman Eden,
+              sendirian. Adam tidak meratapi nasib — <strong>dia sibuk dengan purpose hidupnya.</strong></p>
 
             <div class="personal-note">
-              <p>Saya pernah ada di fase di mana saya merasa hidup kurang lengkap kalau nggak ada yang dituju setiap hari. Timeline Instagram penuh wedding. Dan saya mulai ngerasa: <em>"Apa aku kurang ya?"</em> Sampai Tuhan kayak ngomong pelan: <strong>"Kalau kamu butuh manusia buat merasa berharga, berarti identitasmu belum selesai di dalam Aku."</strong> Kalimat itu bikin saya berhenti. Sejak itu saya belajar menikmati proses pemulihan — belajar menerima diri, belajar tidak buru-buru. Dan anehnya, damai itu balik.</p>
+              <p>Saya pernah ada di fase di mana saya merasa hidup kurang lengkap kalau nggak ada yang dituju setiap
+                hari. Timeline Instagram penuh wedding. Dan saya mulai ngerasa: <em>"Apa aku kurang ya?"</em> Sampai
+                Tuhan kayak ngomong pelan: <strong>"Kalau kamu butuh manusia buat merasa berharga, berarti identitasmu
+                  belum selesai di dalam Aku."</strong> Kalimat itu bikin saya berhenti. Sejak itu saya belajar
+                menikmati proses pemulihan — belajar menerima diri, belajar tidak buru-buru. Dan anehnya, damai itu
+                balik.</p>
             </div>
 
-            <p>Waktu Tuhan menciptakan Hawa, wanita diciptakan <em>bukan</em> untuk membuat Adam menjadi complete — karena Adam sudah complete sejak sebelum ketemu wanita. Tujuannya sebagai penolong. Inisiatif berpasangan justru dari Tuhan — bukan dari Adam yang kebingungan mencari-cari.</p>
+            <p>Waktu Tuhan menciptakan Hawa, wanita diciptakan <em>bukan</em> untuk membuat Adam menjadi complete —
+              karena Adam sudah complete sejak sebelum ketemu wanita. Tujuannya sebagai penolong. Inisiatif berpasangan
+              justru dari Tuhan — bukan dari Adam yang kebingungan mencari-cari.</p>
 
-            <div class="section-divider"><div class="section-divider-inner"><span></span><span></span><span></span></div></div>
+            <div class="section-divider">
+              <div class="section-divider-inner"><span></span><span></span><span></span></div>
+            </div>
 
             <!-- SINGLENESS -->
             <div id="singleness" class="anchor"></div>
             <div class="post-label">Tentang Kesiapan</div>
             <h2 class="post-h2">'SINGLE'ness — Tahapan yang Harus Dicapai</h2>
 
-            <p>Kapan kita tahu siap untuk menerima pasangan? Yaitu pada saat kita merasa <em>tidak membutuhkan</em> pasangan — karena di situlah kita merasa complete.</p>
-            <p>Singleness adalah suatu tahapan yang harus dicapai oleh setiap orang yang akan menikah. Pernikahan seharusnya terjadi antara <em>two single persons</em> — antara laki-laki yang utuh dan wanita yang utuh.</p>
+            <p>Kapan kita tahu siap untuk menerima pasangan? Yaitu pada saat kita merasa <em>tidak membutuhkan</em>
+              pasangan — karena di situlah kita merasa complete.</p>
+            <p>Singleness adalah suatu tahapan yang harus dicapai oleh setiap orang yang akan menikah. Pernikahan
+              seharusnya terjadi antara <em>two single persons</em> — antara laki-laki yang utuh dan wanita yang utuh.
+            </p>
 
-            <p>Ilustrasinya: ada dua gelas berisi air yang tidak penuh. Setelah gelas yang satu mengisi gelas yang lain, apa yang terjadi? Salah satu jadi kosong. <strong>Dua gelas setengah kosong tidak saling mengisi — mereka saling menguras.</strong></p>
+            <p>Ilustrasinya: ada dua gelas berisi air yang tidak penuh. Setelah gelas yang satu mengisi gelas yang lain,
+              apa yang terjadi? Salah satu jadi kosong. <strong>Dua gelas setengah kosong tidak saling mengisi — mereka
+                saling menguras.</strong></p>
 
             <div class="verse-box">
               <p>"Kasihilah sesamamu manusia seperti dirimu sendiri."</p>
               <p class="verse-ref">Matius 22:39</p>
             </div>
 
-            <p>Kalau kita tidak bisa mengasihi diri sendiri (bukan egois — tapi menerima dan utuh), kita tidak bisa mengasihi orang lain dengan sehat. Kalau kita belum utuh, hubungan cuma jadi ajang mencari pengakuan dan validasi.</p>
+            <p>Kalau kita tidak bisa mengasihi diri sendiri (bukan egois — tapi menerima dan utuh), kita tidak bisa
+              mengasihi orang lain dengan sehat. Kalau kita belum utuh, hubungan cuma jadi ajang mencari pengakuan dan
+              validasi.</p>
 
             <div class="quote">
-              <p>'Di generasi kita sekarang, banyak hubungan yang sebetulnya bukan tentang cinta, tapi tentang konten. Foto bareng yang estetik. Caption mesra yang viral. Tapi di balik layar, dua orang itu sedang saling menguras. Dua orang yang lapar nggak bisa memberi makan satu sama lain.'</p>
+              <p>'Di generasi kita sekarang, banyak hubungan yang sebetulnya bukan tentang cinta, tapi tentang konten.
+                Foto bareng yang estetik. Caption mesra yang viral. Tapi di balik layar, dua orang itu sedang saling
+                menguras. Dua orang yang lapar nggak bisa memberi makan satu sama lain.'</p>
             </div>
 
-            <p>Orang yang tidak utuh mudah cemburu berlebihan, mudah insecure, mudah mencari pelarian — karena dia mencari pemenuhan, bukan membangun perjanjian.</p>
+            <p>Orang yang tidak utuh mudah cemburu berlebihan, mudah insecure, mudah mencari pelarian — karena dia
+              mencari pemenuhan, bukan membangun perjanjian.</p>
 
-            <div class="section-divider"><div class="section-divider-inner"><span></span><span></span><span></span></div></div>
+            <div class="section-divider">
+              <div class="section-divider-inner"><span></span><span></span><span></span></div>
+            </div>
 
             <!-- MENGASIHI DIRI -->
             <div id="matius" class="anchor"></div>
@@ -850,30 +1090,47 @@
             <h2 class="post-h2">Bagaimana Mengasihi Diri Sendiri?</h2>
 
             <ul class="bullets">
-              <li><strong>Mengenal diri kita sendiri.</strong> Do you know who you are? Do you know your identity in God? Yesus mengetahui siapa diri-Nya, sehingga Dia bisa mengasihi orang lain. (Yoh 14:6, 10:9, 8:12)</li>
-              <li><strong>Menerima diri kita, apa adanya.</strong> Artinya memiliki gambar diri yang telah dipulihkan dalam Kristus.</li>
-              <li><strong>Mengampuni diri sendiri.</strong> Banyak dari kita yang hidup menanggung rasa bersalah bertahun-tahun. Kalau Tuhan sudah mengampuni, siapa kita yang terus menghukum diri sendiri?</li>
-              <li><strong>Merawat diri — jiwa, pikiran, dan tubuh.</strong> Apakah kamu memberi dirimu sendiri waktu untuk beristirahat, waktu bersama Tuhan, waktu untuk bertumbuh? Orang yang belajar merawat dirinya akan jauh lebih siap merawat orang lain.</li>
+              <li><strong>Mengenal diri kita sendiri.</strong> Do you know who you are? Do you know your identity in
+                God? Yesus mengetahui siapa diri-Nya, sehingga Dia bisa mengasihi orang lain. (Yoh 14:6, 10:9, 8:12)
+              </li>
+              <li><strong>Menerima diri kita, apa adanya.</strong> Artinya memiliki gambar diri yang telah dipulihkan
+                dalam Kristus.</li>
+              <li><strong>Mengampuni diri sendiri.</strong> Banyak dari kita yang hidup menanggung rasa bersalah
+                bertahun-tahun. Kalau Tuhan sudah mengampuni, siapa kita yang terus menghukum diri sendiri?</li>
+              <li><strong>Merawat diri — jiwa, pikiran, dan tubuh.</strong> Apakah kamu memberi dirimu sendiri waktu
+                untuk beristirahat, waktu bersama Tuhan, waktu untuk bertumbuh? Orang yang belajar merawat dirinya akan
+                jauh lebih siap merawat orang lain.</li>
             </ul>
 
-            <div class="section-divider"><div class="section-divider-inner"><span></span><span></span><span></span></div></div>
+            <div class="section-divider">
+              <div class="section-divider-inner"><span></span><span></span><span></span></div>
+            </div>
 
             <!-- MARRIAGE -->
             <div id="perfect" class="anchor"></div>
             <div class="post-label">Kisah Nyata</div>
             <h2 class="post-h2">The Marriage That Looked Perfect</h2>
 
-            <p>Saya punya pasangan sahabat yang menikah muda. Dari luar, semua kelihatan indah — foto pernikahan yang cantik, bulan madu yang epic, caption medsos yang penuh cinta. Tapi tidak sampai dua tahun, semuanya retak.</p>
-            <p>Bukan karena mereka tidak saling cinta. Tapi karena dua-duanya masuk ke pernikahan dengan luka yang belum sembuh. Dua kekosongan yang saling berhadapan dan mengira bisa saling mengisi — padahal yang terjadi justru sebaliknya: saling menguras.</p>
+            <p>Saya punya pasangan sahabat yang menikah muda. Dari luar, semua kelihatan indah — foto pernikahan yang
+              cantik, bulan madu yang epic, caption medsos yang penuh cinta. Tapi tidak sampai dua tahun, semuanya
+              retak.</p>
+            <p>Bukan karena mereka tidak saling cinta. Tapi karena dua-duanya masuk ke pernikahan dengan luka yang belum
+              sembuh. Dua kekosongan yang saling berhadapan dan mengira bisa saling mengisi — padahal yang terjadi
+              justru sebaliknya: saling menguras.</p>
 
             <div class="quote">
-              <p>"Gue kira nikah bakal bikin gue lebih baik. Ternyata gue harus jadi lebih baik dulu, baru bisa punya pernikahan yang baik."</p>
+              <p>"Gue kira nikah bakal bikin gue lebih baik. Ternyata gue harus jadi lebih baik dulu, baru bisa punya
+                pernikahan yang baik."</p>
               <cite>— si pria setelah berpisah</cite>
             </div>
 
-            <p>Makanya Tuhan tidak bilang <em>'I will make him a wife'</em> — tapi <em>'I will make him a helper, someone who is fit for him.'</em> Yang sepadan. Bukan yang sempurna, tapi yang sepadan. Ada level kematangan yang perlu dicapai dulu.</p>
+            <p>Makanya Tuhan tidak bilang <em>'I will make him a wife'</em> — tapi <em>'I will make him a helper,
+                someone who is fit for him.'</em> Yang sepadan. Bukan yang sempurna, tapi yang sepadan. Ada level
+              kematangan yang perlu dicapai dulu.</p>
 
-            <div class="section-divider"><div class="section-divider-inner"><span></span><span></span><span></span></div></div>
+            <div class="section-divider">
+              <div class="section-divider-inner"><span></span><span></span><span></span></div>
+            </div>
 
             <!-- MITOS -->
             <div id="mitos" class="anchor"></div>
@@ -884,33 +1141,42 @@
               <div class="myth-item">
                 <div class="myth-label">Mitos 1</div>
                 <p class="myth-text">"Nanti kalau sudah ketemu yang tepat, hidupku akan baik-baik aja."</p>
-                <p class="myth-answer">Salah. Kalau hidupmu belum baik-baik aja sekarang, kehadiran seseorang tidak otomatis membuatnya jadi baik. Kamu perlu beres dulu, sebelum beres bersama.</p>
+                <p class="myth-answer">Salah. Kalau hidupmu belum baik-baik aja sekarang, kehadiran seseorang tidak
+                  otomatis membuatnya jadi baik. Kamu perlu beres dulu, sebelum beres bersama.</p>
               </div>
               <div class="myth-item">
                 <div class="myth-label">Mitos 2</div>
                 <p class="myth-text">"Umurku sudah sekian, harusnya sudah nikah."</p>
-                <p class="myth-answer">Tuhan tidak punya kalender seperti tante-tante di arisan. His timing is not early, not late — always perfect.</p>
+                <p class="myth-answer">Tuhan tidak punya kalender seperti tante-tante di arisan. His timing is not
+                  early, not late — always perfect.</p>
               </div>
               <div class="myth-item">
                 <div class="myth-label">Mitos 3</div>
                 <p class="myth-text">"Kalau ada yang suka sama aku, itu tanda dari Tuhan."</p>
-                <p class="myth-answer">Hati-hati. Banyak yang 'merasa' itu konfirmasi Tuhan, padahal itu hanya konfirmasi rasa kesepian mereka sendiri.</p>
+                <p class="myth-answer">Hati-hati. Banyak yang 'merasa' itu konfirmasi Tuhan, padahal itu hanya
+                  konfirmasi rasa kesepian mereka sendiri.</p>
               </div>
               <div class="myth-item">
                 <div class="myth-label">Mitos 4</div>
                 <p class="myth-text">"Sendirian berarti ada yang salah dengan aku."</p>
-                <p class="myth-answer">Tidak. Sendirian bisa berarti Tuhan sedang menyiapkanmu. Masa single bukan hukuman — itu investasi.</p>
+                <p class="myth-answer">Tidak. Sendirian bisa berarti Tuhan sedang menyiapkanmu. Masa single bukan
+                  hukuman — itu investasi.</p>
               </div>
             </div>
 
-            <div class="section-divider"><div class="section-divider-inner"><span></span><span></span><span></span></div></div>
+            <div class="section-divider">
+              <div class="section-divider-inner"><span></span><span></span><span></span></div>
+            </div>
 
             <!-- YESUS -->
             <div id="yesus" class="anchor"></div>
             <div class="post-label">Contoh Sempurna</div>
             <h2 class="post-h2">The Most Complete Man Who Ever Lived</h2>
 
-            <p>Mau tahu contoh paling sempurna dari seseorang yang Single — utuh, complete, penuh — yang pernah ada di muka bumi ini? Yesus Kristus. Dia tidak pernah menikah. Tapi tidak ada satu momen pun di mana Yesus kelihatan tidak lengkap atau mencari validasi dari orang lain. Sebaliknya, Dia yang justru menjadi sumber bagi orang lain.</p>
+            <p>Mau tahu contoh paling sempurna dari seseorang yang Single — utuh, complete, penuh — yang pernah ada di
+              muka bumi ini? Yesus Kristus. Dia tidak pernah menikah. Tapi tidak ada satu momen pun di mana Yesus
+              kelihatan tidak lengkap atau mencari validasi dari orang lain. Sebaliknya, Dia yang justru menjadi sumber
+              bagi orang lain.</p>
 
             <p>Yohanes 4 — perempuan Samaria yang sudah lima kali menikah dan masih merasa kosong. Yesus berkata:</p>
 
@@ -919,24 +1185,38 @@
               <p class="verse-ref">Yohanes 4:14</p>
             </div>
 
-            <p>Perempuan itu hidup dengan mitos bahwa pria ke-enam-lah yang akan mengisi hidupnya. Tapi Yesus menunjukkan bahwa yang dia butuhkan bukan pria ke-enam — tapi Satu Pribadi yang benar.</p>
+            <p>Perempuan itu hidup dengan mitos bahwa pria ke-enam-lah yang akan mengisi hidupnya. Tapi Yesus
+              menunjukkan bahwa yang dia butuhkan bukan pria ke-enam — tapi Satu Pribadi yang benar.</p>
 
-            <p>Pernikahan terbaik yang pernah saya saksikan bukan yang pasangannya selalu sempurna — tapi yang dua-duanya sudah berdamai dengan diri mereka sendiri, sehingga bisa hadir sepenuhnya untuk satu sama lain, tanpa agenda tersembunyi, tanpa kekosongan yang menuntut diisi.</p>
+            <p>Pernikahan terbaik yang pernah saya saksikan bukan yang pasangannya selalu sempurna — tapi yang
+              dua-duanya sudah berdamai dengan diri mereka sendiri, sehingga bisa hadir sepenuhnya untuk satu sama lain,
+              tanpa agenda tersembunyi, tanpa kekosongan yang menuntut diisi.</p>
 
-            <div class="section-divider"><div class="section-divider-inner"><span></span><span></span><span></span></div></div>
+            <div class="section-divider">
+              <div class="section-divider-inner"><span></span><span></span><span></span></div>
+            </div>
 
             <!-- CLOSING -->
             <div id="gift" class="anchor"></div>
             <h2 class="post-h2">The Greatest Gift You Can Become</h2>
 
-            <p>Kalau kamu hari ini masih sendirian dan sedang berjuang dengan rasa kesepian atau pertanyaan <em>'kapan giliran saya'</em> — saya mau bilang ini kepadamu:</p>
-            <p>Masa single-mu bukan ruang tunggu yang membosankan. <strong>Itu ruang persiapan yang sakral.</strong> Rawat hubunganmu dengan Tuhan. Kerjakan panggilanmu. Sembuhkan luka-lukamu. Kenali dirimu. Terima dirimu. Dan ketika saatnya tiba — dan itu akan tiba di waktu yang paling presisi — kamu akan berdiri bukan sebagai orang yang akhirnya menemukan seseorang untuk 'melengkapi' dirimu, tapi sebagai orang yang sudah utuh, yang siap berbagi hidup dengan seseorang yang juga sudah utuh.</p>
+            <p>Kalau kamu hari ini masih sendirian dan sedang berjuang dengan rasa kesepian atau pertanyaan <em>'kapan
+                giliran saya'</em> — saya mau bilang ini kepadamu:</p>
+            <p>Masa single-mu bukan ruang tunggu yang membosankan. <strong>Itu ruang persiapan yang sakral.</strong>
+              Rawat hubunganmu dengan Tuhan. Kerjakan panggilanmu. Sembuhkan luka-lukamu. Kenali dirimu. Terima dirimu.
+              Dan ketika saatnya tiba — dan itu akan tiba di waktu yang paling presisi — kamu akan berdiri bukan sebagai
+              orang yang akhirnya menemukan seseorang untuk 'melengkapi' dirimu, tapi sebagai orang yang sudah utuh,
+              yang siap berbagi hidup dengan seseorang yang juga sudah utuh.</p>
 
             <div class="closing-note">
-              <p>Pribadi yang benar-benar utuh di dalam Kristus adalah hadiah terindah yang bisa kamu berikan — bukan hanya untuk pasangan masa depanmu, tapi juga untuk dirimu sendiri.<br><br><em>Kamu tidak sendirian. Dan kamu lebih utuh dari yang kamu kira.</em></p>
+              <p>Pribadi yang benar-benar utuh di dalam Kristus adalah hadiah terindah yang bisa kamu berikan — bukan
+                hanya untuk pasangan masa depanmu, tapi juga untuk dirimu sendiri.<br><br><em>Kamu tidak sendirian. Dan
+                  kamu lebih utuh dari yang kamu kira.</em></p>
             </div>
 
-            <div class="section-divider"><div class="section-divider-inner"><span></span><span></span><span></span></div></div>
+            <div class="section-divider">
+              <div class="section-divider-inner"><span></span><span></span><span></span></div>
+            </div>
 
             <div class="footer-note">
               <p>✦ &nbsp;Ditulis dengan doa dan harapan, untuk kamu yang sedang berjalan dalam proses.</p>
@@ -946,7 +1226,7 @@
               <a href="../index.html">← Back to Home</a>
               <a href="#intro">↑ Back to Top</a>
             </nav>
-                <button id="darkModeToggle" class="dark-mode-toggle" type="button" aria-label="Toggle dark mode"><span class="dm-icon">🌙</span><span class="dm-label">Dark Mode</span></button>
+
           </div>
         </article>
 
@@ -996,7 +1276,7 @@
 
     // Active TOC highlight
     const tocLinks = document.querySelectorAll('.toc a[href^="#"]');
-    const anchors  = [...document.querySelectorAll('.anchor')];
+    const anchors = [...document.querySelectorAll('.anchor')];
 
     function updateTOC() {
       const scrollY = window.scrollY + 120;
@@ -1010,4 +1290,5 @@
     updateTOC();
   </script>
 </body>
+
 </html>
